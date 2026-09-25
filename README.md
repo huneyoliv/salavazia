@@ -99,14 +99,34 @@ O projeto conta com suíte de testes unitários e validações automatizadas:
 
 ```bash
 # Executar testes unitários
-pytest
+pytest -v
 
 # Validação de linter
 ruff check .
 
-# Validação de formatação
-ruff format --check .
-
 # Checagem estática de tipos
-mypy .
+mypy salavazia tests
+
+# Auditoria de segurança de dependências
+pip-audit
 ```
+
+---
+
+## 🌐 Web App & PWA (GitHub Pages)
+
+O projeto inclui uma aplicação web moderna e responsiva (PWA) hospedada no **GitHub Pages**:
+
+🔗 **Acesse online:** [https://huneyoliv.github.io/salavazia/](https://huneyoliv.github.io/salavazia/)
+
+### Funcionalidades do Web App
+- 📍 **Localização por GPS (Haversine):** Identifica em tempo real qual prédio o aluno está mais próximo e ordena as salas livres da mais perto para a mais longe.
+- 🕒 **Relógio e Grade ao Vivo:** Identifica a faixa horária oficial da UFS (Resolução CONEPE 2024.1) minuto a minuto.
+- 🟢 **Projeção de Ocupação:** Informa até que horas cada sala permanecerá livre (`Livre até 15:10`) ou quando será desocupada (`Libera às 16:10`).
+- 🏛️ **Filtros por Campus e Prédio:** Suporte a São Cristóvão (Didáticas 1-7, Departamentos, CCBS, Multidepartamental), Itabaiana (Blocos B, C, D) e Aracaju (CULTART).
+- 📱 **PWA Offline:** Funciona sem conexão à internet utilizando cache do Service Worker.
+
+### Automação com GitHub Actions
+- **`scrape.yml`:** Executa 3 vezes ao dia (06:45, 12:45 e 18:30 BRT) nas transições de turno letivo, atualizando o arquivo `data/status.json` automaticamente.
+- **`deploy.yml`:** Publica automaticamente qualquer alteração no frontend ou dados diretamente no GitHub Pages.
+
