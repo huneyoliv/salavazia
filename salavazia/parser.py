@@ -22,9 +22,7 @@ def normalize_room_metadata(raw_title: str) -> tuple[str, str, str]:
 
     # Determine category
     category = "OUTRO"
-    if "SALA DE AULA" in upper:
-        category = "SALA DE AULA"
-    elif "LAB" in upper:
+    if "LAB" in upper:
         category = "LABORATORIO"
     elif "AUDIT" in upper:
         category = "AUDITORIO"
@@ -32,6 +30,8 @@ def normalize_room_metadata(raw_title: str) -> tuple[str, str, str]:
         category = "PROJECAO"
     elif "GABINETE" in upper:
         category = "GABINETE"
+    elif "SALA" in upper:
+        category = "SALA DE AULA"
 
     # Match common Didática pattern (e.g., DID 6 - 106, DID 1 - 014, DID 6 SALA 101)
     did_match = re.search(r"\b(DID\s*\d+)\s*(?:-|SALA)?\s*([0-9A-Z]+)\b", upper)
@@ -40,17 +40,27 @@ def normalize_room_metadata(raw_title: str) -> tuple[str, str, str]:
         room_number = did_match.group(2).strip()
         return category, building, room_number
 
-    # Match department or generic building pattern (e.g. DMA - ... - 001, SALA DE AULA - DMO - 001)
+    # Match Bloco pattern (e.g. BLOCO C SALA - 104, BLOCO D SALA - 106)
+    bloco_match = re.search(r"\b(BLOCO\s+[A-Z])\b", upper)
     tokens = [t.strip() for t in clean_title.split("-") if t.strip()]
+    if bloco_match:
+        building = bloco_match.group(1).strip()
+        room_number = tokens[-1] if tokens else clean_title
+        return category, building, room_number
+
+    # Match department pattern (e.g. DMA - ... - 001, SALA DE AULA 01 - DEF - 001)
+    dept_prefixes = ("SALA DE AULA", "LABORATORIO", "AUDITORIO")
     if len(tokens) >= 3:
-        if tokens[0].upper() in ("SALA DE AULA", "LABORATORIO", "AUDITORIO"):
+        first_upper = tokens[0].upper()
+        if any(first_upper.startswith(p) for p in dept_prefixes):
             building = tokens[1]
         else:
             building = tokens[0]
         room_number = tokens[-1]
         return category, building, room_number
     elif len(tokens) == 2:
-        if tokens[0].upper() in ("SALA DE AULA", "LABORATORIO", "AUDITORIO"):
+        first_upper = tokens[0].upper()
+        if any(first_upper.startswith(p) for p in dept_prefixes):
             building = "UNKNOWN"
             room_number = tokens[1]
         else:

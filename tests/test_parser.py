@@ -87,6 +87,16 @@ def test_normalize_room_metadata() -> None:
     assert building == "DMO"
     assert number == "001"
 
+    category, building, number = normalize_room_metadata("BLOCO C SALA - 104")
+    assert category == "SALA DE AULA"
+    assert building == "BLOCO C"
+    assert number == "104"
+
+    category, building, number = normalize_room_metadata("SALA DE AULA 01 - DEF - 001")
+    assert category == "SALA DE AULA"
+    assert building == "DEF"
+    assert number == "001"
+
 
 def test_parse_valid_room() -> None:
     room = parse_room_page(1008644, SAMPLE_VALID_ROOM_HTML)
