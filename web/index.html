@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sala Vazia UFS — Salas Livres em Tempo Real por GPS</title>
+  <meta name="description" content="Localize em tempo real as salas de aula e didáticas vazias mais próximas na Universidade Federal de Sergipe (UFS) usando GPS.">
+  <meta name="theme-color" content="#10b981">
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+
+  <!-- Typography: Google Fonts Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="top-bar">
+        <div class="brand">
+          <div class="logo-badge">🎓</div>
+          <div class="brand-text">
+            <h1>Sala Vazia UFS</h1>
+            <p class="brand-subtitle">Disponibilidade de salas em tempo real</p>
+          </div>
+        </div>
+
+        <div class="live-clock-card">
+          <span class="clock-digits" id="live-clock">--:--</span>
+          <span class="slot-badge slot-active" id="live-slot-badge">Carregando...</span>
+        </div>
+      </div>
+
+      <!-- GPS Proximity Banner -->
+      <section id="gps-banner" aria-label="Alerta de Geolocalização"></section>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Metrics Overview -->
+      <section class="metrics-grid" aria-label="Métricas do Campus">
+        <div class="metric-card">
+          <div class="metric-icon">🟢</div>
+          <div class="metric-content">
+            <h4>Salas Livres Agora</h4>
+            <div class="metric-value text-success" id="metric-free">--</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">🔴</div>
+          <div class="metric-content">
+            <h4>Salas Ocupadas</h4>
+            <div class="metric-value text-danger" id="metric-occupied">--</div>
+          </div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-icon">📍</div>
+          <div class="metric-content">
+            <h4>Prédio Mais Próximo</h4>
+            <div class="metric-value" id="metric-nearest">Detectando...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Controls Panel -->
+      <section class="controls-panel" aria-label="Filtros e Busca">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Buscar por sala (ex: DID 6 - 106, 102), prédio ou disciplina..."
+            aria-label="Buscar salas"
+          >
+          <button id="btn-clear-search" class="btn-clear" aria-label="Limpar busca">✕</button>
+        </div>
+
+        <div class="filters-row">
+          <!-- Campus Pills -->
+          <div class="campus-pills" role="tablist" aria-label="Filtrar por Campus">
+            <button class="campus-pill active" data-campus="all">Todos os Campi</button>
+            <button class="campus-pill" data-campus="São Cristóvão">São Cristóvão</button>
+            <button class="campus-pill" data-campus="Itabaiana">Itabaiana</button>
+            <button class="campus-pill" data-campus="Aracaju">Aracaju (Cultart)</button>
+          </div>
+
+          <!-- Selects & Toggles -->
+          <div class="select-filters">
+            <select id="filter-building" class="filter-select" aria-label="Filtrar por Prédio">
+              <option value="all">Todos os Prédios</option>
+            </select>
+
+            <select id="filter-category" class="filter-select" aria-label="Filtrar por Categoria">
+              <option value="all">Todas Categorias</option>
+              <option value="SALA DE AULA">Salas de Aula</option>
+              <option value="LABORATORIO">Laboratórios</option>
+              <option value="AUDITORIO">Auditórios</option>
+            </select>
+
+            <label class="toggle-wrapper" for="toggle-free-only">
+              <span class="toggle-switch">
+                <input type="checkbox" id="toggle-free-only" checked>
+                <span class="toggle-slider"></span>
+              </span>
+              <span>Apenas Livres</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Count Bar -->
+      <div class="results-header">
+        <span class="results-count" id="results-count">Buscando salas...</span>
+        <span class="results-count" id="live-status-label"></span>
+      </div>
+
+      <!-- Rooms Grid -->
+      <section id="rooms-grid" class="rooms-grid" aria-label="Lista de Salas"></section>
+    </main>
+
+    <!-- Details Modal -->
+    <div id="room-modal" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true">
+      <div class="modal-dialog">
+        <button id="modal-close" class="modal-close-btn" aria-label="Fechar modal">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>
+        <strong>Sala Vazia UFS</strong> — Desenvolvido de forma aberta e colaborativa.
+        Dados extraídos do SIGAA UFS sob a resolução CONEPE 2024.1.
+      </p>
+      <p>
+        Código-fonte disponível no <a href="https://github.com/huneyoliv/salavazia" target="_blank" rel="noopener">GitHub (huneyoliv/salavazia)</a>.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/schedule.js"></script>
+  <script src="./js/geo.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
