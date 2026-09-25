@@ -1,0 +1,212 @@
+{
+  "DID 1": {
+    "name": "Didática 1",
+    "campus": "São Cristóvão",
+    "lat": -10.9256581,
+    "lng": -37.1032108,
+    "description": "Salas de aula de graduação e laboratórios didáticos"
+  },
+  "DID 2": {
+    "name": "Didática 2",
+    "campus": "São Cristóvão",
+    "lat": -10.9251906,
+    "lng": -37.1032177,
+    "description": "Salas de aula de graduação e laboratórios"
+  },
+  "DID 3": {
+    "name": "Didática 3",
+    "campus": "São Cristóvão",
+    "lat": -10.9247216,
+    "lng": -37.1032335,
+    "description": "Salas de aula de graduação e centros acadêmicos"
+  },
+  "DID 4": {
+    "name": "Didática 4",
+    "campus": "São Cristóvão",
+    "lat": -10.9242466,
+    "lng": -37.1032584,
+    "description": "Salas de aula de graduação"
+  },
+  "DID 5": {
+    "name": "Didática 5",
+    "campus": "São Cristóvão",
+    "lat": -10.924967,
+    "lng": -37.1040998,
+    "description": "Salas de aula de graduação e anfiteatro"
+  },
+  "DID 6": {
+    "name": "Didática 6",
+    "campus": "São Cristóvão",
+    "lat": -10.9256556,
+    "lng": -37.1042175,
+    "description": "Salas de aula de graduação e pós-graduação"
+  },
+  "DID 7": {
+    "name": "Didática 7",
+    "campus": "São Cristóvão",
+    "lat": -10.9293005,
+    "lng": -37.1027557,
+    "description": "Salas de aula de graduação e auditórios"
+  },
+  "CODAP": {
+    "name": "CODAP — Colégio de Aplicação",
+    "campus": "São Cristóvão",
+    "lat": -10.9277914,
+    "lng": -37.1041714,
+    "description": "Colégio de Aplicação da Universidade Federal de Sergipe"
+  },
+  "AUDITÓRIO DO CCBS": {
+    "name": "Auditório do CCBS",
+    "campus": "São Cristóvão",
+    "lat": -10.9239105,
+    "lng": -37.1019278,
+    "description": "Centro de Ciências Biológicas e da Saúde"
+  },
+  "DEC": {
+    "name": "DEC — Departamento de Engenharia Civil",
+    "campus": "São Cristóvão",
+    "lat": -10.9234699,
+    "lng": -37.101147,
+    "description": "Salas de aula e laboratórios de transportes e topografia"
+  },
+  "DEQ": {
+    "name": "DEQ — Departamento de Engenharia Química",
+    "campus": "São Cristóvão",
+    "lat": -10.923104,
+    "lng": -37.1011194,
+    "description": "Salas de aula e laboratórios de engenharia química e bioquímica"
+  },
+  "DFI": {
+    "name": "DFI — Departamento de Física",
+    "campus": "São Cristóvão",
+    "lat": -10.9223415,
+    "lng": -37.1013173,
+    "description": "Salas de aula e laboratórios do departamento de física"
+  },
+  "DQI": {
+    "name": "DQI — Departamento de Química",
+    "campus": "São Cristóvão",
+    "lat": -10.9226503,
+    "lng": -37.1012735,
+    "description": "Salas de aula e laboratórios de química analítica e experimental"
+  },
+  "DMA": {
+    "name": "DMA — Departamento de Matemática",
+    "campus": "São Cristóvão",
+    "lat": -10.92305,
+    "lng": -37.1015,
+    "description": "Laboratório de ensino de matemática e salas departamentais"
+  },
+  "DEF": {
+    "name": "DEF — Departamento de Educação Física",
+    "campus": "São Cristóvão",
+    "lat": -10.9274076,
+    "lng": -37.1027341,
+    "description": "Salas de aula e complexo esportivo"
+  },
+  "DMO": {
+    "name": "DMO — Departamento de Morfologia",
+    "campus": "São Cristóvão",
+    "lat": -10.92395,
+    "lng": -37.1021,
+    "description": "Salas de aula e laboratórios de morfologia e anatomia"
+  },
+  "DFS": {
+    "name": "DFS — Departamento de Fisiologia",
+    "campus": "São Cristóvão",
+    "lat": -10.9241,
+    "lng": -37.1018,
+    "description": "Salas de aula, auditório e laboratórios de fisiologia"
+  },
+  "DBI BLOCO A": {
+    "name": "DBI — Bloco A (Biologia)",
+    "campus": "São Cristóvão",
+    "lat": -10.9243,
+    "lng": -37.1023,
+    "description": "Salas de aula e laboratórios do departamento de biologia"
+  },
+  "DBI BLOCO B": {
+    "name": "DBI — Bloco B (Biologia)",
+    "campus": "São Cristóvão",
+    "lat": -10.9244,
+    "lng": -37.1024,
+    "description": "Salas de aula e laboratórios de botânica e zoologia"
+  },
+  "LAB DE MICROSCOPIA E LUPAS": {
+    "name": "Laboratório de Microscopia e Lupas (Multidepartamental I)",
+    "campus": "São Cristóvão",
+    "lat": -10.9238,
+    "lng": -37.1008,
+    "description": "Prédio Multidepartamental I - DGEOL"
+  },
+  "LAB GEOPROCESSAMENTO E CARTOGRAFIA": {
+    "name": "Laboratório de Geoprocessamento e Cartografia (Multidepartamental I)",
+    "campus": "São Cristóvão",
+    "lat": -10.9238,
+    "lng": -37.1008,
+    "description": "Prédio Multidepartamental I - DGEOL"
+  },
+  "LAB GEOQUIMICA E SEDIMENTOLOGIA": {
+    "name": "Laboratório de Geoquímica e Sedimentologia (Multidepartamental I)",
+    "campus": "São Cristóvão",
+    "lat": -10.9238,
+    "lng": -37.1008,
+    "description": "Prédio Multidepartamental I - DGEOL"
+  },
+  "LAB MINERALOGIA E PALEONTOLOGIA": {
+    "name": "Laboratório de Mineralogia e Paleontologia (Multidepartamental I)",
+    "campus": "São Cristóvão",
+    "lat": -10.9238,
+    "lng": -37.1008,
+    "description": "Prédio Multidepartamental I - DGEOL"
+  },
+  "RESUN": {
+    "name": "RESUN — Restaurante Universitário",
+    "campus": "São Cristóvão",
+    "lat": -10.92548,
+    "lng": -37.10145,
+    "description": "Restaurante Universitário da UFS"
+  },
+  "BICEN": {
+    "name": "BICEN — Biblioteca Central",
+    "campus": "São Cristóvão",
+    "lat": -10.92485,
+    "lng": -37.1009,
+    "description": "Biblioteca Central Prof. Antônio Tavares de Bragança"
+  },
+  "REITORIA": {
+    "name": "Reitoria da UFS",
+    "campus": "São Cristóvão",
+    "lat": -10.925225,
+    "lng": -37.1004449,
+    "description": "Prédio da Reitoria e administração central"
+  },
+  "BLOCO B": {
+    "name": "Bloco B — Campus Itabaiana",
+    "campus": "Itabaiana",
+    "lat": -10.681616,
+    "lng": -37.435295,
+    "description": "Laboratórios de informática, sistemas e salas de aula de Itabaiana"
+  },
+  "BLOCO C": {
+    "name": "Bloco C — Campus Itabaiana",
+    "campus": "Itabaiana",
+    "lat": -10.6817282,
+    "lng": -37.4355496,
+    "description": "Salas de aula e laboratórios de física e química de Itabaiana"
+  },
+  "BLOCO D": {
+    "name": "Bloco D — Campus Itabaiana",
+    "campus": "Itabaiana",
+    "lat": -10.681733,
+    "lng": -37.4364951,
+    "description": "Salas de aula de graduação e laboratórios de Itabaiana"
+  },
+  "SALA DO CULTART": {
+    "name": "CULTART — Centro de Cultura e Arte",
+    "campus": "Aracaju",
+    "lat": -10.9191913,
+    "lng": -37.0470733,
+    "description": "Centro de Cultura e Arte da UFS, Av. Ivo do Prado, 612"
+  }
+}
