@@ -40,9 +40,16 @@ def normalize_room_metadata(raw_title: str) -> tuple[str, str, str]:
         room_number = did_match.group(2).strip()
         return category, building, room_number
 
+    # Match DBI Bloco pattern (e.g. DBI BLOCO A, DBI BLOCO B)
+    dbi_bloco_match = re.search(r"\b(DBI\s+BLOCO\s+[A-Z])\b", upper)
+    tokens = [t.strip() for t in clean_title.split("-") if t.strip()]
+    if dbi_bloco_match:
+        building = dbi_bloco_match.group(1).strip()
+        room_number = tokens[-1] if tokens else clean_title
+        return category, building, room_number
+
     # Match Bloco pattern (e.g. BLOCO C SALA - 104, BLOCO D SALA - 106)
     bloco_match = re.search(r"\b(BLOCO\s+[A-Z])\b", upper)
-    tokens = [t.strip() for t in clean_title.split("-") if t.strip()]
     if bloco_match:
         building = bloco_match.group(1).strip()
         room_number = tokens[-1] if tokens else clean_title

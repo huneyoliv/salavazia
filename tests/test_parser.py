@@ -92,6 +92,21 @@ def test_normalize_room_metadata() -> None:
     assert building == "BLOCO C"
     assert number == "104"
 
+    category, building, number = normalize_room_metadata("SALA DE AULA - DBI BLOCO A - 002")
+    assert category == "SALA DE AULA"
+    assert building == "DBI BLOCO A"
+    assert number == "002"
+
+    category, building, number = normalize_room_metadata("SALA DE AULA - DBI BLOCO B - 006")
+    assert category == "SALA DE AULA"
+    assert building == "DBI BLOCO B"
+    assert number == "006"
+
+    category, building, number = normalize_room_metadata("BLOCO B LAB SIST III - 002")
+    assert category == "LABORATORIO"
+    assert building == "BLOCO B"
+    assert number == "002"
+
     category, building, number = normalize_room_metadata("SALA DE AULA 01 - DEF - 001")
     assert category == "SALA DE AULA"
     assert building == "DEF"
