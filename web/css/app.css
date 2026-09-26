@@ -465,6 +465,40 @@ input:checked + .toggle-slider:before {
   gap: 1.25rem;
 }
 
+/* Show All Banner */
+.show-all-banner {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.btn-show-all {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-show-all:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
 .room-card {
   background: var(--bg-card);
   backdrop-filter: blur(14px);

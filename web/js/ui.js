@@ -164,26 +164,31 @@ function renderRoomCard(room, buildingInfo, distanceMeters) {
   `;
 }
 
-function renderRoomsGrid(rooms, buildings, userCoords) {
+function renderRoomsGrid(rooms, buildings, userCoords, isPreview, totalCount) {
   const container = document.getElementById('rooms-grid');
   const countEl = document.getElementById('results-count');
   if (!container) return;
 
   if (rooms.length === 0) {
+    const hasGps = !!userCoords;
     container.innerHTML = `
       <div class="empty-state">
-        <div class="empty-icon">🔍</div>
+        <div class="empty-icon">🏫</div>
         <h3>Nenhuma sala encontrada</h3>
-        <p>Tente ajustar os filtros de busca, prédio ou campus.</p>
+        <p>${hasGps ? 'Não há salas com os filtros aplicados nesta região.' : 'Tente ajustar os filtros de busca ou campus.'}</p>
         <button class="btn-primary" onclick="window.App.resetFilters()">Limpar Filtros</button>
       </div>
     `;
-    if (countEl) countEl.textContent = '0 salas encontradas';
+    if (countEl) countEl.textContent = '0 salas';
     return;
   }
 
   if (countEl) {
-    countEl.textContent = `${rooms.length} sala${rooms.length !== 1 ? 's' : ''} encontrada${rooms.length !== 1 ? 's' : ''}`;
+    if (isPreview) {
+      countEl.textContent = `Mostrando 5 mais próximas de ${totalCount} salas`;
+    } else {
+      countEl.textContent = `${rooms.length} sala${rooms.length !== 1 ? 's' : ''} encontrada${rooms.length !== 1 ? 's' : ''}`;
+    }
   }
 
   const cardsHtml = rooms.map((room) => {
@@ -200,7 +205,17 @@ function renderRoomsGrid(rooms, buildings, userCoords) {
     return renderRoomCard(room, buildingInfo, dist);
   }).join('');
 
-  container.innerHTML = cardsHtml;
+  // Show-all banner when in preview mode
+  const showAllBanner = isPreview ? `
+    <div class="show-all-banner">
+      <span>Mostrando 5 de <strong>${totalCount}</strong> salas disponíveis</span>
+      <button class="btn-show-all" id="btn-show-all" onclick="window.App.setShowAll(true)">
+        Ver todas as ${totalCount} salas
+      </button>
+    </div>
+  ` : '';
+
+  container.innerHTML = cardsHtml + showAllBanner;
 }
 
 window.UI = {

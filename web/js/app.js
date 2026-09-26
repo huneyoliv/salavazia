@@ -9,12 +9,13 @@ const AppState = {
   userCoords: null,
   gpsLoading: false,
   gpsError: null,
+  showAll: false,
   filters: {
     query: '',
     campus: 'all',
     building: 'all',
     category: 'all',
-    freeOnly: true
+    freeOnly: false
   }
 };
 
@@ -80,6 +81,11 @@ function populateBuildingFilter() {
   select.value = currentVal;
 }
 
+function hasActiveFilters() {
+  const { query, campus, building, category, freeOnly } = AppState.filters;
+  return query.trim() !== '' || campus !== 'all' || building !== 'all' || category !== 'all' || freeOnly;
+}
+
 function filterAndSortRooms() {
   if (!AppState.statusData || !AppState.statusData.rooms) return [];
 
@@ -87,56 +93,54 @@ function filterAndSortRooms() {
   const qLower = query.trim().toLowerCase();
 
   let filtered = AppState.statusData.rooms.filter((room) => {
-    // Only display rooms that have active schedules
     if (!room.has_schedule) return false;
 
-    // Free only filter
     if (freeOnly && !room.is_free_now) return false;
 
-    // Building filter
     if (building !== 'all' && room.building !== building) return false;
 
-    // Campus filter
     const bldgInfo = AppState.buildingsData[room.building];
     if (campus !== 'all') {
       if (!bldgInfo || bldgInfo.campus !== campus) return false;
     }
 
-    // Category filter
     if (category !== 'all' && room.category !== category) return false;
 
-    // Text search filter
     if (qLower) {
       const matchName = (room.name || '').toLowerCase().includes(qLower);
       const matchBldg = (room.building || '').toLowerCase().includes(qLower);
       const matchNum = (room.room_number || '').toLowerCase().includes(qLower);
       const matchClass = (room.current_class || '').toLowerCase().includes(qLower) ||
                          (room.next_class || '').toLowerCase().includes(qLower);
-      if (!matchName && !matchBldg && !matchNum && !matchClass) {
-        return false;
-      }
+      if (!matchName && !matchBldg && !matchNum && !matchClass) return false;
     }
 
     return true;
   });
 
-  // Sort rooms
+  // Sort: by distance if GPS available, otherwise alphabetical
   if (AppState.userCoords) {
     filtered.sort((a, b) => {
       const bldgA = AppState.buildingsData[a.building];
       const bldgB = AppState.buildingsData[b.building];
       const distA = bldgA ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgA.lat, bldgA.lng) : Infinity;
       const distB = bldgB ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgB.lat, bldgB.lng) : Infinity;
-
       if (distA !== distB) return distA - distB;
       return a.name.localeCompare(b.name);
     });
   } else {
-    // Default alphabetical by building and name
     filtered.sort((a, b) => {
       if (a.building !== b.building) return a.building.localeCompare(b.building);
       return a.name.localeCompare(b.name);
     });
+  }
+
+  // Default view: show only 5 nearest rooms unless user expanded or has active filters
+  const isDefaultView = !AppState.showAll && !hasActiveFilters();
+  if (isDefaultView && filtered.length > 5) {
+    filtered._totalCount = filtered.length;
+    filtered = filtered.slice(0, 5);
+    filtered._isPreview = true;
   }
 
   return filtered;
@@ -161,13 +165,15 @@ function updateAppView() {
   );
 
   const filteredRooms = filterAndSortRooms();
+  const isPreview = filteredRooms._isPreview || false;
+  const totalCount = filteredRooms._totalCount || filteredRooms.length;
 
   const totalActive = AppState.statusData ? AppState.statusData.summary.total_active_rooms : 0;
   const totalFree = AppState.statusData ? AppState.statusData.summary.total_free_now : 0;
   const totalOccupied = totalActive - totalFree;
 
   window.UI.renderMetrics(totalActive, totalFree, totalOccupied, nearestInfo);
-  window.UI.renderRoomsGrid(filteredRooms, AppState.buildingsData, AppState.userCoords);
+  window.UI.renderRoomsGrid(filteredRooms, AppState.buildingsData, AppState.userCoords, isPreview, totalCount);
 }
 
 async function requestGpsLocation() {
@@ -192,6 +198,7 @@ function setupEventListeners() {
   const searchInput = document.getElementById('search-input');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
+      AppState.showAll = true;
       AppState.filters.query = e.target.value;
       updateAppView();
     });
@@ -211,6 +218,7 @@ function setupEventListeners() {
   const freeToggle = document.getElementById('toggle-free-only');
   if (freeToggle) {
     freeToggle.addEventListener('change', (e) => {
+      AppState.showAll = true;
       AppState.filters.freeOnly = e.target.checked;
       updateAppView();
     });
@@ -222,6 +230,7 @@ function setupEventListeners() {
     pill.addEventListener('click', (e) => {
       campusPills.forEach((p) => p.classList.remove('active'));
       e.currentTarget.classList.add('active');
+      AppState.showAll = true;
       AppState.filters.campus = e.currentTarget.dataset.campus;
       populateBuildingFilter();
       updateAppView();
@@ -232,6 +241,7 @@ function setupEventListeners() {
   const buildingSelect = document.getElementById('filter-building');
   if (buildingSelect) {
     buildingSelect.addEventListener('change', (e) => {
+      AppState.showAll = true;
       AppState.filters.building = e.target.value;
       updateAppView();
     });
@@ -241,6 +251,7 @@ function setupEventListeners() {
   const categorySelect = document.getElementById('filter-category');
   if (categorySelect) {
     categorySelect.addEventListener('change', (e) => {
+      AppState.showAll = true;
       AppState.filters.category = e.target.value;
       updateAppView();
     });
@@ -257,6 +268,11 @@ function setupEventListeners() {
       if (e.target === modalBackdrop) modalBackdrop.style.display = 'none';
     });
   }
+}
+
+function setShowAll(val) {
+  AppState.showAll = val;
+  updateAppView();
 }
 
 function showRoomDetails(roomId) {
@@ -288,6 +304,7 @@ function showRoomDetails(roomId) {
 }
 
 function resetFilters() {
+  AppState.showAll = false;
   AppState.filters.query = '';
   AppState.filters.campus = 'all';
   AppState.filters.building = 'all';
@@ -339,5 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.App = {
   requestGpsLocation,
   showRoomDetails,
-  resetFilters
+  resetFilters,
+  setShowAll
 };
