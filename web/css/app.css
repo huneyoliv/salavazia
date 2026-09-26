@@ -722,6 +722,46 @@ input:checked + .toggle-slider:before {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Header Right — Clock + GitHub Author */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.github-author-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem 0.4rem 0.4rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.github-author-link:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-card-hover);
+  transform: scale(1.03);
+}
+
+.github-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.github-author-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
 /* Footer */
 .app-footer {
   margin-top: 4rem;
@@ -730,6 +770,57 @@ input:checked + .toggle-slider:before {
   text-align: center;
   color: var(--text-dim);
   font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-author-card {
+  margin-bottom: 0.5rem;
+}
+
+.footer-author-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  padding: 0.65rem 1.25rem 0.65rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.footer-author-link:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-card-hover);
+  transform: translateY(-1px);
+}
+
+.footer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-author-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-author-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.footer-author-handle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 .app-footer a {
@@ -748,9 +839,18 @@ input:checked + .toggle-slider:before {
     align-items: flex-start;
   }
 
-  .live-clock-card {
+  .header-right {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .live-clock-card {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .github-author-name {
+    display: none;
   }
 
   .filters-row {
