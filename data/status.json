@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-09-26T10:53:37.956130-03:00",
-  "evaluated_timestamp": "2026-09-26T10:53:37.954335-03:00",
+  "generated_at": "2026-09-26T15:42:40.635970-03:00",
+  "evaluated_timestamp": "2026-09-26T15:42:40.633373-03:00",
   "schedule": {
     "day_of_week": 7,
     "day_name": "Sábado",
     "is_academic_hours": true,
-    "status_label": "Aula em andamento: M4 (10:10 - 11:00)",
+    "status_label": "Aula em andamento: T3 (15:10 - 16:00)",
     "current_slot": {
-      "shift": 1,
-      "slot_index": 4,
-      "code": "M4",
-      "time_range": "10:10 - 11:00",
-      "start": "10:10",
-      "end": "11:00"
+      "shift": 2,
+      "slot_index": 3,
+      "code": "T3",
+      "time_range": "15:10 - 16:00",
+      "start": "15:10",
+      "end": "16:00"
     },
     "next_slot": {
-      "shift": 1,
-      "slot_index": 5,
-      "code": "M5",
-      "time_range": "11:00 - 11:50",
-      "start": "11:00",
-      "end": "11:50"
+      "shift": 2,
+      "slot_index": 4,
+      "code": "T4",
+      "time_range": "16:10 - 17:00",
+      "start": "16:10",
+      "end": "17:00"
     }
   },
   "summary": {
     "total_rooms": 531,
     "total_active_rooms": 216,
-    "total_free_now": 212,
-    "total_occupied_now": 4
+    "total_free_now": 216,
+    "total_occupied_now": 0
   },
   "rooms": [
     {
@@ -4254,10 +4254,10 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "GEOLO0105-01A",
-      "free_until": "11:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -7748,12 +7748,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": false,
+      "is_free_now": true,
       "is_free_next": true,
-      "current_class": "EDUI0100-01",
+      "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": "11:00"
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008999,
@@ -7793,12 +7793,12 @@
       "category": "SALA DE AULA",
       "capacity": 51,
       "has_schedule": true,
-      "is_free_now": false,
-      "is_free_next": false,
-      "current_class": "EDUI0133-01",
-      "next_class": "EDUI0135-01",
-      "free_until": null,
-      "free_at": "13:30"
+      "is_free_now": true,
+      "is_free_next": true,
+      "current_class": null,
+      "next_class": null,
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009002,
@@ -7808,12 +7808,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": false,
+      "is_free_now": true,
       "is_free_next": true,
-      "current_class": "EDUI0101-01",
+      "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": "11:00"
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009003,
@@ -7868,12 +7868,12 @@
       "category": "SALA DE AULA",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": false,
+      "is_free_now": true,
       "is_free_next": true,
-      "current_class": "QUII0170-01",
+      "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": "11:00"
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009007,
