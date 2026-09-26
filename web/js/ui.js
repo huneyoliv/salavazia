@@ -55,18 +55,40 @@ function renderGpsBanner(gpsState, nearestInfo) {
     return;
   }
 
-  if (gpsState.error) {
+  if (gpsState.error || !gpsState.coords) {
     banner.innerHTML = `
-      <div class="gps-card gps-error">
-        <span class="gps-icon">📍</span>
+      <div class="gps-card gps-notice">
+        <span class="gps-icon">🔍</span>
         <div class="gps-info">
-          <strong>Localização desativada</strong>
-          <span>${escapeHtml(gpsState.error)} — Salas ordenadas por nome do prédio.</span>
+          <strong>GPS não ativado — Busque pela barra de pesquisa</strong>
+          <span>Sem GPS? Use a <strong>barra de busca</strong> abaixo para procurar pelo prédio ou sala desejada (ex: <em>DID 3, 104, Química</em>).</span>
         </div>
-        <button id="btn-retry-gps" class="btn-sm btn-outline">Tentar Novamente</button>
+        <div class="gps-actions">
+          <button id="btn-focus-search" class="btn-sm btn-search-cta" title="Rolar até a barra de busca">
+            🔍 Ir para a Busca
+          </button>
+          <button id="btn-retry-gps" class="btn-sm btn-outline" title="Tentar ativar GPS">
+            📍 Ativar GPS
+          </button>
+        </div>
       </div>
     `;
     banner.style.display = 'block';
+
+    const focusBtn = document.getElementById('btn-focus-search');
+    if (focusBtn) {
+      focusBtn.addEventListener('click', () => {
+        const input = document.getElementById('search-input');
+        if (input) {
+          input.focus();
+          input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          input.classList.remove('highlight-pulse');
+          void input.offsetWidth;
+          input.classList.add('highlight-pulse');
+        }
+      });
+    }
+
     const retryBtn = document.getElementById('btn-retry-gps');
     if (retryBtn) {
       retryBtn.addEventListener('click', () => window.App.requestGpsLocation());
@@ -82,7 +104,7 @@ function renderGpsBanner(gpsState, nearestInfo) {
           <strong>Você está a ${nearestInfo.distanceFormatted} do prédio ${escapeHtml(nearestInfo.building.name)}</strong>
           <span>${escapeHtml(nearestInfo.building.campus)} • Salas ordenadas da mais próxima para a mais distante</span>
         </div>
-        <button id="btn-refresh-gps" class="btn-sm btn-outline" title="Atualizar GPS">Atualizar</button>
+        <button id="btn-refresh-gps" class="btn-sm btn-outline" title="Atualizar GPS">Atualizar 📍</button>
       </div>
     `;
     banner.style.display = 'block';
@@ -107,7 +129,7 @@ function renderMetrics(totalRooms, totalFree, totalOccupied, nearestInfo) {
     if (nearestInfo) {
       nearestEl.innerHTML = `<strong>${escapeHtml(nearestInfo.key)}</strong> <span class="text-subtle">(${nearestInfo.distanceFormatted})</span>`;
     } else {
-      nearestEl.innerHTML = '<span class="text-subtle">GPS Desativado</span>';
+      nearestEl.innerHTML = '<span class="text-subtle" title="Utilize a barra de busca para encontrar sua sala">Use a busca 🔍</span>';
     }
   }
 }
@@ -187,7 +209,15 @@ function renderRoomsGrid(rooms, buildings, userCoords, isPreview, totalCount) {
     if (isPreview) {
       countEl.textContent = `Mostrando as 5 salas mais prioritárias (de ${totalCount} salas livres)`;
     } else {
-      countEl.textContent = `${rooms.length} sala${rooms.length !== 1 ? 's' : ''} encontrada${rooms.length !== 1 ? 's' : ''}`;
+      const freeCount = rooms.filter((r) => r.is_free_now).length;
+      const occupiedCount = rooms.length - freeCount;
+      if (occupiedCount > 0 && freeCount > 0) {
+        countEl.textContent = `${rooms.length} salas encontradas (${freeCount} livres no topo • ${occupiedCount} ocupadas)`;
+      } else if (freeCount > 0) {
+        countEl.textContent = `${rooms.length} sala${rooms.length !== 1 ? 's' : ''} livre${rooms.length !== 1 ? 's' : ''} encontrada${rooms.length !== 1 ? 's' : ''}`;
+      } else {
+        countEl.textContent = `${rooms.length} sala${rooms.length !== 1 ? 's' : ''} ocupada${rooms.length !== 1 ? 's' : ''} encontrada${rooms.length !== 1 ? 's' : ''}`;
+      }
     }
   }
 

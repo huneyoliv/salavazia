@@ -188,6 +188,48 @@ body {
   border: 1px solid var(--danger-border);
 }
 
+.gps-notice {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.gps-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-search-cta {
+  background: linear-gradient(135deg, var(--primary), #0284c7);
+  color: #ffffff;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btn-search-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+@keyframes highlightGlow {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.6); border-color: #38bdf8; }
+  50% { box-shadow: 0 0 20px 4px rgba(56, 189, 248, 0.8); border-color: #38bdf8; }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+
+.search-input.highlight-pulse {
+  animation: highlightGlow 1.2s ease-out;
+}
+
 .gps-info {
   flex: 1;
 }
