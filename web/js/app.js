@@ -15,7 +15,7 @@ const AppState = {
     campus: 'all',
     building: 'all',
     category: 'all',
-    freeOnly: false
+    freeOnly: true
   }
 };
 
@@ -81,9 +81,42 @@ function populateBuildingFilter() {
   select.value = currentVal;
 }
 
+function isDefaultSearchState() {
+  const { query, campus, building, category } = AppState.filters;
+  return query.trim() === '' && campus === 'all' && building === 'all' && category === 'all';
+}
+
 function hasActiveFilters() {
   const { query, campus, building, category, freeOnly } = AppState.filters;
-  return query.trim() !== '' || campus !== 'all' || building !== 'all' || category !== 'all' || freeOnly;
+  return query.trim() !== '' || campus !== 'all' || building !== 'all' || category !== 'all' || !freeOnly;
+}
+
+function getRoomAvailabilityScore(room, nowMinutes, sigaaDay) {
+  if (!room.is_free_now) {
+    return 0;
+  }
+
+  if (room.free_until === 'Resto do dia') {
+    const catalogEntry = AppState.roomsCatalog[room.id];
+    const allocationsToday = (catalogEntry?.allocations || []).filter(
+      (a) => a.day_of_week === sigaaDay
+    ).length;
+    return allocationsToday === 0 ? 900 : 720;
+  }
+
+  if (room.free_until && room.free_until.includes(':')) {
+    const [h, m] = room.free_until.split(':').map(Number);
+    const endMinutes = h * 60 + m;
+    let diff = endMinutes - nowMinutes;
+    if (diff < 0) diff = 30;
+
+    if (!room.is_free_next) {
+      return Math.min(diff, 45);
+    }
+    return diff;
+  }
+
+  return room.is_free_next ? 120 : 30;
 }
 
 function filterAndSortRooms() {
@@ -118,31 +151,59 @@ function filterAndSortRooms() {
     return true;
   });
 
-  // Sort: by distance if GPS available, otherwise alphabetical
-  if (AppState.userCoords) {
-    filtered.sort((a, b) => {
+  const now = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  const sigaaDay = window.ScheduleEngine ? window.ScheduleEngine.getSigaaDayOfWeek(now) : now.getDay() + 1;
+
+  filtered.sort((a, b) => {
+    if (a.is_free_now !== b.is_free_now) {
+      return a.is_free_now ? -1 : 1;
+    }
+
+    const availA = getRoomAvailabilityScore(a, nowMinutes, sigaaDay);
+    const availB = getRoomAvailabilityScore(b, nowMinutes, sigaaDay);
+
+    if (AppState.userCoords) {
       const bldgA = AppState.buildingsData[a.building];
       const bldgB = AppState.buildingsData[b.building];
-      const distA = bldgA ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgA.lat, bldgA.lng) : Infinity;
-      const distB = bldgB ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgB.lat, bldgB.lng) : Infinity;
-      if (distA !== distB) return distA - distB;
+      const distA = bldgA && typeof bldgA.lat === 'number'
+        ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgA.lat, bldgA.lng)
+        : Infinity;
+      const distB = bldgB && typeof bldgB.lat === 'number'
+        ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgB.lat, bldgB.lng)
+        : Infinity;
+
+      const effDistA = distA - (availA * 0.35);
+      const effDistB = distB - (availB * 0.35);
+
+      if (Math.abs(effDistA - effDistB) > 0.01) {
+        return effDistA - effDistB;
+      }
       return a.name.localeCompare(b.name);
-    });
-  } else {
-    filtered.sort((a, b) => {
-      if (a.building !== b.building) return a.building.localeCompare(b.building);
-      return a.name.localeCompare(b.name);
-    });
+    }
+
+    if (availA !== availB) {
+      return availB - availA;
+    }
+
+    if (a.building !== b.building) {
+      return a.building.localeCompare(b.building);
+    }
+    return a.name.localeCompare(b.name);
+  });
+
+  const isDefaultView = !AppState.showAll && isDefaultSearchState();
+  const totalCount = filtered.length;
+
+  if (isDefaultView && totalCount > 5) {
+    const previewRooms = filtered.slice(0, 5);
+    previewRooms._totalCount = totalCount;
+    previewRooms._isPreview = true;
+    return previewRooms;
   }
 
-  // Default view: show only 5 nearest rooms unless user expanded or has active filters
-  const isDefaultView = !AppState.showAll && !hasActiveFilters();
-  if (isDefaultView && filtered.length > 5) {
-    filtered._totalCount = filtered.length;
-    filtered = filtered.slice(0, 5);
-    filtered._isPreview = true;
-  }
-
+  filtered._totalCount = totalCount;
+  filtered._isPreview = false;
   return filtered;
 }
 
@@ -309,13 +370,13 @@ function resetFilters() {
   AppState.filters.campus = 'all';
   AppState.filters.building = 'all';
   AppState.filters.category = 'all';
-  AppState.filters.freeOnly = false;
+  AppState.filters.freeOnly = true;
 
   const searchInput = document.getElementById('search-input');
   if (searchInput) searchInput.value = '';
 
   const freeToggle = document.getElementById('toggle-free-only');
-  if (freeToggle) freeToggle.checked = false;
+  if (freeToggle) freeToggle.checked = true;
 
   const buildingSelect = document.getElementById('filter-building');
   if (buildingSelect) buildingSelect.value = 'all';
