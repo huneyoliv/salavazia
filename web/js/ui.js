@@ -185,7 +185,7 @@ function renderRoomsGrid(rooms, buildings, userCoords, isPreview, totalCount) {
 
   if (countEl) {
     if (isPreview) {
-      countEl.textContent = `Mostrando 5 mais próximas de ${totalCount} salas`;
+      countEl.textContent = `Mostrando as 5 salas mais prioritárias (de ${totalCount} salas livres)`;
     } else {
       countEl.textContent = `${rooms.length} sala${rooms.length !== 1 ? 's' : ''} encontrada${rooms.length !== 1 ? 's' : ''}`;
     }
@@ -205,10 +205,10 @@ function renderRoomsGrid(rooms, buildings, userCoords, isPreview, totalCount) {
     return renderRoomCard(room, buildingInfo, dist);
   }).join('');
 
-  // Show-all banner when in preview mode
-  const showAllBanner = isPreview ? `
+  // Show-all banner when in preview mode and there are more rooms to display
+  const showAllBanner = (isPreview && totalCount > rooms.length) ? `
     <div class="show-all-banner">
-      <span>Mostrando 5 de <strong>${totalCount}</strong> salas disponíveis</span>
+      <span>Mostrando 5 de <strong>${totalCount}</strong> salas livres disponíveis</span>
       <button class="btn-show-all" id="btn-show-all" onclick="window.App.setShowAll(true)">
         Ver todas as ${totalCount} salas
       </button>

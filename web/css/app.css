@@ -756,44 +756,11 @@ input:checked + .toggle-slider:before {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Header Right — Clock + GitHub Author */
+/* Header Right — Live Clock */
 .header-right {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-.github-author-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  padding: 0.4rem 0.75rem 0.4rem 0.4rem;
-  border-radius: var(--radius-full);
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-subtle);
-  transition: all var(--transition-fast);
-}
-
-.github-author-link:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  background: var(--bg-card-hover);
-  transform: scale(1.03);
-}
-
-.github-avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-.github-author-name {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-muted);
 }
 
 /* Footer */
@@ -881,10 +848,6 @@ input:checked + .toggle-slider:before {
   .live-clock-card {
     flex: 1;
     justify-content: space-between;
-  }
-
-  .github-author-name {
-    display: none;
   }
 
   .filters-row {
