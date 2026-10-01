@@ -96,27 +96,34 @@ function getRoomAvailabilityScore(room, nowMinutes, sigaaDay) {
     return 0;
   }
 
+  let score = 0;
+
   if (room.free_until === 'Resto do dia') {
     const catalogEntry = AppState.roomsCatalog[room.id];
     const allocationsToday = (catalogEntry?.allocations || []).filter(
       (a) => a.day_of_week === sigaaDay
     ).length;
-    return allocationsToday === 0 ? 900 : 720;
-  }
-
-  if (room.free_until && room.free_until.includes(':')) {
+    score = allocationsToday === 0 ? 900 : 720;
+  } else if (room.free_until && room.free_until.includes(':')) {
     const [h, m] = room.free_until.split(':').map(Number);
     const endMinutes = h * 60 + m;
     let diff = endMinutes - nowMinutes;
     if (diff < 0) diff = 30;
-
-    if (!room.is_free_next) {
-      return Math.min(diff, 45);
-    }
-    return diff;
+    score = room.is_free_next ? diff + 30 : Math.min(diff, 45);
+  } else {
+    score = room.is_free_next ? 120 : 30;
   }
 
-  return room.is_free_next ? 120 : 30;
+  if (room.category === 'SALA DE AULA') {
+    score += 20;
+  }
+
+  const cap = room.capacity || 0;
+  if (cap >= 30 && cap <= 80) {
+    score += 10;
+  }
+
+  return score;
 }
 
 function filterAndSortRooms() {
