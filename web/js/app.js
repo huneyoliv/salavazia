@@ -126,11 +126,26 @@ function getRoomAvailabilityScore(room, nowMinutes, sigaaDay) {
   return score;
 }
 
+function normalizeSearchText(str) {
+  if (!str) return '';
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[-_./]/g, ' ')
+    .replace(/([a-zA-Z])(\d)/g, '$1 $2')
+    .replace(/(\d)([a-zA-Z])/g, '$1 $2')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function filterAndSortRooms() {
   if (!AppState.statusData || !AppState.statusData.rooms) return [];
 
   const { query, campus, building, category, freeOnly } = AppState.filters;
-  const qLower = query.trim().toLowerCase();
+  const normQuery = normalizeSearchText(query);
+  const queryTokens = normQuery ? normQuery.split(' ').filter(Boolean) : [];
+  const queryCompact = normQuery.replace(/\s+/g, '');
 
   let filtered = AppState.statusData.rooms.filter((room) => {
     if (!room.has_schedule) return false;
@@ -146,13 +161,29 @@ function filterAndSortRooms() {
 
     if (category !== 'all' && room.category !== category) return false;
 
-    if (qLower) {
-      const matchName = (room.name || '').toLowerCase().includes(qLower);
-      const matchBldg = (room.building || '').toLowerCase().includes(qLower);
-      const matchNum = (room.room_number || '').toLowerCase().includes(qLower);
-      const matchClass = (room.current_class || '').toLowerCase().includes(qLower) ||
-                         (room.next_class || '').toLowerCase().includes(qLower);
-      if (!matchName && !matchBldg && !matchNum && !matchClass) return false;
+    if (queryTokens.length > 0) {
+      const bldgName = bldgInfo ? bldgInfo.name : '';
+      const rawCombined = `${room.name || ''} ${room.building || ''} ${room.room_number || ''} ${bldgName} ${room.category || ''} ${room.current_class || ''} ${room.next_class || ''}`;
+      const targetNorm = normalizeSearchText(rawCombined);
+      const targetWords = targetNorm.split(' ');
+      const targetCompact = targetNorm.replace(/\s+/g, '');
+
+      const matchesAllTokens = queryTokens.every((token) => {
+        if (/^\d+$/.test(token)) {
+          const numVal = parseInt(token, 10);
+          return targetWords.some((w) => {
+            if (w === token) return true;
+            if (/^\d+$/.test(w)) {
+              if (parseInt(w, 10) === numVal) return true;
+              if (token.length >= 3 && w.startsWith(token)) return true;
+            }
+            return false;
+          });
+        }
+        return targetNorm.includes(token) || targetCompact.includes(token);
+      });
+
+      if (!matchesAllTokens) return false;
     }
 
     return true;
