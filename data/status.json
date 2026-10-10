@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-10-10T12:34:59.517699-03:00",
-  "evaluated_timestamp": "2026-10-10T12:34:59.515449-03:00",
+  "generated_at": "2026-10-10T16:30:21.386934-03:00",
+  "evaluated_timestamp": "2026-10-10T16:30:21.384163-03:00",
   "schedule": {
     "day_of_week": 7,
     "day_name": "Sábado",
     "is_academic_hours": true,
-    "status_label": "Aula em andamento: M6 (11:50 - 12:40)",
+    "status_label": "Aula em andamento: T4 (16:10 - 17:00)",
     "current_slot": {
-      "shift": 1,
-      "slot_index": 6,
-      "code": "M6",
-      "time_range": "11:50 - 12:40",
-      "start": "11:50",
-      "end": "12:40"
+      "shift": 2,
+      "slot_index": 4,
+      "code": "T4",
+      "time_range": "16:10 - 17:00",
+      "start": "16:10",
+      "end": "17:00"
     },
     "next_slot": {
       "shift": 2,
-      "slot_index": 1,
-      "code": "T1",
-      "time_range": "13:30 - 14:20",
-      "start": "13:30",
-      "end": "14:20"
+      "slot_index": 5,
+      "code": "T5",
+      "time_range": "17:00 - 17:50",
+      "start": "17:00",
+      "end": "17:50"
     }
   },
   "summary": {
     "total_rooms": 531,
     "total_active_rooms": 216,
-    "total_free_now": 214,
-    "total_occupied_now": 2
+    "total_free_now": 216,
+    "total_occupied_now": 0
   },
   "rooms": [
     {
@@ -4253,12 +4253,12 @@
       "category": "LABORATORIO",
       "capacity": 25,
       "has_schedule": true,
-      "is_free_now": false,
+      "is_free_now": true,
       "is_free_next": true,
-      "current_class": "GEOLO0105-01A",
+      "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": "13:30"
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008766,
@@ -7793,12 +7793,12 @@
       "category": "SALA DE AULA",
       "capacity": 51,
       "has_schedule": true,
-      "is_free_now": false,
+      "is_free_now": true,
       "is_free_next": true,
-      "current_class": "EDUI0135-01",
+      "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": "13:30"
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009002,
