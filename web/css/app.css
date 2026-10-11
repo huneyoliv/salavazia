@@ -1057,12 +1057,12 @@ body {
   right: 1rem;
   max-width: 440px;
   margin: 0 auto;
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-strong);
+  background-color: #121827;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-lg);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08);
   z-index: 99999;
-  padding: 0.9rem 1rem 0.95rem 1rem;
+  padding: 0.95rem 1.05rem 1rem 1.05rem;
   box-sizing: border-box;
   animation: pwaSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   transition: transform 0.25s ease, opacity 0.25s ease;
@@ -1121,20 +1121,20 @@ body {
 .pwa-banner-title {
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #f8fafc;
   line-height: 1.25;
 }
 
 .pwa-banner-sub {
   font-size: 0.74rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   line-height: 1.2;
 }
 
 .pwa-btn-close {
   background: transparent;
   border: none;
-  color: var(--text-muted);
+  color: #94a3b8;
   padding: 0.25rem;
   margin-top: -0.15rem;
   margin-right: -0.25rem;
@@ -1147,13 +1147,13 @@ body {
 }
 
 .pwa-btn-close:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .pwa-banner-desc {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: #94a3b8;
   line-height: 1.4;
   margin: 0 0 0.8rem 0;
 }
@@ -1166,9 +1166,9 @@ body {
 }
 
 .btn-pwa-dismiss {
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--border-subtle);
+  background-color: #1a2336;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-sm);
   padding: 0.5rem 0.85rem;
   font-size: 0.82rem;
@@ -1178,12 +1178,13 @@ body {
 }
 
 .btn-pwa-dismiss:hover {
-  color: var(--text-primary);
-  border-color: var(--border-default);
+  background-color: #222e47;
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-pwa-install {
-  background: var(--brand-primary);
+  background-color: #10b981;
   color: #ffffff;
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
@@ -1196,7 +1197,7 @@ body {
 }
 
 .btn-pwa-install:hover {
-  background: #059669;
+  background-color: #059669;
 }
 
 @media (max-width: 480px) {
