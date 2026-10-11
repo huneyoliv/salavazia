@@ -65,6 +65,7 @@ class ScheduleState:
     next_slot: TimeSlot | None
     is_academic_hours: bool
     status_label: str
+    is_expediente: bool = False
 
 
 def get_sigaa_day_of_week(dt: datetime) -> int:
@@ -82,34 +83,52 @@ def get_schedule_state(target_dt: datetime | None = None) -> ScheduleState:
     sigaa_day = get_sigaa_day_of_week(target_dt)
     day_name = DAY_NAMES.get(sigaa_day, "Desconhecido")
     current_time = target_dt.time()
+    now_minutes = current_time.hour * 60 + current_time.minute
+
+    # UFS schedule rules:
+    # - Mon..Fri (2..6): 07:30 (450m) to 22:15 (1335m)
+    # - Saturday (7): 07:30 (450m) to 12:30 (750m) - shift 1 only
+    # - Sunday (1): No classes
+    is_weekday = 2 <= sigaa_day <= 6
+    is_saturday = sigaa_day == 7
+    is_expediente = (is_weekday and 450 <= now_minutes <= 1335) or (
+        is_saturday and 450 <= now_minutes <= 750
+    )
+
+    applicable_slots = [s for s in UFS_SLOTS if s.shift == 1] if is_saturday else UFS_SLOTS
 
     current_slot: TimeSlot | None = None
     next_slot: TimeSlot | None = None
 
-    # Find matching current slot
-    for idx, slot in enumerate(UFS_SLOTS):
-        if slot.start <= current_time < slot.end:
-            current_slot = slot
-            if idx + 1 < len(UFS_SLOTS):
-                next_slot = UFS_SLOTS[idx + 1]
-            break
-
-    # If not in an active slot, find the upcoming next slot today
-    if current_slot is None:
-        for slot in UFS_SLOTS:
-            if current_time < slot.start:
-                next_slot = slot
+    if is_expediente:
+        # Find matching current slot
+        for idx, slot in enumerate(applicable_slots):
+            if slot.start <= current_time < slot.end:
+                current_slot = slot
+                if idx + 1 < len(applicable_slots):
+                    next_slot = applicable_slots[idx + 1]
                 break
 
-    is_academic_hours = current_slot is not None and sigaa_day in range(2, 8)
+        # If not in an active slot, find upcoming slot in applicable slots today
+        if current_slot is None:
+            for slot in applicable_slots:
+                if current_time < slot.start:
+                    next_slot = slot
+                    break
+
+    is_academic_hours = current_slot is not None and is_expediente
 
     if current_slot:
         status_label = f"Aula em andamento: {current_slot.code} ({current_slot.time_range})"
-    elif next_slot:
+    elif next_slot and is_expediente:
         next_time = next_slot.start.strftime("%H:%M")
         status_label = f"Intervalo: Próxima aula {next_slot.code} às {next_time}"
     elif sigaa_day == 1:
         status_label = "Domingo (sem aulas regulares)"
+    elif is_saturday and now_minutes > 750:
+        status_label = "Sábado (aulas encerradas às 12:30)"
+    elif now_minutes < 450:
+        status_label = "Fora de expediente (aulas iniciam às 07:30)"
     else:
         status_label = "Fora do horário de aulas"
 
@@ -121,4 +140,5 @@ def get_schedule_state(target_dt: datetime | None = None) -> ScheduleState:
         next_slot=next_slot,
         is_academic_hours=is_academic_hours,
         status_label=status_label,
+        is_expediente=is_expediente,
     )

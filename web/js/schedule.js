@@ -51,27 +51,37 @@ function getCurrentScheduleState(date = new Date()) {
   const dayName = DAY_NAMES[sigaaDay] || 'Desconhecido';
   const nowMinutes = date.getHours() * 60 + date.getMinutes();
 
-  // UFS classes run Monday (2) to Saturday (7) between 07:30 (450m) and 22:15 (1335m)
-  const isExpediente = sigaaDay >= 2 && sigaaDay <= 7 && nowMinutes >= 450 && nowMinutes <= 1335;
+  // UFS classes run:
+  // - Monday to Friday (2..6): 07:30 (450m) to 22:15 (1335m)
+  // - Saturday (7): 07:30 (450m) to 12:30 (750m) - shift 1 only
+  // - Sunday (1): No classes
+  const isWeekday = sigaaDay >= 2 && sigaaDay <= 6;
+  const isSaturday = sigaaDay === 7;
+  const isExpediente = (isWeekday && nowMinutes >= 450 && nowMinutes <= 1335) ||
+                       (isSaturday && nowMinutes >= 450 && nowMinutes <= 750);
+
+  const applicableSlots = isSaturday
+    ? UFS_SLOTS.filter((s) => s.shift === 1)
+    : UFS_SLOTS;
 
   let currentSlot = null;
   let nextSlot = null;
 
   if (isExpediente) {
-    for (let i = 0; i < UFS_SLOTS.length; i++) {
-      const slot = UFS_SLOTS[i];
+    for (let i = 0; i < applicableSlots.length; i++) {
+      const slot = applicableSlots[i];
       const startMin = parseTimeToMinutes(slot.start);
       const endMin = parseTimeToMinutes(slot.end);
 
       if (nowMinutes >= startMin && nowMinutes < endMin) {
         currentSlot = slot;
-        nextSlot = i + 1 < UFS_SLOTS.length ? UFS_SLOTS[i + 1] : null;
+        nextSlot = i + 1 < applicableSlots.length ? applicableSlots[i + 1] : null;
         break;
       }
     }
 
     if (!currentSlot) {
-      for (const slot of UFS_SLOTS) {
+      for (const slot of applicableSlots) {
         const startMin = parseTimeToMinutes(slot.start);
         if (nowMinutes < startMin) {
           nextSlot = slot;
@@ -94,6 +104,9 @@ function getCurrentScheduleState(date = new Date()) {
     statusMode = 'interval';
   } else if (sigaaDay === 1) {
     statusLabel = 'Domingo · Sem expediente letivo';
+    statusMode = 'off';
+  } else if (isSaturday && nowMinutes > 750) {
+    statusLabel = 'Sábado · Aulas encerradas às 12:30';
     statusMode = 'off';
   } else if (nowMinutes < 450) {
     statusLabel = 'Fora de expediente · Aulas iniciam às 07:30';

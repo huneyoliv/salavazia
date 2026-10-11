@@ -32,6 +32,24 @@ def compute_room_status(
     has_schedule = room_data.get("has_schedule", False)
     allocations = room_data.get("allocations", [])
 
+    if not schedule_state.is_expediente:
+        return {
+            "id": room_id,
+            "name": name,
+            "building": building,
+            "room_number": room_number,
+            "category": category,
+            "capacity": capacity,
+            "has_schedule": has_schedule,
+            "is_free_now": True,
+            "is_free_next": True,
+            "current_class": None,
+            "next_class": None,
+            "free_until": None,
+            "free_at": None,
+            "is_off_hours": True,
+        }
+
     # Index today's allocations by (shift, slot_index)
     today_allocations: dict[tuple[int, int], str] = {}
     for alloc in allocations:
@@ -119,9 +137,14 @@ def generate_status_payload(
         compute_room_status(room, schedule_state) for room in rooms
     ]
 
-    total_active = sum(1 for r in evaluated_rooms if r["has_schedule"])
-    total_free_now = sum(1 for r in evaluated_rooms if r["is_free_now"] and r["has_schedule"])
-    total_occupied_now = total_active - total_free_now
+    if schedule_state.is_expediente:
+        total_active = sum(1 for r in evaluated_rooms if r["has_schedule"])
+        total_free_now = sum(1 for r in evaluated_rooms if r["is_free_now"] and r["has_schedule"])
+        total_occupied_now = total_active - total_free_now
+    else:
+        total_active = 0
+        total_free_now = 0
+        total_occupied_now = 0
 
     current_slot_dict: dict[str, Any] | None = None
     if schedule_state.current_slot:
@@ -154,6 +177,7 @@ def generate_status_payload(
             "day_of_week": schedule_state.day_of_week,
             "day_name": schedule_state.day_name,
             "is_academic_hours": schedule_state.is_academic_hours,
+            "is_expediente": schedule_state.is_expediente,
             "status_label": schedule_state.status_label,
             "current_slot": current_slot_dict,
             "next_slot": next_slot_dict,
