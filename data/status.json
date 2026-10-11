@@ -1,27 +1,13 @@
 {
-  "generated_at": "2026-10-10T21:20:49.982211-03:00",
-  "evaluated_timestamp": "2026-10-10T21:20:49.978550-03:00",
+  "generated_at": "2026-10-10T22:16:29.392026-03:00",
+  "evaluated_timestamp": "2026-10-10T22:16:29.387719-03:00",
   "schedule": {
     "day_of_week": 7,
     "day_name": "Sábado",
-    "is_academic_hours": true,
-    "status_label": "Aula em andamento: N3 (20:45 - 21:30)",
-    "current_slot": {
-      "shift": 3,
-      "slot_index": 3,
-      "code": "N3",
-      "time_range": "20:45 - 21:30",
-      "start": "20:45",
-      "end": "21:30"
-    },
-    "next_slot": {
-      "shift": 3,
-      "slot_index": 4,
-      "code": "N4",
-      "time_range": "21:30 - 22:15",
-      "start": "21:30",
-      "end": "22:15"
-    }
+    "is_academic_hours": false,
+    "status_label": "Fora do horário de aulas",
+    "current_slot": null,
+    "next_slot": null
   },
   "summary": {
     "total_rooms": 531,
