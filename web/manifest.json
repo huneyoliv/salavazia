@@ -1,5 +1,5 @@
 {
-  "name": "Sala Vazia — UFS",
+  "name": "Sala Vazia",
   "short_name": "Sala Vazia",
   "description": "Localizador de salas de aula livres em tempo real na UFS por GPS",
   "start_url": "./index.html",
