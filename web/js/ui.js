@@ -126,6 +126,13 @@ function renderMetrics(totalRooms, totalFree, totalOccupied, nearestInfo) {
   const occupiedEl = document.getElementById('metric-occupied');
   const nearestEl = document.getElementById('metric-nearest');
 
+  if (totalRooms === 0) {
+    if (freeEl) freeEl.textContent = '--';
+    if (occupiedEl) occupiedEl.textContent = '--';
+    if (nearestEl) nearestEl.textContent = '--';
+    return;
+  }
+
   if (freeEl) freeEl.textContent = totalFree;
   if (occupiedEl) occupiedEl.textContent = totalOccupied;
   if (nearestEl) {
@@ -255,10 +262,25 @@ function renderRoomCard(room, buildingInfo, distanceMeters) {
   `;
 }
 
-function renderRoomsGrid(rooms, buildings, userCoords, isPreview, totalCount) {
+function renderRoomsGrid(rooms, buildings, userCoords, isPreview, totalCount, scheduleState) {
   const container = document.getElementById('rooms-grid');
   const countEl = document.getElementById('results-count');
   if (!container) return;
+
+  if (scheduleState && !scheduleState.isExpediente) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <h3>Expediente acadêmico encerrado</h3>
+        <p>${escapeHtml(scheduleState.statusLabel)}. As atividades letivas nos campi ocorrem de segunda a sexta, das 07:30 às 22:15, e aos sábados, das 07:30 às 12:30.</p>
+      </div>
+    `;
+    if (countEl) countEl.textContent = 'Expediente encerrado · Nenhuma sala ativa no momento';
+    return;
+  }
 
   if (rooms.length === 0) {
     container.innerHTML = `

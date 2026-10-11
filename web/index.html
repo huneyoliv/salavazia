@@ -9,14 +9,16 @@
 
   <!-- PWA Manifest & Favicon -->
   <link rel="manifest" href="./manifest.json">
-  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 
   <!-- Typography: Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/app.css?v=2.2.0">
 </head>
 <body>
   <div class="app-layout">
@@ -25,16 +27,11 @@
       <div class="header-inner">
         <div class="brand-group">
           <div class="brand-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-              <path d="M6 6h10"/>
-              <path d="M6 10h10"/>
-            </svg>
+            <img src="./images/logo.png" alt="Sala Vazia" class="brand-logo-img" width="32" height="32">
           </div>
           <div class="brand-headings">
             <div class="brand-title-row">
               <h1 class="brand-title">Sala Vazia</h1>
-              <span class="brand-badge">UFS</span>
             </div>
             <p class="brand-description">Disponibilidade de salas e didáticas em tempo real</p>
           </div>
@@ -179,12 +176,29 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile Install App Prompt -->
+    <aside id="pwa-install-banner" class="pwa-banner" style="display: none;" aria-label="Instalar aplicativo">
+      <div class="pwa-banner-inner">
+        <div class="pwa-banner-icon">
+          <img src="./images/logo.png" alt="Sala Vazia" width="36" height="36">
+        </div>
+        <div class="pwa-banner-text">
+          <strong class="pwa-banner-title">Usar Sala Vazia como aplicativo?</strong>
+          <p class="pwa-banner-desc">Instale na sua tela inicial para consultar salas rapidamente sem abrir o navegador.</p>
+        </div>
+        <div class="pwa-banner-actions">
+          <button id="pwa-btn-dismiss" class="btn-pwa-dismiss" type="button">Agora não</button>
+          <button id="pwa-btn-install" class="btn-pwa-install" type="button">Instalar app</button>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <!-- Scripts -->
-  <script src="./js/schedule.js"></script>
-  <script src="./js/geo.js"></script>
-  <script src="./js/ui.js"></script>
-  <script src="./js/app.js"></script>
+  <script src="./js/schedule.js?v=2.2.0"></script>
+  <script src="./js/geo.js?v=2.2.0"></script>
+  <script src="./js/ui.js?v=2.2.0"></script>
+  <script src="./js/app.js?v=2.2.0"></script>
 </body>
 </html>
