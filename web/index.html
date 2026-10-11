@@ -176,29 +176,38 @@
         </div>
       </div>
     </footer>
-
-    <!-- Mobile Install App Prompt -->
-    <aside id="pwa-install-banner" class="pwa-banner" style="display: none;" aria-label="Instalar aplicativo">
-      <div class="pwa-banner-inner">
-        <div class="pwa-banner-icon">
-          <img src="./images/logo.png" alt="Sala Vazia" width="36" height="36">
-        </div>
-        <div class="pwa-banner-text">
-          <strong class="pwa-banner-title">Usar Sala Vazia como aplicativo?</strong>
-          <p class="pwa-banner-desc">Instale na sua tela inicial para consultar salas rapidamente sem abrir o navegador.</p>
-        </div>
-        <div class="pwa-banner-actions">
-          <button id="pwa-btn-dismiss" class="btn-pwa-dismiss" type="button">Agora não</button>
-          <button id="pwa-btn-install" class="btn-pwa-install" type="button">Instalar app</button>
-        </div>
-      </div>
-    </aside>
   </div>
 
+  <!-- Mobile Install App Prompt -->
+  <aside id="pwa-install-banner" class="pwa-banner" style="display: none;" aria-label="Instalar aplicativo">
+    <div class="pwa-banner-header">
+      <div class="pwa-banner-brand">
+        <div class="pwa-banner-icon">
+          <img src="./images/logo.png" alt="Sala Vazia" width="30" height="30">
+        </div>
+        <div class="pwa-banner-headings">
+          <strong class="pwa-banner-title">Usar como aplicativo?</strong>
+          <span class="pwa-banner-sub">Acesso rápido na tela inicial</span>
+        </div>
+      </div>
+      <button id="pwa-btn-close" class="pwa-btn-close" aria-label="Fechar aviso" title="Fechar">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <p class="pwa-banner-desc">Consulte horários e salas livres na UFS com um toque, sem abrir o navegador.</p>
+    <div class="pwa-banner-actions">
+      <button id="pwa-btn-dismiss" class="btn-pwa-dismiss" type="button">Agora não</button>
+      <button id="pwa-btn-install" class="btn-pwa-install" type="button">Instalar aplicativo</button>
+    </div>
+  </aside>
+
   <!-- Scripts -->
-  <script src="./js/schedule.js?v=2.2.0"></script>
-  <script src="./js/geo.js?v=2.2.0"></script>
-  <script src="./js/ui.js?v=2.2.0"></script>
-  <script src="./js/app.js?v=2.2.0"></script>
+  <script src="./js/schedule.js?v=2.3.0"></script>
+  <script src="./js/geo.js?v=2.3.0"></script>
+  <script src="./js/ui.js?v=2.3.0"></script>
+  <script src="./js/app.js?v=2.3.0"></script>
 </body>
 </html>
