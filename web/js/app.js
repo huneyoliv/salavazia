@@ -139,15 +139,23 @@ function normalizeSearchText(str) {
     .trim();
 }
 
-function filterAndSortRooms() {
-  if (!AppState.statusData || !AppState.statusData.rooms) return [];
+function getEvaluatedRooms(scheduleState) {
+  const catalogRooms = Object.values(AppState.roomsCatalog);
+  if (catalogRooms.length > 0 && window.ScheduleEngine && typeof window.ScheduleEngine.computeRoomStatus === 'function') {
+    return catalogRooms.map((room) => window.ScheduleEngine.computeRoomStatus(room, scheduleState));
+  }
+  return AppState.statusData && AppState.statusData.rooms ? AppState.statusData.rooms : [];
+}
+
+function filterAndSortRooms(evaluatedRooms, scheduleState) {
+  if (!evaluatedRooms || evaluatedRooms.length === 0) return [];
 
   const { query, campus, building, category, freeOnly } = AppState.filters;
   const normQuery = normalizeSearchText(query);
   const queryTokens = normQuery ? normQuery.split(' ').filter(Boolean) : [];
   const queryCompact = normQuery.replace(/\s+/g, '');
 
-  let filtered = AppState.statusData.rooms.filter((room) => {
+  let filtered = evaluatedRooms.filter((room) => {
     if (!room.has_schedule) return false;
 
     if (freeOnly && !room.is_free_now) return false;
@@ -189,9 +197,9 @@ function filterAndSortRooms() {
     return true;
   });
 
-  const now = new Date();
+  const now = scheduleState ? scheduleState.timestamp || new Date() : new Date();
   const nowMinutes = now.getHours() * 60 + now.getMinutes();
-  const sigaaDay = window.ScheduleEngine ? window.ScheduleEngine.getSigaaDayOfWeek(now) : now.getDay() + 1;
+  const sigaaDay = scheduleState ? scheduleState.dayOfWeek : (window.ScheduleEngine ? window.ScheduleEngine.getSigaaDayOfWeek(now) : now.getDay() + 1);
 
   filtered.sort((a, b) => {
     if (a.is_free_now !== b.is_free_now) {
@@ -263,12 +271,13 @@ function updateAppView() {
     nearestInfo
   );
 
-  const filteredRooms = filterAndSortRooms();
+  const evaluatedRooms = getEvaluatedRooms(scheduleState);
+  const filteredRooms = filterAndSortRooms(evaluatedRooms, scheduleState);
   const isPreview = filteredRooms._isPreview || false;
   const totalCount = filteredRooms._totalCount || filteredRooms.length;
 
-  const totalActive = AppState.statusData ? AppState.statusData.summary.total_active_rooms : 0;
-  const totalFree = AppState.statusData ? AppState.statusData.summary.total_free_now : 0;
+  const totalActive = evaluatedRooms.filter((r) => r.has_schedule).length;
+  const totalFree = evaluatedRooms.filter((r) => r.has_schedule && r.is_free_now).length;
   const totalOccupied = totalActive - totalFree;
 
   window.UI.renderMetrics(totalActive, totalFree, totalOccupied, nearestInfo);

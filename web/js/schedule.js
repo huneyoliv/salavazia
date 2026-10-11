@@ -5,19 +5,19 @@
 
 const UFS_SLOTS = [
   // Manhã (Shift 1)
-  { shift: 1, slotIndex: 1, code: 'M1', start: '07:30', end: '08:20' },
-  { shift: 1, slotIndex: 2, code: 'M2', start: '08:20', end: '09:10' },
-  { shift: 1, slotIndex: 3, code: 'M3', start: '09:10', end: '10:00' },
-  { shift: 1, slotIndex: 4, code: 'M4', start: '10:10', end: '11:00' },
-  { shift: 1, slotIndex: 5, code: 'M5', start: '11:00', end: '11:50' },
-  { shift: 1, slotIndex: 6, code: 'M6', start: '11:50', end: '12:40' },
+  { shift: 1, slotIndex: 1, code: 'M1', start: '07:30', end: '08:15' },
+  { shift: 1, slotIndex: 2, code: 'M2', start: '08:15', end: '09:00' },
+  { shift: 1, slotIndex: 3, code: 'M3', start: '09:15', end: '10:00' },
+  { shift: 1, slotIndex: 4, code: 'M4', start: '10:00', end: '10:45' },
+  { shift: 1, slotIndex: 5, code: 'M5', start: '11:00', end: '11:45' },
+  { shift: 1, slotIndex: 6, code: 'M6', start: '11:45', end: '12:30' },
   // Tarde (Shift 2)
-  { shift: 2, slotIndex: 1, code: 'T1', start: '13:30', end: '14:20' },
-  { shift: 2, slotIndex: 2, code: 'T2', start: '14:20', end: '15:10' },
-  { shift: 2, slotIndex: 3, code: 'T3', start: '15:10', end: '16:00' },
-  { shift: 2, slotIndex: 4, code: 'T4', start: '16:10', end: '17:00' },
-  { shift: 2, slotIndex: 5, code: 'T5', start: '17:00', end: '17:50' },
-  { shift: 2, slotIndex: 6, code: 'T6', start: '17:50', end: '18:40' },
+  { shift: 2, slotIndex: 1, code: 'T1', start: '13:30', end: '14:15' },
+  { shift: 2, slotIndex: 2, code: 'T2', start: '14:15', end: '15:00' },
+  { shift: 2, slotIndex: 3, code: 'T3', start: '15:15', end: '16:00' },
+  { shift: 2, slotIndex: 4, code: 'T4', start: '16:00', end: '16:45' },
+  { shift: 2, slotIndex: 5, code: 'T5', start: '17:00', end: '17:45' },
+  { shift: 2, slotIndex: 6, code: 'T6', start: '17:45', end: '18:30' },
   // Noite (Shift 3)
   { shift: 3, slotIndex: 1, code: 'N1', start: '19:00', end: '19:45' },
   { shift: 3, slotIndex: 2, code: 'N2', start: '19:45', end: '20:30' },
@@ -100,9 +100,106 @@ function getCurrentScheduleState(date = new Date()) {
   };
 }
 
+function computeRoomStatus(roomData, scheduleState) {
+  const allocations = roomData.allocations || [];
+  const todayAllocations = {};
+  for (const alloc of allocations) {
+    if (alloc.day_of_week === scheduleState.dayOfWeek) {
+      todayAllocations[`${alloc.shift}_${alloc.slot_index}`] = alloc.class_code;
+    }
+  }
+
+  const currentSlot = scheduleState.currentSlot;
+  const nextSlot = scheduleState.nextSlot;
+
+  let isFreeNow = true;
+  let currentClass = null;
+
+  if (currentSlot) {
+    const key = `${currentSlot.shift}_${currentSlot.slotIndex}`;
+    if (todayAllocations[key]) {
+      isFreeNow = false;
+      currentClass = todayAllocations[key];
+    }
+  }
+
+  let isFreeNext = true;
+  let nextClass = null;
+
+  if (nextSlot) {
+    const nextKey = `${nextSlot.shift}_${nextSlot.slotIndex}`;
+    if (todayAllocations[nextKey]) {
+      isFreeNext = false;
+      nextClass = todayAllocations[nextKey];
+    }
+  }
+
+  let freeUntil = null;
+  let freeAt = null;
+
+  let orderedSlots = [];
+  if (currentSlot) {
+    const currIdx = UFS_SLOTS.findIndex(
+      (s) => s.shift === currentSlot.shift && s.slotIndex === currentSlot.slotIndex
+    );
+    if (currIdx !== -1) {
+      orderedSlots = UFS_SLOTS.slice(currIdx);
+    }
+  } else if (nextSlot) {
+    const nextIdx = UFS_SLOTS.findIndex(
+      (s) => s.shift === nextSlot.shift && s.slotIndex === nextSlot.slotIndex
+    );
+    if (nextIdx !== -1) {
+      orderedSlots = UFS_SLOTS.slice(nextIdx);
+    }
+  }
+
+  if (isFreeNow) {
+    for (const slot of orderedSlots) {
+      const key = `${slot.shift}_${slot.slotIndex}`;
+      if (todayAllocations[key]) {
+        freeUntil = slot.start;
+        break;
+      }
+    }
+    if (!freeUntil) {
+      freeUntil = 'Resto do dia';
+    }
+  } else {
+    for (const slot of orderedSlots) {
+      const key = `${slot.shift}_${slot.slotIndex}`;
+      if (todayAllocations[key] === currentClass) {
+        freeAt = slot.end;
+      } else {
+        break;
+      }
+    }
+    if (!freeAt && currentSlot) {
+      freeAt = currentSlot.end;
+    }
+  }
+
+  return {
+    id: roomData.id,
+    name: roomData.name || '',
+    building: roomData.building || 'UNKNOWN',
+    room_number: roomData.room_number || '',
+    category: roomData.category || 'OUTRO',
+    capacity: roomData.capacity || 0,
+    has_schedule: roomData.has_schedule ?? allocations.length > 0,
+    is_free_now: isFreeNow,
+    is_free_next: isFreeNext,
+    current_class: currentClass,
+    next_class: nextClass,
+    free_until: freeUntil,
+    free_at: freeAt
+  };
+}
+
 window.ScheduleEngine = {
   UFS_SLOTS,
   DAY_NAMES,
   getSigaaDayOfWeek,
-  getCurrentScheduleState
+  getCurrentScheduleState,
+  computeRoomStatus
 };
