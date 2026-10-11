@@ -48,10 +48,14 @@ async function loadData() {
     if (grid) {
       grid.innerHTML = `
         <div class="empty-state">
-          <div class="empty-icon">⚠️</div>
+          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
           <h3>Erro ao carregar dados</h3>
           <p>${err.message}</p>
-          <button class="btn-primary" onclick="location.reload()">Recarregar Página</button>
+          <button class="btn-reset-filters" onclick="location.reload()">Recarregar página</button>
         </div>
       `;
     }
@@ -390,19 +394,19 @@ function showRoomDetails(roomId) {
   if (!room || !modal || !modalBody) return;
 
   const coursesList = (room.courses || [])
-    .map((c) => `<li><strong>${c.code}</strong> — ${c.name}</li>`)
+    .map((c) => `<li><strong>${escapeHtml(c.code)}</strong> — ${escapeHtml(c.name)}</li>`)
     .join('');
 
   modalBody.innerHTML = `
-    <h2>${room.name}</h2>
-    <div class="modal-meta">
-      <span>🏛️ <strong>Prédio:</strong> ${room.building}</span>
-      <span>🚪 <strong>Número:</strong> ${room.room_number || '-'}</span>
-      <span>👥 <strong>Capacidade:</strong> ${room.capacity || 0} alunos</span>
-      <span>🏷️ <strong>Categoria:</strong> ${room.category || '-'}</span>
+    <h2>${escapeHtml(room.name)}</h2>
+    <div class="modal-meta-grid">
+      <span>Prédio: <strong>${escapeHtml(room.building)}</strong></span>
+      <span>Sala: <strong>${escapeHtml(room.room_number || '-')}</strong></span>
+      <span>Capacidade: <strong>${room.capacity || 0} lugares</strong></span>
+      <span>Categoria: <strong>${escapeHtml(room.category || '-')}</strong></span>
     </div>
 
-    <h3>Disciplinas Alocadas neste Semestre</h3>
+    <h3>Disciplinas alocadas neste semestre</h3>
     <ul class="courses-list">
       ${coursesList || '<li>Nenhuma disciplina cadastrada</li>'}
     </ul>

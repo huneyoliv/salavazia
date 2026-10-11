@@ -1,4 +1,4 @@
-const CACHE_NAME = 'salavazia-v4';
+const CACHE_NAME = 'salavazia-v5';
 const CORE_ASSETS = [
   './',
   './index.html',
