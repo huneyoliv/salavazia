@@ -464,6 +464,7 @@ function initPwaInstallPrompt() {
   const banner = document.getElementById('pwa-install-banner');
   const btnInstall = document.getElementById('pwa-btn-install');
   const btnDismiss = document.getElementById('pwa-btn-dismiss');
+  const btnClose = document.getElementById('pwa-btn-close');
   if (!banner || !btnInstall || !btnDismiss) return;
 
   // Don't show if already running as standalone app
@@ -473,6 +474,17 @@ function initPwaInstallPrompt() {
   const dismissedUntil = localStorage.getItem('salavazia_pwa_dismissed_until');
   if (dismissedUntil && Number(dismissedUntil) > Date.now()) {
     return;
+  }
+
+  function hideBanner() {
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateY(16px)';
+    setTimeout(() => {
+      banner.style.display = 'none';
+      banner.style.opacity = '';
+      banner.style.transform = '';
+    }, 220);
+    localStorage.setItem('salavazia_pwa_dismissed_until', String(Date.now() + 7 * 86400000));
   }
 
   // Listen for Chrome/Android native beforeinstallprompt
@@ -493,20 +505,20 @@ function initPwaInstallPrompt() {
           banner.style.display = 'block';
         }
       }
-    }, 1800);
+    }, 1500);
   }
 
-  btnDismiss.addEventListener('click', () => {
-    banner.style.display = 'none';
-    localStorage.setItem('salavazia_pwa_dismissed_until', String(Date.now() + 7 * 86400000));
-  });
+  btnDismiss.addEventListener('click', hideBanner);
+  if (btnClose) {
+    btnClose.addEventListener('click', hideBanner);
+  }
 
   btnInstall.addEventListener('click', async () => {
     if (deferredInstallPrompt) {
       deferredInstallPrompt.prompt();
       const choice = await deferredInstallPrompt.userChoice;
       if (choice.outcome === 'accepted') {
-        banner.style.display = 'none';
+        hideBanner();
       }
       deferredInstallPrompt = null;
     } else {
@@ -516,8 +528,7 @@ function initPwaInstallPrompt() {
       } else {
         alert('Para usar como app: toque no menu de opções do navegador (três pontos) e selecione "Instalar aplicativo" ou "Adicionar à tela inicial".');
       }
-      banner.style.display = 'none';
-      localStorage.setItem('salavazia_pwa_dismissed_until', String(Date.now() + 7 * 86400000));
+      hideBanner();
     }
   });
 
