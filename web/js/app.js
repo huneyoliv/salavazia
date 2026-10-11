@@ -448,16 +448,19 @@ function resetFilters() {
 let deferredInstallPrompt = null;
 
 function isMobileDevice() {
-  const uaMatch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const touchMatch = window.matchMedia && window.matchMedia('(max-width: 768px)').matches && (
-    'ontouchstart' in window || navigator.maxTouchPoints > 0
+  const ua = navigator.userAgent || '';
+  const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
+  const isSmallTouchScreen = window.innerWidth <= 820 && (
+    'ontouchstart' in window || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0)
   );
-  return uaMatch || touchMatch;
+  return isMobileUA || isSmallTouchScreen;
 }
 
 function isStandaloneMode() {
-  return window.matchMedia('(display-mode: standalone)').matches ||
-    window.navigator.standalone === true;
+  const isDisplayStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+  const isWindowStandalone = window.navigator.standalone === true;
+  const isReferrerApp = document.referrer.includes('android-app://') || document.referrer.includes('app://');
+  return Boolean(isDisplayStandalone || isWindowStandalone || isReferrerApp);
 }
 
 function initPwaInstallPrompt() {
@@ -467,13 +470,31 @@ function initPwaInstallPrompt() {
   const btnClose = document.getElementById('pwa-btn-close');
   if (!banner || !btnInstall || !btnDismiss) return;
 
-  // Don't show if already running as standalone app
-  if (isStandaloneMode()) return;
+  // Clear any legacy persistent lock so the user can see and test the prompt
+  localStorage.removeItem('salavazia_pwa_dismissed_until');
 
-  // Check if dismissed in the last 7 days
-  const dismissedUntil = localStorage.getItem('salavazia_pwa_dismissed_until');
-  if (dismissedUntil && Number(dismissedUntil) > Date.now()) {
+  // Condition 1: Must NOT be open as an installed app
+  if (isStandaloneMode()) {
+    banner.style.display = 'none';
     return;
+  }
+
+  // Condition 2: Must be on a mobile device
+  if (!isMobileDevice()) {
+    banner.style.display = 'none';
+    return;
+  }
+
+  // Condition 3: Check if dismissed during current browser session
+  if (sessionStorage.getItem('salavazia_pwa_dismissed_session') === 'true') {
+    banner.style.display = 'none';
+    return;
+  }
+
+  function showBanner() {
+    if (isMobileDevice() && !isStandaloneMode() && sessionStorage.getItem('salavazia_pwa_dismissed_session') !== 'true') {
+      banner.style.display = 'block';
+    }
   }
 
   function hideBanner() {
@@ -484,29 +505,18 @@ function initPwaInstallPrompt() {
       banner.style.opacity = '';
       banner.style.transform = '';
     }, 220);
-    localStorage.setItem('salavazia_pwa_dismissed_until', String(Date.now() + 7 * 86400000));
+    sessionStorage.setItem('salavazia_pwa_dismissed_session', 'true');
   }
 
-  // Listen for Chrome/Android native beforeinstallprompt
+  // Native Chrome/Android prompt hook
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredInstallPrompt = e;
-    if (isMobileDevice()) {
-      banner.style.display = 'block';
-    }
+    showBanner();
   });
 
-  // If mobile device (e.g. iOS Safari or browser without beforeinstallprompt event yet)
-  if (isMobileDevice()) {
-    setTimeout(() => {
-      if (!isStandaloneMode() && banner.style.display !== 'block') {
-        const stillDismissed = localStorage.getItem('salavazia_pwa_dismissed_until');
-        if (!stillDismissed || Number(stillDismissed) <= Date.now()) {
-          banner.style.display = 'block';
-        }
-      }
-    }, 1500);
-  }
+  // Prompt on page load for mobile browsers
+  setTimeout(showBanner, 300);
 
   btnDismiss.addEventListener('click', hideBanner);
   if (btnClose) {
