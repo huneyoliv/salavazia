@@ -8,6 +8,10 @@ on:
       - 'web/**'
       - 'data/**'
       - '.github/workflows/deploy.yml'
+  workflow_run:
+    workflows: ["Update Room Status"]
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
