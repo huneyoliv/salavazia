@@ -67,18 +67,45 @@ def test_schedule_state_night_and_off_hours() -> None:
     assert state_night.next_slot is not None
     assert state_night.next_slot.code == "N3"
 
-    # Dawn at 03:00
+    # Dawn at 03:00 (outside academic hours)
     dt_dawn = datetime(2026, 9, 23, 3, 0, tzinfo=BRASILIA_TZ)
     state_dawn = get_schedule_state(dt_dawn)
     assert state_dawn.current_slot is None
-    assert state_dawn.next_slot is not None
-    assert state_dawn.next_slot.code == "M1"
+    assert state_dawn.next_slot is None
+    assert state_dawn.is_academic_hours is False
+    assert state_dawn.is_expediente is False
+    assert "07:30" in state_dawn.status_label
 
-    # Late night at 23:00
+    # Late night at 23:00 (outside academic hours)
     dt_late = datetime(2026, 9, 23, 23, 0, tzinfo=BRASILIA_TZ)
     state_late = get_schedule_state(dt_late)
     assert state_late.current_slot is None
     assert state_late.next_slot is None
+    assert state_late.is_academic_hours is False
+    assert state_late.is_expediente is False
+
+    # Saturday morning at 10:00 (active shift 1)
+    dt_sat_morning = datetime(2026, 9, 26, 10, 0, tzinfo=BRASILIA_TZ)
+    state_sat_morning = get_schedule_state(dt_sat_morning)
+    assert state_sat_morning.is_expediente is True
+    assert state_sat_morning.current_slot is not None
+    assert state_sat_morning.current_slot.code == "M4"
+
+    # Saturday afternoon at 14:30 (outside academic hours: Saturday has no afternoon classes)
+    dt_sat_afternoon = datetime(2026, 9, 26, 14, 30, tzinfo=BRASILIA_TZ)
+    state_sat_afternoon = get_schedule_state(dt_sat_afternoon)
+    assert state_sat_afternoon.is_expediente is False
+    assert state_sat_afternoon.current_slot is None
+    assert state_sat_afternoon.next_slot is None
+    assert "12:30" in state_sat_afternoon.status_label
+
+    # Sunday at 10:00 (no classes)
+    dt_sun = datetime(2026, 9, 27, 10, 0, tzinfo=BRASILIA_TZ)
+    state_sun = get_schedule_state(dt_sun)
+    assert state_sun.is_expediente is False
+    assert state_sun.current_slot is None
+    assert state_sun.next_slot is None
+    assert "Domingo" in state_sun.status_label
 
 
 def test_compute_room_status_occupied_and_free() -> None:
@@ -197,4 +224,34 @@ def test_compute_room_status_shift_boundary_and_separate_classes() -> None:
     assert status["is_free_now"] is False
     assert status["current_class"] == "COMSO0445-01"
     assert status["free_at"] == "18:30"  # Must free up at 18:30, NOT 22:15!
+
+
+def test_generate_status_payload_outside_academic_hours() -> None:
+    rooms_path = Path("data/rooms.json")
+    assert rooms_path.exists()
+
+    with open(rooms_path, encoding="utf-8") as f:
+        rooms = json.load(f)
+
+    # Test Sunday 11:00 (completely outside academic hours)
+    sun_dt = datetime(2026, 9, 27, 11, 0, tzinfo=BRASILIA_TZ)
+    payload_sun = generate_status_payload(rooms, sun_dt)
+
+    assert payload_sun["schedule"]["is_academic_hours"] is False
+    assert payload_sun["schedule"]["is_expediente"] is False
+    assert payload_sun["summary"]["total_active_rooms"] == 0
+    assert payload_sun["summary"]["total_free_now"] == 0
+    assert payload_sun["summary"]["total_occupied_now"] == 0
+    assert all(r.get("is_off_hours") is True for r in payload_sun["rooms"])
+
+    # Test Saturday night 21:00 (Saturday closes at 12:30)
+    sat_night_dt = datetime(2026, 9, 26, 21, 0, tzinfo=BRASILIA_TZ)
+    payload_sat_night = generate_status_payload(rooms, sat_night_dt)
+
+    assert payload_sat_night["schedule"]["is_academic_hours"] is False
+    assert payload_sat_night["schedule"]["is_expediente"] is False
+    assert payload_sat_night["summary"]["total_active_rooms"] == 0
+    assert payload_sat_night["summary"]["total_free_now"] == 0
+    assert payload_sat_night["summary"]["total_occupied_now"] == 0
+
 

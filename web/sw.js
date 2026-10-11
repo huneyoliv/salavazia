@@ -1,4 +1,4 @@
-const CACHE_NAME = 'salavazia-v4';
+const CACHE_NAME = 'salavazia-v7';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,12 @@ const CORE_ASSETS = [
   './js/geo.js',
   './js/ui.js',
   './js/app.js',
+  './images/logo.png',
+  './favicon.png',
+  './favicon.ico',
+  './icons/apple-touch-icon.png',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
   './manifest.json'
 ];
 
@@ -35,8 +41,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
-  // Network first for JSON data
-  if (url.pathname.endsWith('.json')) {
+  // Network first for JSON data, scripts and stylesheets to ensure fresh updates
+  if (url.pathname.endsWith('.json') || url.pathname.endsWith('.js') || url.pathname.endsWith('.css') || url.pathname === '/' || url.pathname.endsWith('index.html')) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
@@ -51,7 +57,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Cache first for static assets
+  // Cache first with network fallback for images and media
   event.respondWith(
     caches.match(event.request).then((cached) => {
       return cached || fetch(event.request).then((response) => {

@@ -51,42 +51,69 @@ function getCurrentScheduleState(date = new Date()) {
   const dayName = DAY_NAMES[sigaaDay] || 'Desconhecido';
   const nowMinutes = date.getHours() * 60 + date.getMinutes();
 
+  // UFS classes run:
+  // - Monday to Friday (2..6): 07:30 (450m) to 22:15 (1335m)
+  // - Saturday (7): 07:30 (450m) to 12:30 (750m) - shift 1 only
+  // - Sunday (1): No classes
+  const isWeekday = sigaaDay >= 2 && sigaaDay <= 6;
+  const isSaturday = sigaaDay === 7;
+  const isExpediente = (isWeekday && nowMinutes >= 450 && nowMinutes <= 1335) ||
+                       (isSaturday && nowMinutes >= 450 && nowMinutes <= 750);
+
+  const applicableSlots = isSaturday
+    ? UFS_SLOTS.filter((s) => s.shift === 1)
+    : UFS_SLOTS;
+
   let currentSlot = null;
   let nextSlot = null;
 
-  for (let i = 0; i < UFS_SLOTS.length; i++) {
-    const slot = UFS_SLOTS[i];
-    const startMin = parseTimeToMinutes(slot.start);
-    const endMin = parseTimeToMinutes(slot.end);
-
-    if (nowMinutes >= startMin && nowMinutes < endMin) {
-      currentSlot = slot;
-      nextSlot = i + 1 < UFS_SLOTS.length ? UFS_SLOTS[i + 1] : null;
-      break;
-    }
-  }
-
-  if (!currentSlot) {
-    for (const slot of UFS_SLOTS) {
+  if (isExpediente) {
+    for (let i = 0; i < applicableSlots.length; i++) {
+      const slot = applicableSlots[i];
       const startMin = parseTimeToMinutes(slot.start);
-      if (nowMinutes < startMin) {
-        nextSlot = slot;
+      const endMin = parseTimeToMinutes(slot.end);
+
+      if (nowMinutes >= startMin && nowMinutes < endMin) {
+        currentSlot = slot;
+        nextSlot = i + 1 < applicableSlots.length ? applicableSlots[i + 1] : null;
         break;
+      }
+    }
+
+    if (!currentSlot) {
+      for (const slot of applicableSlots) {
+        const startMin = parseTimeToMinutes(slot.start);
+        if (nowMinutes < startMin) {
+          nextSlot = slot;
+          break;
+        }
       }
     }
   }
 
-  const isAcademicHours = currentSlot !== null && sigaaDay >= 2 && sigaaDay <= 7;
+  const isAcademicHours = currentSlot !== null && isExpediente;
 
   let statusLabel = '';
+  let statusMode = 'off';
+
   if (currentSlot) {
-    statusLabel = `Aula em andamento: ${currentSlot.code} (${currentSlot.start} - ${currentSlot.end})`;
-  } else if (nextSlot) {
-    statusLabel = `Intervalo: Próxima aula ${nextSlot.code} às ${nextSlot.start}`;
+    statusLabel = `Em aula: ${currentSlot.code} (${currentSlot.start} – ${currentSlot.end})`;
+    statusMode = 'active';
+  } else if (nextSlot && isExpediente) {
+    statusLabel = `Intervalo · Próxima aula: ${nextSlot.code} às ${nextSlot.start}`;
+    statusMode = 'interval';
   } else if (sigaaDay === 1) {
-    statusLabel = 'Domingo (sem aulas regulares)';
+    statusLabel = 'Domingo · Sem expediente letivo';
+    statusMode = 'off';
+  } else if (isSaturday && nowMinutes > 750) {
+    statusLabel = 'Sábado · Aulas encerradas às 12:30';
+    statusMode = 'off';
+  } else if (nowMinutes < 450) {
+    statusLabel = 'Fora de expediente · Aulas iniciam às 07:30';
+    statusMode = 'off';
   } else {
-    statusLabel = 'Fora do horário de aulas';
+    statusLabel = 'Fora de expediente · Aulas encerradas hoje';
+    statusMode = 'off';
   }
 
   return {
@@ -95,6 +122,8 @@ function getCurrentScheduleState(date = new Date()) {
     currentSlot,
     nextSlot,
     isAcademicHours,
+    isExpediente,
+    statusMode,
     statusLabel,
     timeString: date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
   };
@@ -102,6 +131,27 @@ function getCurrentScheduleState(date = new Date()) {
 
 function computeRoomStatus(roomData, scheduleState) {
   const allocations = roomData.allocations || [];
+
+  // When outside academic hours, do not show class projections
+  if (!scheduleState.isExpediente) {
+    return {
+      id: roomData.id,
+      name: roomData.name || '',
+      building: roomData.building || 'UNKNOWN',
+      room_number: roomData.room_number || '',
+      category: roomData.category || 'OUTRO',
+      capacity: roomData.capacity || 0,
+      has_schedule: roomData.has_schedule ?? allocations.length > 0,
+      is_free_now: true,
+      is_free_next: true,
+      current_class: null,
+      next_class: null,
+      free_until: null,
+      free_at: null,
+      is_off_hours: true
+    };
+  }
+
   const todayAllocations = {};
   for (const alloc of allocations) {
     if (alloc.day_of_week === scheduleState.dayOfWeek) {
@@ -192,7 +242,8 @@ function computeRoomStatus(roomData, scheduleState) {
     current_class: currentClass,
     next_class: nextClass,
     free_until: freeUntil,
-    free_at: freeAt
+    free_at: freeAt,
+    is_off_hours: false
   };
 }
 

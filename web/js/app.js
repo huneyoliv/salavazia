@@ -48,10 +48,14 @@ async function loadData() {
     if (grid) {
       grid.innerHTML = `
         <div class="empty-state">
-          <div class="empty-icon">⚠️</div>
+          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
           <h3>Erro ao carregar dados</h3>
           <p>${err.message}</p>
-          <button class="btn-primary" onclick="location.reload()">Recarregar Página</button>
+          <button class="btn-reset-filters" onclick="location.reload()">Recarregar página</button>
         </div>
       `;
     }
@@ -271,17 +275,18 @@ function updateAppView() {
     nearestInfo
   );
 
+  const isExpediente = scheduleState.isExpediente;
   const evaluatedRooms = getEvaluatedRooms(scheduleState);
-  const filteredRooms = filterAndSortRooms(evaluatedRooms, scheduleState);
+  const filteredRooms = isExpediente ? filterAndSortRooms(evaluatedRooms, scheduleState) : [];
   const isPreview = filteredRooms._isPreview || false;
   const totalCount = filteredRooms._totalCount || filteredRooms.length;
 
-  const totalActive = evaluatedRooms.filter((r) => r.has_schedule).length;
-  const totalFree = evaluatedRooms.filter((r) => r.has_schedule && r.is_free_now).length;
-  const totalOccupied = totalActive - totalFree;
+  const totalActive = isExpediente ? evaluatedRooms.filter((r) => r.has_schedule).length : 0;
+  const totalFree = isExpediente ? evaluatedRooms.filter((r) => r.has_schedule && r.is_free_now).length : 0;
+  const totalOccupied = isExpediente ? totalActive - totalFree : 0;
 
-  window.UI.renderMetrics(totalActive, totalFree, totalOccupied, nearestInfo);
-  window.UI.renderRoomsGrid(filteredRooms, AppState.buildingsData, AppState.userCoords, isPreview, totalCount);
+  window.UI.renderMetrics(totalActive, totalFree, totalOccupied, isExpediente ? nearestInfo : null);
+  window.UI.renderRoomsGrid(filteredRooms, AppState.buildingsData, AppState.userCoords, isPreview, totalCount, scheduleState);
 }
 
 async function requestGpsLocation() {
@@ -390,19 +395,19 @@ function showRoomDetails(roomId) {
   if (!room || !modal || !modalBody) return;
 
   const coursesList = (room.courses || [])
-    .map((c) => `<li><strong>${c.code}</strong> — ${c.name}</li>`)
+    .map((c) => `<li><strong>${escapeHtml(c.code)}</strong> — ${escapeHtml(c.name)}</li>`)
     .join('');
 
   modalBody.innerHTML = `
-    <h2>${room.name}</h2>
-    <div class="modal-meta">
-      <span>🏛️ <strong>Prédio:</strong> ${room.building}</span>
-      <span>🚪 <strong>Número:</strong> ${room.room_number || '-'}</span>
-      <span>👥 <strong>Capacidade:</strong> ${room.capacity || 0} alunos</span>
-      <span>🏷️ <strong>Categoria:</strong> ${room.category || '-'}</span>
+    <h2>${escapeHtml(room.name)}</h2>
+    <div class="modal-meta-grid">
+      <span>Prédio: <strong>${escapeHtml(room.building)}</strong></span>
+      <span>Sala: <strong>${escapeHtml(room.room_number || '-')}</strong></span>
+      <span>Capacidade: <strong>${room.capacity || 0} lugares</strong></span>
+      <span>Categoria: <strong>${escapeHtml(room.category || '-')}</strong></span>
     </div>
 
-    <h3>Disciplinas Alocadas neste Semestre</h3>
+    <h3>Disciplinas alocadas neste semestre</h3>
     <ul class="courses-list">
       ${coursesList || '<li>Nenhuma disciplina cadastrada</li>'}
     </ul>
@@ -440,9 +445,92 @@ function resetFilters() {
   updateAppView();
 }
 
+let deferredInstallPrompt = null;
+
+function isMobileDevice() {
+  const uaMatch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  const touchMatch = window.matchMedia && window.matchMedia('(max-width: 768px)').matches && (
+    'ontouchstart' in window || navigator.maxTouchPoints > 0
+  );
+  return uaMatch || touchMatch;
+}
+
+function isStandaloneMode() {
+  return window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone === true;
+}
+
+function initPwaInstallPrompt() {
+  const banner = document.getElementById('pwa-install-banner');
+  const btnInstall = document.getElementById('pwa-btn-install');
+  const btnDismiss = document.getElementById('pwa-btn-dismiss');
+  if (!banner || !btnInstall || !btnDismiss) return;
+
+  // Don't show if already running as standalone app
+  if (isStandaloneMode()) return;
+
+  // Check if dismissed in the last 7 days
+  const dismissedUntil = localStorage.getItem('salavazia_pwa_dismissed_until');
+  if (dismissedUntil && Number(dismissedUntil) > Date.now()) {
+    return;
+  }
+
+  // Listen for Chrome/Android native beforeinstallprompt
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    if (isMobileDevice()) {
+      banner.style.display = 'block';
+    }
+  });
+
+  // If mobile device (e.g. iOS Safari or browser without beforeinstallprompt event yet)
+  if (isMobileDevice()) {
+    setTimeout(() => {
+      if (!isStandaloneMode() && banner.style.display !== 'block') {
+        const stillDismissed = localStorage.getItem('salavazia_pwa_dismissed_until');
+        if (!stillDismissed || Number(stillDismissed) <= Date.now()) {
+          banner.style.display = 'block';
+        }
+      }
+    }, 1800);
+  }
+
+  btnDismiss.addEventListener('click', () => {
+    banner.style.display = 'none';
+    localStorage.setItem('salavazia_pwa_dismissed_until', String(Date.now() + 7 * 86400000));
+  });
+
+  btnInstall.addEventListener('click', async () => {
+    if (deferredInstallPrompt) {
+      deferredInstallPrompt.prompt();
+      const choice = await deferredInstallPrompt.userChoice;
+      if (choice.outcome === 'accepted') {
+        banner.style.display = 'none';
+      }
+      deferredInstallPrompt = null;
+    } else {
+      const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (isIos) {
+        alert('Para usar como app no iPhone/iPad: toque no ícone de Compartilhar (no rodapé do Safari) e selecione "Adicionar à Tela de Início".');
+      } else {
+        alert('Para usar como app: toque no menu de opções do navegador (três pontos) e selecione "Instalar aplicativo" ou "Adicionar à tela inicial".');
+      }
+      banner.style.display = 'none';
+      localStorage.setItem('salavazia_pwa_dismissed_until', String(Date.now() + 7 * 86400000));
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    banner.style.display = 'none';
+    deferredInstallPrompt = null;
+  });
+}
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   setupEventListeners();
+  initPwaInstallPrompt();
   loadData();
 
   // Try GPS automatically on load
