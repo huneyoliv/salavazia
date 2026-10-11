@@ -82,14 +82,14 @@ def compute_room_status(
         if free_until is None:
             free_until = "Resto do dia"
     else:
-        # Currently occupied: find when this consecutive block of classes ends
+        # Currently occupied: find when this consecutive block of the current class ends
         for slot in ordered_slots:
-            if (slot.shift, slot.slot_index) not in today_allocations:
-                free_at = slot.start.strftime("%H:%M")
+            if today_allocations.get((slot.shift, slot.slot_index)) == current_class:
+                free_at = slot.end.strftime("%H:%M")
+            else:
                 break
-        if free_at is None:
-            # Occupied until end of night shift
-            free_at = "22:15"
+        if free_at is None and current_slot is not None:
+            free_at = current_slot.end.strftime("%H:%M")
 
     return {
         "id": room_id,

@@ -104,7 +104,7 @@ def test_compute_room_status_occupied_and_free() -> None:
     assert status1["is_free_now"] is False
     assert status1["current_class"] == "MAT0101"
     assert status1["is_free_next"] is False
-    assert status1["free_at"] == "16:10"  # Free after T3 ends (T4 starts 16:10)
+    assert status1["free_at"] == "16:00"  # Free after T3 ends at 16:00
 
     # Room 2: Free now in T2, but has class in T3
     soon_occupied_room = {
@@ -124,7 +124,7 @@ def test_compute_room_status_occupied_and_free() -> None:
     assert status2["current_class"] is None
     assert status2["is_free_next"] is False
     assert status2["next_class"] == "FIS0202"
-    assert status2["free_until"] == "15:10"  # T3 starts at 15:10
+    assert status2["free_until"] == "15:15"  # T3 starts at 15:15
 
     # Room 3: Completely free for the rest of today
     completely_free_room = {
@@ -168,3 +168,33 @@ def test_generate_status_payload_with_real_catalog() -> None:
         "current_class", "next_class", "free_until", "free_at"
     }
     assert required_keys.issubset(room_item.keys())
+
+
+def test_compute_room_status_shift_boundary_and_separate_classes() -> None:
+    # Thursday at 17:30 (T5: 17:00 - 17:45)
+    dt = datetime(2026, 9, 24, 17, 30, tzinfo=BRASILIA_TZ)
+    state = get_schedule_state(dt)
+
+    # Room with class A in T5/T6 (ends 18:30) and class B in N1..N4 (starts 19:00)
+    room = {
+        "id": 1008644,
+        "name": "SALA DE AULA - DID 6 - 106",
+        "building": "DID 6",
+        "room_number": "106",
+        "category": "SALA DE AULA",
+        "capacity": 80,
+        "has_schedule": True,
+        "allocations": [
+            {"day_of_week": 5, "shift": 2, "slot_index": 5, "class_code": "COMSO0445-01"},
+            {"day_of_week": 5, "shift": 2, "slot_index": 6, "class_code": "COMSO0445-01"},
+            {"day_of_week": 5, "shift": 3, "slot_index": 1, "class_code": "LETRV0090-VERN"},
+            {"day_of_week": 5, "shift": 3, "slot_index": 2, "class_code": "LETRV0090-VERN"},
+            {"day_of_week": 5, "shift": 3, "slot_index": 3, "class_code": "LETRV0090-VERN"},
+            {"day_of_week": 5, "shift": 3, "slot_index": 4, "class_code": "LETRV0090-VERN"},
+        ],
+    }
+    status = compute_room_status(room, state)
+    assert status["is_free_now"] is False
+    assert status["current_class"] == "COMSO0445-01"
+    assert status["free_at"] == "18:30"  # Must free up at 18:30, NOT 22:15!
+

@@ -33,19 +33,19 @@ class TimeSlot:
 
 UFS_SLOTS: list[TimeSlot] = [
     # Manhã (Shift 1)
-    TimeSlot(shift=1, slot_index=1, code="M1", start=time(7, 30), end=time(8, 20)),
-    TimeSlot(shift=1, slot_index=2, code="M2", start=time(8, 20), end=time(9, 10)),
-    TimeSlot(shift=1, slot_index=3, code="M3", start=time(9, 10), end=time(10, 0)),
-    TimeSlot(shift=1, slot_index=4, code="M4", start=time(10, 10), end=time(11, 0)),
-    TimeSlot(shift=1, slot_index=5, code="M5", start=time(11, 0), end=time(11, 50)),
-    TimeSlot(shift=1, slot_index=6, code="M6", start=time(11, 50), end=time(12, 40)),
+    TimeSlot(shift=1, slot_index=1, code="M1", start=time(7, 30), end=time(8, 15)),
+    TimeSlot(shift=1, slot_index=2, code="M2", start=time(8, 15), end=time(9, 0)),
+    TimeSlot(shift=1, slot_index=3, code="M3", start=time(9, 15), end=time(10, 0)),
+    TimeSlot(shift=1, slot_index=4, code="M4", start=time(10, 0), end=time(10, 45)),
+    TimeSlot(shift=1, slot_index=5, code="M5", start=time(11, 0), end=time(11, 45)),
+    TimeSlot(shift=1, slot_index=6, code="M6", start=time(11, 45), end=time(12, 30)),
     # Tarde (Shift 2)
-    TimeSlot(shift=2, slot_index=1, code="T1", start=time(13, 30), end=time(14, 20)),
-    TimeSlot(shift=2, slot_index=2, code="T2", start=time(14, 20), end=time(15, 10)),
-    TimeSlot(shift=2, slot_index=3, code="T3", start=time(15, 10), end=time(16, 0)),
-    TimeSlot(shift=2, slot_index=4, code="T4", start=time(16, 10), end=time(17, 0)),
-    TimeSlot(shift=2, slot_index=5, code="T5", start=time(17, 0), end=time(17, 50)),
-    TimeSlot(shift=2, slot_index=6, code="T6", start=time(17, 50), end=time(18, 40)),
+    TimeSlot(shift=2, slot_index=1, code="T1", start=time(13, 30), end=time(14, 15)),
+    TimeSlot(shift=2, slot_index=2, code="T2", start=time(14, 15), end=time(15, 0)),
+    TimeSlot(shift=2, slot_index=3, code="T3", start=time(15, 15), end=time(16, 0)),
+    TimeSlot(shift=2, slot_index=4, code="T4", start=time(16, 0), end=time(16, 45)),
+    TimeSlot(shift=2, slot_index=5, code="T5", start=time(17, 0), end=time(17, 45)),
+    TimeSlot(shift=2, slot_index=6, code="T6", start=time(17, 45), end=time(18, 30)),
     # Noite (Shift 3)
     TimeSlot(shift=3, slot_index=1, code="N1", start=time(19, 0), end=time(19, 45)),
     TimeSlot(shift=3, slot_index=2, code="N2", start=time(19, 45), end=time(20, 30)),
