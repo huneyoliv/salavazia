@@ -2,13 +2,8 @@ name: Update Room Status
 
 on:
   schedule:
-    # Runs at shift transitions (UTC-3 / Brasília):
-    # 06:45 BRT -> 09:45 UTC (before morning shift 07:30)
-    - cron: '45 9 * * 1-6'
-    # 12:45 BRT -> 15:45 UTC (before afternoon shift 13:30)
-    - cron: '45 15 * * 1-6'
-    # 18:30 BRT -> 21:30 UTC (before night shift 19:00)
-    - cron: '30 21 * * 1-6'
+    # Runs every 2 hours (UTC-3 / Brasília):
+    - cron: '23 */2 * * 1-6'
   workflow_dispatch:
 
 jobs:
