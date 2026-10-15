@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-10-14T18:50:14.513631-03:00",
-  "evaluated_timestamp": "2026-10-14T18:50:14.507768-03:00",
+  "generated_at": "2026-10-14T21:38:50.512729-03:00",
+  "evaluated_timestamp": "2026-10-14T21:38:50.509086-03:00",
   "schedule": {
     "day_of_week": 4,
     "day_name": "Quarta-feira",
-    "is_academic_hours": false,
+    "is_academic_hours": true,
     "is_expediente": true,
-    "status_label": "Intervalo: Próxima aula N1 às 19:00",
-    "current_slot": null,
-    "next_slot": {
+    "status_label": "Aula em andamento: N4 (21:30 - 22:15)",
+    "current_slot": {
       "shift": 3,
-      "slot_index": 1,
-      "code": "N1",
-      "time_range": "19:00 - 19:45",
-      "start": "19:00",
-      "end": "19:45"
-    }
+      "slot_index": 4,
+      "code": "N4",
+      "time_range": "21:30 - 22:15",
+      "start": "21:30",
+      "end": "22:15"
+    },
+    "next_slot": null
   },
   "summary": {
     "total_rooms": 531,
     "total_active_rooms": 216,
-    "total_free_now": 216,
-    "total_occupied_now": 0
+    "total_free_now": 77,
+    "total_occupied_now": 139
   },
   "rooms": [
     {
@@ -198,10 +198,10 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "MAT0052-02",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -257,12 +257,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ESTAT0102-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "BIOL0358-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008500,
@@ -272,12 +272,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "GEO0066-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "GEO0066-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008501,
@@ -287,12 +287,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "PSIC0102-11",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "PSIC0102-11",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008502,
@@ -302,12 +302,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0403-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0403-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008503,
@@ -317,12 +317,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "GEO0042-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0076-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008504,
@@ -332,12 +332,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "DIRE0268-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "DIRE0241-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008505,
@@ -347,12 +347,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0084-VERN2B",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0084-VERN2B",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008506,
@@ -362,12 +362,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ECONO0132-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "GEO0086-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008507,
@@ -377,12 +377,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "BIOL0285-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0018-06",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008508,
@@ -407,12 +407,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "SSOCI0132-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "SSOCI0132-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008510,
@@ -422,12 +422,12 @@
       "category": "LABORATORIO",
       "capacity": 25,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTA0059-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTA0059-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008511,
@@ -437,12 +437,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "NGCR0006-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "NGCR0006-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008512,
@@ -452,12 +452,12 @@
       "category": "SALA DE AULA",
       "capacity": 45,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "PSIC0102-10",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "PSIC0102-10",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008513,
@@ -467,12 +467,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ECONO0108-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0080-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008514,
@@ -482,12 +482,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EXEC0012-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EXEC0004-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008515,
@@ -497,12 +497,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTA0055-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "QUI0253-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008516,
@@ -512,12 +512,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0067-ESP2",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0067-ESP2",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008517,
@@ -528,10 +528,10 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "GEO0071-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -542,12 +542,12 @@
       "category": "SALA DE AULA",
       "capacity": 45,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0245-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0068-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008519,
@@ -557,12 +557,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": true,
-      "current_class": null,
+      "current_class": "FILO0097-01",
       "next_class": null,
-      "free_until": "20:45",
-      "free_at": null
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008520,
@@ -572,12 +572,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0736-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0736-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008521,
@@ -602,12 +602,12 @@
       "category": "SALA DE AULA",
       "capacity": 40,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": true,
-      "current_class": null,
+      "current_class": "CONTA0043-01",
       "next_class": null,
-      "free_until": "20:45",
-      "free_at": null
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008523,
@@ -632,12 +632,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ECONO0023-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "QUI0276-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008525,
@@ -737,12 +737,12 @@
       "category": "SALA DE AULA",
       "capacity": 70,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTA0038-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTA0038-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008532,
@@ -767,12 +767,12 @@
       "category": "SALA DE AULA",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": true,
-      "current_class": null,
+      "current_class": "GEO0069-01",
       "next_class": null,
-      "free_until": "20:45",
-      "free_at": null
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008534,
@@ -797,12 +797,12 @@
       "category": "SALA DE AULA",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0084-VERN2A",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0084-VERN2A",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008536,
@@ -812,12 +812,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0627-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0627-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008537,
@@ -827,12 +827,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "GEO0045-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0084-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008538,
@@ -842,12 +842,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CINFO0048-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CINFO0048-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008539,
@@ -857,12 +857,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0055-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0072-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008540,
@@ -917,12 +917,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "BIOL0381-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "BIOL0381-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008544,
@@ -932,12 +932,12 @@
       "category": "SALA DE AULA",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "SSOCI0113-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "SSOCI0113-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008545,
@@ -947,12 +947,12 @@
       "category": "SALA DE AULA",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTA0028-03",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0075-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008546,
@@ -962,12 +962,12 @@
       "category": "SALA DE AULA",
       "capacity": 70,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDU0404-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDU0404-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008547,
@@ -992,12 +992,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ECONO0089-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ECONO0042-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008549,
@@ -1007,12 +1007,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "COMP0506-04",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTA0040-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008550,
@@ -1022,12 +1022,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0078-VERN",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0078-VERN",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008551,
@@ -1037,12 +1037,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "HIST0002-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "HIST0002-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008552,
@@ -1052,12 +1052,12 @@
       "category": "SALA DE AULA",
       "capacity": 55,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0076-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0153-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008553,
@@ -1127,12 +1127,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0103-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTA0049-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008558,
@@ -1142,12 +1142,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": true,
-      "current_class": null,
+      "current_class": "PSIC0089-03",
       "next_class": null,
-      "free_until": "20:45",
-      "free_at": null
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008559,
@@ -1157,12 +1157,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "COMP0472-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "COMP0472-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008560,
@@ -1172,12 +1172,12 @@
       "category": "SALA DE AULA",
       "capacity": 56,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRL0034-10",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRL0034-10",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008561,
@@ -1202,12 +1202,12 @@
       "category": "SALA DE AULA",
       "capacity": 55,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "PSIC0149-03",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0151-04",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008563,
@@ -1217,12 +1217,12 @@
       "category": "SALA DE AULA",
       "capacity": 72,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0060-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0099-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008564,
@@ -1233,10 +1233,10 @@
       "capacity": 72,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "ESTAT0002-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -1247,12 +1247,12 @@
       "category": "SALA DE AULA",
       "capacity": 72,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "HIST0114-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "HIST0114-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008566,
@@ -1262,12 +1262,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "GEO0089-03",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0100-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008567,
@@ -1277,12 +1277,12 @@
       "category": "SALA DE AULA",
       "capacity": 48,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0065-04",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0057-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008568,
@@ -1292,12 +1292,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0062-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "GEO0046-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008569,
@@ -1307,12 +1307,12 @@
       "category": "SALA DE AULA",
       "capacity": 48,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0231-03",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADM0181-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008570,
@@ -1322,12 +1322,12 @@
       "category": "SALA DE AULA",
       "capacity": 48,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "HIST0007-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "HIST0007-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008571,
@@ -1337,12 +1337,12 @@
       "category": "SALA DE AULA",
       "capacity": 72,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0150-05",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0152-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008572,
@@ -1352,12 +1352,12 @@
       "category": "SALA DE AULA",
       "capacity": 48,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0099-04",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0074-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008573,
@@ -1367,12 +1367,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "TEATR0138-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "TEATR0138-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008574,
@@ -1382,12 +1382,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CINFO0033-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CINFO0033-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008575,
@@ -1397,12 +1397,12 @@
       "category": "SALA DE AULA",
       "capacity": 25,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "TEATR0159-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "TEATR0159-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008576,
@@ -1412,12 +1412,12 @@
       "category": "SALA DE AULA",
       "capacity": 60,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0061-FRA",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0061-FRA",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008577,
@@ -1427,12 +1427,12 @@
       "category": "SALA DE AULA",
       "capacity": 48,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "COMP0517-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "COMP0517-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008578,
@@ -1442,12 +1442,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FISI0261-04",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FISI0275-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008579,
@@ -1457,12 +1457,12 @@
       "category": "SALA DE AULA",
       "capacity": 70,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MAT0096-03",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTA0029-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008580,
@@ -1472,12 +1472,12 @@
       "category": "SALA DE AULA",
       "capacity": 60,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0244-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "DIRE0254-04",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008581,
@@ -1487,12 +1487,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "SSOCI0143-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "SSOCI0143-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008582,
@@ -1502,12 +1502,12 @@
       "category": "SALA DE AULA",
       "capacity": 20,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "SSOCI0143-07",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "SSOCI0143-07",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008583,
@@ -1517,12 +1517,12 @@
       "category": "SALA DE AULA",
       "capacity": 21,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "QUI0064-11",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "QUI0277-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008584,
@@ -1533,10 +1533,10 @@
       "capacity": 21,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "FILO0018-13",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -1547,12 +1547,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTA0028-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "DIRE0245-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008586,
@@ -1562,12 +1562,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "COMP0476-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "COMP0334-06",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008587,
@@ -1577,12 +1577,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0715-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0715-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008588,
@@ -1592,12 +1592,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "PSIC0094-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "SOCIA0025-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008589,
@@ -1607,12 +1607,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": true,
-      "current_class": null,
+      "current_class": "CONTA0005-01",
       "next_class": null,
-      "free_until": "20:45",
-      "free_at": null
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008590,
@@ -1623,10 +1623,10 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "CONTA0048-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -1637,12 +1637,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "DIRE0243-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "PSIC0094-03",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008592,
@@ -1652,12 +1652,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0242-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "COMP0502-03",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008593,
@@ -1667,12 +1667,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDU0388-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDU0388-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008594,
@@ -1682,12 +1682,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0018-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0018-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008595,
@@ -1697,12 +1697,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTA0041-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0050-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008596,
@@ -1712,12 +1712,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0064-VERN2",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0064-VERN2",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008597,
@@ -1727,12 +1727,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "DIRE0239-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADM0219-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008598,
@@ -1742,12 +1742,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0726-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0726-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008599,
@@ -1757,12 +1757,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0020-03",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ECONO0157-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008600,
@@ -1772,12 +1772,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDU0371-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDU0371-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008601,
@@ -1787,12 +1787,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0403-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0403-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008602,
@@ -1802,12 +1802,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CINFO0131-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CINFO0131-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008603,
@@ -1817,12 +1817,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0220-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0092-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008604,
@@ -1832,12 +1832,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "NGCR0015-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "NGCR0015-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008605,
@@ -1847,12 +1847,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "DIRE0228-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "DIRE0228-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008606,
@@ -1862,12 +1862,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDU0375-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDU0375-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008607,
@@ -1877,12 +1877,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRV0104-DIV2",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRV0104-DIV2",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008608,
@@ -1892,12 +1892,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0101-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0064-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008609,
@@ -1952,12 +1952,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRL0034-09",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRL0034-09",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008613,
@@ -1967,12 +1967,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRL0034-07",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRL0034-07",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008614,
@@ -1982,12 +1982,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "QUI0269-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADM0234-03",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008615,
@@ -1997,12 +1997,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EXEC0014-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EXEC0014-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008616,
@@ -2012,12 +2012,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ESTAT0067-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ESTAT0092-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008617,
@@ -2027,12 +2027,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0698-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0698-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008618,
@@ -2042,12 +2042,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRL0034-08",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRL0034-08",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008619,
@@ -2073,10 +2073,10 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "MAT0152-10",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -2088,10 +2088,10 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "MAT0154-02",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -2117,12 +2117,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0751-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0751-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008624,
@@ -2132,12 +2132,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "DIRE0216-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "DIRE0242-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008625,
@@ -2147,12 +2147,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0416-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0416-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008626,
@@ -2177,12 +2177,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0654-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0654-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008628,
@@ -2192,12 +2192,12 @@
       "category": "SALA DE AULA",
       "capacity": 0,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "TEATR0143-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "TEATR0143-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008629,
@@ -2207,12 +2207,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0698-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0698-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008630,
@@ -2237,12 +2237,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "SSOCI0109-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "SSOCI0109-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008632,
@@ -2267,12 +2267,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0235-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "QUI0178-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008634,
@@ -2297,12 +2297,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0018-23",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0018-23",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008636,
@@ -2312,12 +2312,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ESTAT0063-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FILO0018-20",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008637,
@@ -2342,12 +2342,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDFIS0104-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDFIS0104-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008639,
@@ -2357,12 +2357,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "QUI0256-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADM0020-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008640,
@@ -2373,10 +2373,10 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "MAT0151-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -2402,12 +2402,12 @@
       "category": "SALA DE AULA",
       "capacity": 80,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADM0251-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MAT0065-06",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008643,
@@ -2417,12 +2417,12 @@
       "category": "SALA DE AULA",
       "capacity": 0,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "TEATR0174-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "TEATR0174-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008644,
@@ -2432,12 +2432,12 @@
       "category": "SALA DE AULA",
       "capacity": 80,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "HIST0103-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "HIST0103-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008645,
@@ -2462,12 +2462,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETR0407-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETR0407-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008647,
@@ -2477,12 +2477,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0018-08",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "PSIC0063-25",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008648,
@@ -2493,10 +2493,10 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "DIRE0327-02",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -2507,12 +2507,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FILO0018-07",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "QUI0245-03",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008650,
@@ -2522,12 +2522,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CINFO0169-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CINFO0169-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008651,
@@ -3468,10 +3468,10 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "FISI0265-04",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -3497,12 +3497,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": true,
-      "current_class": null,
+      "current_class": "FISI0283-01",
       "next_class": null,
-      "free_until": "20:45",
-      "free_at": null
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008716,
@@ -3513,10 +3513,10 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "FISI0284-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -3528,10 +3528,10 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "FISI0288-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -3632,12 +3632,12 @@
       "category": "SALA DE AULA",
       "capacity": 25,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "BIOL0362-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "BIOL0362-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008725,
@@ -3647,12 +3647,12 @@
       "category": "SALA DE AULA",
       "capacity": 25,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "BIOL0335-02A",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "BIOL0335-02B",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008726,
@@ -3662,12 +3662,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ECO0024-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ECO0024-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008727,
@@ -3722,12 +3722,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "BIOL0337-01A",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "BIOL0337-01B",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008731,
@@ -4008,10 +4008,10 @@
       "capacity": 60,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "MORFO0004-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -4083,10 +4083,10 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "MORFO0026-01B",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -4607,12 +4607,12 @@
       "category": "OUTRO",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "NGCR0044-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "NGCR0044-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008790,
@@ -7533,10 +7533,10 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "FISII0070-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -7563,10 +7563,10 @@
       "capacity": 10,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "FISII0075-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -7577,12 +7577,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRI0043-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRI0043-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008988,
@@ -7592,12 +7592,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRI0038-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRI0038-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008989,
@@ -7607,12 +7607,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRI0090-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRI0090-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008990,
@@ -7622,12 +7622,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRI0034-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRI0034-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008991,
@@ -7637,12 +7637,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "FISII0017-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FISII0003-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008992,
@@ -7652,12 +7652,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDUI0159-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FISII0084-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008993,
@@ -7667,12 +7667,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADMI0065-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADMI0065-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008994,
@@ -7682,12 +7682,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTI0006-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTI0006-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008995,
@@ -7697,12 +7697,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MATI0083-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "MATI0020-02",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008996,
@@ -7727,12 +7727,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDUI0050-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDUI0050-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008998,
@@ -7742,12 +7742,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MATI0053-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADMI0052-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1008999,
@@ -7787,12 +7787,12 @@
       "category": "SALA DE AULA",
       "capacity": 51,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADMI0056-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADMI0056-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009002,
@@ -7802,12 +7802,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDUI0165-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDUI0165-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009003,
@@ -7817,12 +7817,12 @@
       "category": "SALA DE AULA",
       "capacity": 35,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "ADMI0070-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "ADMI0070-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009004,
@@ -7832,12 +7832,12 @@
       "category": "SALA DE AULA",
       "capacity": 80,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRI0021-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRI0021-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009005,
@@ -7847,12 +7847,12 @@
       "category": "SALA DE AULA",
       "capacity": 80,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTI0007-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTI0007-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009006,
@@ -7863,10 +7863,10 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": null,
-      "next_class": "ADMI0071-01",
-      "free_until": "19:00",
+      "next_class": null,
+      "free_until": "Resto do dia",
       "free_at": null
     },
     {
@@ -7877,12 +7877,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "LETRI0004-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "LETRI0004-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009008,
@@ -7922,12 +7922,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "EDUI0161-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FISII0005-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009011,
@@ -7937,12 +7937,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTI0028-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTI0028-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009012,
@@ -7952,12 +7952,12 @@
       "category": "SALA DE AULA",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "MATI0082-02",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "FISII0074-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     },
     {
       "id": 1009013,
@@ -7982,12 +7982,12 @@
       "category": "LABORATORIO",
       "capacity": 50,
       "has_schedule": true,
-      "is_free_now": true,
-      "is_free_next": false,
-      "current_class": null,
-      "next_class": "CONTI0021-01",
-      "free_until": "19:00",
-      "free_at": null
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "CONTI0021-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
     }
   ]
 }
