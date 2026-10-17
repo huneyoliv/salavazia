@@ -255,3 +255,33 @@ def test_generate_status_payload_outside_academic_hours() -> None:
     assert payload_sat_night["summary"]["total_occupied_now"] == 0
 
 
+def test_pre_slot_window_calculation() -> None:
+    # Monday at 15:00: interval before T3 (15:15 - 16:00). Exactly 15 minutes before T3
+    dt_1500 = datetime(2026, 9, 21, 15, 0, tzinfo=BRASILIA_TZ)
+    state_1500 = get_schedule_state(dt_1500)
+    assert state_1500.next_slot is not None
+    assert state_1500.next_slot.code == "T3"
+    assert state_1500.minutes_until_next == 15
+    assert state_1500.is_pre_slot_window is True
+
+    # Monday at 15:08: 7 minutes before T3
+    dt_1508 = datetime(2026, 9, 21, 15, 8, tzinfo=BRASILIA_TZ)
+    state_1508 = get_schedule_state(dt_1508)
+    assert state_1508.minutes_until_next == 7
+    assert state_1508.is_pre_slot_window is True
+
+    # Monday at 14:30: middle of T2 (14:15 - 15:00), next is T3 (15:15). Diff is 45 minutes
+    dt_1430 = datetime(2026, 9, 21, 14, 30, tzinfo=BRASILIA_TZ)
+    state_1430 = get_schedule_state(dt_1430)
+    assert state_1430.next_slot is not None
+    assert state_1430.next_slot.code == "T3"
+    assert state_1430.minutes_until_next == 45
+    assert state_1430.is_pre_slot_window is False
+
+    # Sunday at 15:00 (not expediente)
+    dt_sun = datetime(2026, 9, 27, 15, 0, tzinfo=BRASILIA_TZ)
+    state_sun = get_schedule_state(dt_sun)
+    assert state_sun.is_expediente is False
+    assert state_sun.is_pre_slot_window is False
+
+

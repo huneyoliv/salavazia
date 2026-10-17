@@ -181,6 +181,8 @@ def generate_status_payload(
             "status_label": schedule_state.status_label,
             "current_slot": current_slot_dict,
             "next_slot": next_slot_dict,
+            "minutes_until_next": schedule_state.minutes_until_next,
+            "is_pre_slot_window": schedule_state.is_pre_slot_window,
         },
         "summary": {
             "total_rooms": len(evaluated_rooms),

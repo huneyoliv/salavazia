@@ -91,6 +91,18 @@ function getCurrentScheduleState(date = new Date()) {
     }
   }
 
+  let minutesUntilNext = null;
+  let isPreSlotWindow = false;
+
+  if (nextSlot && isExpediente) {
+    const nextStartMin = parseTimeToMinutes(nextSlot.start);
+    const diff = nextStartMin - nowMinutes;
+    if (diff >= 0) {
+      minutesUntilNext = diff;
+      isPreSlotWindow = diff <= 15;
+    }
+  }
+
   const isAcademicHours = currentSlot !== null && isExpediente;
 
   let statusLabel = '';
@@ -125,6 +137,8 @@ function getCurrentScheduleState(date = new Date()) {
     isExpediente,
     statusMode,
     statusLabel,
+    minutesUntilNext,
+    isPreSlotWindow,
     timeString: date.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
   };
 }
@@ -250,6 +264,7 @@ function computeRoomStatus(roomData, scheduleState) {
 window.ScheduleEngine = {
   UFS_SLOTS,
   DAY_NAMES,
+  parseTimeToMinutes,
   getSigaaDayOfWeek,
   getCurrentScheduleState,
   computeRoomStatus

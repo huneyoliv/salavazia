@@ -66,6 +66,8 @@ class ScheduleState:
     is_academic_hours: bool
     status_label: str
     is_expediente: bool = False
+    minutes_until_next: int | None = None
+    is_pre_slot_window: bool = False
 
 
 def get_sigaa_day_of_week(dt: datetime) -> int:
@@ -116,6 +118,15 @@ def get_schedule_state(target_dt: datetime | None = None) -> ScheduleState:
                     next_slot = slot
                     break
 
+    minutes_until_next: int | None = None
+    is_pre_slot_window = False
+    if next_slot is not None:
+        next_start_min = next_slot.start.hour * 60 + next_slot.start.minute
+        diff = next_start_min - now_minutes
+        if diff >= 0:
+            minutes_until_next = diff
+            is_pre_slot_window = diff <= 15
+
     is_academic_hours = current_slot is not None and is_expediente
 
     if current_slot:
@@ -141,4 +152,6 @@ def get_schedule_state(target_dt: datetime | None = None) -> ScheduleState:
         is_academic_hours=is_academic_hours,
         status_label=status_label,
         is_expediente=is_expediente,
+        minutes_until_next=minutes_until_next,
+        is_pre_slot_window=is_pre_slot_window,
     )
