@@ -8,6 +8,7 @@ from pathlib import Path
 
 from salavazia.client import SigaaClient
 from salavazia.crawler import RoomCrawler
+from salavazia.models import Course, Room, SlotAllocation
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -81,6 +82,44 @@ def handle_probe(args: argparse.Namespace) -> int:
             print(f"  * {course.code} - {course.name}")
         if len(room.courses) > 5:
             print(f"  ... e mais {len(room.courses) - 5} turmas.")
+
+    if getattr(args, "save", False) and rooms:
+        output_dir = Path(args.output_dir)
+        json_path = output_dir / "rooms.json"
+        csv_path = output_dir / "rooms.csv"
+
+        existing_rooms: dict[int, Room] = {}
+        if json_path.exists():
+            with open(json_path, encoding="utf-8") as f:
+                data = json.load(f)
+                for d in data:
+                    courses = [Course(**c) for c in d.get("courses", [])]
+                    allocs = [SlotAllocation(**a) for a in d.get("allocations", [])]
+                    existing_rooms[d["id"]] = Room(
+                        id=d["id"],
+                        name=d["name"],
+                        building=d["building"],
+                        room_number=d["room_number"],
+                        category=d["category"],
+                        capacity=d["capacity"],
+                        available_capacity_pct=d.get("available_capacity_pct", 0),
+                        academic_period=d.get("academic_period", ""),
+                        has_schedule=d.get("has_schedule", False),
+                        status=d.get("status", "no_schedule"),
+                        courses=courses,
+                        allocations=allocs,
+                    )
+
+        for room in rooms:
+            existing_rooms[room.id] = room
+
+        merged_list = sorted(existing_rooms.values(), key=lambda r: r.id)
+        crawler.export_to_json(merged_list, json_path)
+        crawler.export_to_csv(merged_list, csv_path)
+        print(
+            f"\nSalas salvas no catálogo em {json_path} e {csv_path} (total: {len(merged_list)})"
+        )
+
     return 0
 
 
@@ -149,6 +188,17 @@ def build_parser() -> argparse.ArgumentParser:
     # probe command
     probe_parser = subparsers.add_parser("probe", help="Consulta IDs específicos")
     probe_parser.add_argument("--ids", nargs="+", required=True, help="Lista de IDs a consultar")
+    probe_parser.add_argument(
+        "--save",
+        action="store_true",
+        help="Salva as salas encontradas diretamente no catálogo (rooms.json e rooms.csv)",
+    )
+    probe_parser.add_argument(
+        "--output-dir",
+        type=str,
+        default="data",
+        help="Diretório onde estão rooms.json e rooms.csv (padrão: data)",
+    )
 
     # summary command
     summary_parser = subparsers.add_parser("summary", help="Exibe resumo do catálogo de salas")

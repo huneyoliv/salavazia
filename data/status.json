@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-16T21:37:32.912932-03:00",
-  "evaluated_timestamp": "2026-10-16T21:37:32.910597-03:00",
+  "generated_at": "2026-10-16T21:51:38.001011-03:00",
+  "evaluated_timestamp": "2026-10-16T21:51:37.993284-03:00",
   "schedule": {
     "day_of_week": 6,
     "day_name": "Sexta-feira",
@@ -15,13 +15,15 @@
       "start": "21:30",
       "end": "22:15"
     },
-    "next_slot": null
+    "next_slot": null,
+    "minutes_until_next": null,
+    "is_pre_slot_window": false
   },
   "summary": {
-    "total_rooms": 531,
-    "total_active_rooms": 216,
+    "total_rooms": 532,
+    "total_active_rooms": 217,
     "total_free_now": 95,
-    "total_occupied_now": 121
+    "total_occupied_now": 122
   },
   "rooms": [
     {
@@ -7985,6 +7987,21 @@
       "is_free_now": false,
       "is_free_next": true,
       "current_class": "CONTI0031-01",
+      "next_class": null,
+      "free_until": null,
+      "free_at": "22:15"
+    },
+    {
+      "id": 122071161,
+      "name": "SALA DE AULA - DID 3 - 107",
+      "building": "DID 3",
+      "room_number": "107",
+      "category": "SALA DE AULA",
+      "capacity": 20,
+      "has_schedule": true,
+      "is_free_now": false,
+      "is_free_next": true,
+      "current_class": "EDU0108-02",
       "next_class": null,
       "free_until": null,
       "free_at": "22:15"

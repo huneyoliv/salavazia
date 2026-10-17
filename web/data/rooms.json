@@ -85301,5 +85301,587 @@
         "class_code": "CONTI0025-01"
       }
     ]
+  },
+  {
+    "id": 122071161,
+    "name": "SALA DE AULA - DID 3 - 107",
+    "building": "DID 3",
+    "room_number": "107",
+    "category": "SALA DE AULA",
+    "capacity": 20,
+    "available_capacity_pct": 16,
+    "academic_period": "2026/2",
+    "has_schedule": true,
+    "status": "active",
+    "courses": [
+      {
+        "code": "CINFO0048-01",
+        "name": "DESENVOLVIMENTO DE COLEÇÕES"
+      },
+      {
+        "code": "COMSO0356-01",
+        "name": "SEMINÁRIOS TEMÁTICOS II"
+      },
+      {
+        "code": "DFA0037-01A",
+        "name": "ATENÇÃO FARMACÊUTICA"
+      },
+      {
+        "code": "DFA0037-01B",
+        "name": "ATENÇÃO FARMACÊUTICA"
+      },
+      {
+        "code": "EDFIS0037-02",
+        "name": "TÓPICOS ESPECIAIS EM EDUCAÇÃO FÍSICA II"
+      },
+      {
+        "code": "EDFIS0112-02",
+        "name": "EDUCAÇÃO E LUDICIDADE"
+      },
+      {
+        "code": "EDU0108-02",
+        "name": "ESTRUTURA E FUNCIONAMENTO DA EDUCAÇÃO BÁSICA"
+      },
+      {
+        "code": "EMAT0223-01A",
+        "name": "QUÍMICA DE MATERIAIS A"
+      },
+      {
+        "code": "EMAT0223-01B",
+        "name": "QUÍMICA DE MATERIAIS A"
+      },
+      {
+        "code": "EMAT0228-01A",
+        "name": "QUÍMICA DE MATERIAIS B"
+      },
+      {
+        "code": "EMAT0228-01B",
+        "name": "QUÍMICA DE MATERIAIS B"
+      },
+      {
+        "code": "ENAMB0043-01",
+        "name": "SANEAMENTO E ENGENHARIA AMBIENTAL"
+      },
+      {
+        "code": "EPET0033-01",
+        "name": "PROPRIEDADES DOS FLUIDOS E DAS ROCHAS"
+      },
+      {
+        "code": "EQUI0081-01",
+        "name": "TERMODINÂMICA APLICADA"
+      },
+      {
+        "code": "EQUI0129-01A",
+        "name": "QUÍMICA INDUSTRIAL ORGÂNICA"
+      },
+      {
+        "code": "GEO0050-01",
+        "name": "ESTÁGIO SUPERVISIONADO II"
+      },
+      {
+        "code": "GEO0089-02",
+        "name": "ESTÁGIO SUPERVISIONADO EM ENSINO DE GEOGRAFIA II"
+      },
+      {
+        "code": "LETR0701-01",
+        "name": "LÍNGUA INGLESA IV"
+      },
+      {
+        "code": "LETRL0093-01",
+        "name": "INTRODUÇÃO AOS ESTUDOS DA LINGUAGEM"
+      },
+      {
+        "code": "MAT0069-02",
+        "name": "EQUAÇÕES DIFERENCIAIS ORDINÁRIAS"
+      },
+      {
+        "code": "MAT0155-06",
+        "name": "EQUAÇÕES DIFERENCIAIS I"
+      },
+      {
+        "code": "PESCA0013-01",
+        "name": "MICROBIOLOGIA AQUÁTICA"
+      },
+      {
+        "code": "QUI0069-02A",
+        "name": "QUÍMICA ANALÍTICA INSTRUMENTAL"
+      },
+      {
+        "code": "QUI0267-01",
+        "name": "ELETROQUÍMICA"
+      },
+      {
+        "code": "SSOCI0141-04",
+        "name": "LABORATÓRIO DE ENSINO DA PRÁTICA I"
+      },
+      {
+        "code": "TURIS0063-01",
+        "name": "LEGISLAÇÃO E ÉTICA NO TURISMO"
+      }
+    ],
+    "allocations": [
+      {
+        "slot_id": "122071161_3_1_5",
+        "day_of_week": 3,
+        "shift": 1,
+        "slot_index": 5,
+        "class_code": "GEO0089-02"
+      },
+      {
+        "slot_id": "122071161_3_1_6",
+        "day_of_week": 3,
+        "shift": 1,
+        "slot_index": 6,
+        "class_code": "GEO0089-02"
+      },
+      {
+        "slot_id": "122071161_5_1_5",
+        "day_of_week": 5,
+        "shift": 1,
+        "slot_index": 5,
+        "class_code": "GEO0089-02"
+      },
+      {
+        "slot_id": "122071161_5_1_6",
+        "day_of_week": 5,
+        "shift": 1,
+        "slot_index": 6,
+        "class_code": "GEO0089-02"
+      },
+      {
+        "slot_id": "122071161_2_1_3",
+        "day_of_week": 2,
+        "shift": 1,
+        "slot_index": 3,
+        "class_code": "GEO0050-01"
+      },
+      {
+        "slot_id": "122071161_2_1_4",
+        "day_of_week": 2,
+        "shift": 1,
+        "slot_index": 4,
+        "class_code": "GEO0050-01"
+      },
+      {
+        "slot_id": "122071161_2_2_3",
+        "day_of_week": 2,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "EMAT0223-01A"
+      },
+      {
+        "slot_id": "122071161_2_2_4",
+        "day_of_week": 2,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "EMAT0223-01A"
+      },
+      {
+        "slot_id": "122071161_3_2_3",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "EMAT0228-01A"
+      },
+      {
+        "slot_id": "122071161_3_2_4",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "EMAT0228-01A"
+      },
+      {
+        "slot_id": "122071161_2_2_3",
+        "day_of_week": 2,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "EMAT0223-01B"
+      },
+      {
+        "slot_id": "122071161_2_2_4",
+        "day_of_week": 2,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "EMAT0223-01B"
+      },
+      {
+        "slot_id": "122071161_3_2_3",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "EMAT0228-01B"
+      },
+      {
+        "slot_id": "122071161_3_2_4",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "EMAT0228-01B"
+      },
+      {
+        "slot_id": "122071161_4_2_1",
+        "day_of_week": 4,
+        "shift": 2,
+        "slot_index": 1,
+        "class_code": "DFA0037-01A"
+      },
+      {
+        "slot_id": "122071161_4_2_2",
+        "day_of_week": 4,
+        "shift": 2,
+        "slot_index": 2,
+        "class_code": "DFA0037-01A"
+      },
+      {
+        "slot_id": "122071161_4_2_1",
+        "day_of_week": 4,
+        "shift": 2,
+        "slot_index": 1,
+        "class_code": "DFA0037-01B"
+      },
+      {
+        "slot_id": "122071161_4_2_2",
+        "day_of_week": 4,
+        "shift": 2,
+        "slot_index": 2,
+        "class_code": "DFA0037-01B"
+      },
+      {
+        "slot_id": "122071161_4_1_5",
+        "day_of_week": 4,
+        "shift": 1,
+        "slot_index": 5,
+        "class_code": "EQUI0081-01"
+      },
+      {
+        "slot_id": "122071161_4_1_6",
+        "day_of_week": 4,
+        "shift": 1,
+        "slot_index": 6,
+        "class_code": "EQUI0081-01"
+      },
+      {
+        "slot_id": "122071161_6_3_1",
+        "day_of_week": 6,
+        "shift": 3,
+        "slot_index": 1,
+        "class_code": "EDU0108-02"
+      },
+      {
+        "slot_id": "122071161_6_3_2",
+        "day_of_week": 6,
+        "shift": 3,
+        "slot_index": 2,
+        "class_code": "EDU0108-02"
+      },
+      {
+        "slot_id": "122071161_6_3_3",
+        "day_of_week": 6,
+        "shift": 3,
+        "slot_index": 3,
+        "class_code": "EDU0108-02"
+      },
+      {
+        "slot_id": "122071161_6_3_4",
+        "day_of_week": 6,
+        "shift": 3,
+        "slot_index": 4,
+        "class_code": "EDU0108-02"
+      },
+      {
+        "slot_id": "122071161_5_1_3",
+        "day_of_week": 5,
+        "shift": 1,
+        "slot_index": 3,
+        "class_code": "QUI0069-02A"
+      },
+      {
+        "slot_id": "122071161_5_1_4",
+        "day_of_week": 5,
+        "shift": 1,
+        "slot_index": 4,
+        "class_code": "QUI0069-02A"
+      },
+      {
+        "slot_id": "122071161_5_3_1",
+        "day_of_week": 5,
+        "shift": 3,
+        "slot_index": 1,
+        "class_code": "LETR0701-01"
+      },
+      {
+        "slot_id": "122071161_5_3_2",
+        "day_of_week": 5,
+        "shift": 3,
+        "slot_index": 2,
+        "class_code": "LETR0701-01"
+      },
+      {
+        "slot_id": "122071161_5_3_3",
+        "day_of_week": 5,
+        "shift": 3,
+        "slot_index": 3,
+        "class_code": "LETR0701-01"
+      },
+      {
+        "slot_id": "122071161_5_3_4",
+        "day_of_week": 5,
+        "shift": 3,
+        "slot_index": 4,
+        "class_code": "LETR0701-01"
+      },
+      {
+        "slot_id": "122071161_4_1_1",
+        "day_of_week": 4,
+        "shift": 1,
+        "slot_index": 1,
+        "class_code": "LETRL0093-01"
+      },
+      {
+        "slot_id": "122071161_4_1_2",
+        "day_of_week": 4,
+        "shift": 1,
+        "slot_index": 2,
+        "class_code": "LETRL0093-01"
+      },
+      {
+        "slot_id": "122071161_4_1_3",
+        "day_of_week": 4,
+        "shift": 1,
+        "slot_index": 3,
+        "class_code": "LETRL0093-01"
+      },
+      {
+        "slot_id": "122071161_4_1_4",
+        "day_of_week": 4,
+        "shift": 1,
+        "slot_index": 4,
+        "class_code": "LETRL0093-01"
+      },
+      {
+        "slot_id": "122071161_5_2_1",
+        "day_of_week": 5,
+        "shift": 2,
+        "slot_index": 1,
+        "class_code": "PESCA0013-01"
+      },
+      {
+        "slot_id": "122071161_5_2_2",
+        "day_of_week": 5,
+        "shift": 2,
+        "slot_index": 2,
+        "class_code": "PESCA0013-01"
+      },
+      {
+        "slot_id": "122071161_3_2_1",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 1,
+        "class_code": "MAT0155-06"
+      },
+      {
+        "slot_id": "122071161_3_2_2",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 2,
+        "class_code": "MAT0155-06"
+      },
+      {
+        "slot_id": "122071161_4_2_3",
+        "day_of_week": 4,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "TURIS0063-01"
+      },
+      {
+        "slot_id": "122071161_4_2_4",
+        "day_of_week": 4,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "TURIS0063-01"
+      },
+      {
+        "slot_id": "122071161_6_1_1",
+        "day_of_week": 6,
+        "shift": 1,
+        "slot_index": 1,
+        "class_code": "ENAMB0043-01"
+      },
+      {
+        "slot_id": "122071161_6_1_2",
+        "day_of_week": 6,
+        "shift": 1,
+        "slot_index": 2,
+        "class_code": "ENAMB0043-01"
+      },
+      {
+        "slot_id": "122071161_6_2_1",
+        "day_of_week": 6,
+        "shift": 2,
+        "slot_index": 1,
+        "class_code": "MAT0069-02"
+      },
+      {
+        "slot_id": "122071161_6_2_2",
+        "day_of_week": 6,
+        "shift": 2,
+        "slot_index": 2,
+        "class_code": "MAT0069-02"
+      },
+      {
+        "slot_id": "122071161_3_2_5",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 5,
+        "class_code": "EDFIS0037-02"
+      },
+      {
+        "slot_id": "122071161_3_2_6",
+        "day_of_week": 3,
+        "shift": 2,
+        "slot_index": 6,
+        "class_code": "EDFIS0037-02"
+      },
+      {
+        "slot_id": "122071161_2_1_1",
+        "day_of_week": 2,
+        "shift": 1,
+        "slot_index": 1,
+        "class_code": "COMSO0356-01"
+      },
+      {
+        "slot_id": "122071161_2_1_2",
+        "day_of_week": 2,
+        "shift": 1,
+        "slot_index": 2,
+        "class_code": "COMSO0356-01"
+      },
+      {
+        "slot_id": "122071161_6_2_3",
+        "day_of_week": 6,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "EDFIS0112-02"
+      },
+      {
+        "slot_id": "122071161_6_2_4",
+        "day_of_week": 6,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "EDFIS0112-02"
+      },
+      {
+        "slot_id": "122071161_6_2_5",
+        "day_of_week": 6,
+        "shift": 2,
+        "slot_index": 5,
+        "class_code": "EDFIS0112-02"
+      },
+      {
+        "slot_id": "122071161_6_2_6",
+        "day_of_week": 6,
+        "shift": 2,
+        "slot_index": 6,
+        "class_code": "EDFIS0112-02"
+      },
+      {
+        "slot_id": "122071161_2_3_1",
+        "day_of_week": 2,
+        "shift": 3,
+        "slot_index": 1,
+        "class_code": "QUI0267-01"
+      },
+      {
+        "slot_id": "122071161_2_3_2",
+        "day_of_week": 2,
+        "shift": 3,
+        "slot_index": 2,
+        "class_code": "QUI0267-01"
+      },
+      {
+        "slot_id": "122071161_3_3_1",
+        "day_of_week": 3,
+        "shift": 3,
+        "slot_index": 1,
+        "class_code": "SSOCI0141-04"
+      },
+      {
+        "slot_id": "122071161_3_3_2",
+        "day_of_week": 3,
+        "shift": 3,
+        "slot_index": 2,
+        "class_code": "SSOCI0141-04"
+      },
+      {
+        "slot_id": "122071161_3_3_3",
+        "day_of_week": 3,
+        "shift": 3,
+        "slot_index": 3,
+        "class_code": "SSOCI0141-04"
+      },
+      {
+        "slot_id": "122071161_3_3_4",
+        "day_of_week": 3,
+        "shift": 3,
+        "slot_index": 4,
+        "class_code": "SSOCI0141-04"
+      },
+      {
+        "slot_id": "122071161_3_1_1",
+        "day_of_week": 3,
+        "shift": 1,
+        "slot_index": 1,
+        "class_code": "EQUI0129-01A"
+      },
+      {
+        "slot_id": "122071161_3_1_2",
+        "day_of_week": 3,
+        "shift": 1,
+        "slot_index": 2,
+        "class_code": "EQUI0129-01A"
+      },
+      {
+        "slot_id": "122071161_5_2_3",
+        "day_of_week": 5,
+        "shift": 2,
+        "slot_index": 3,
+        "class_code": "EPET0033-01"
+      },
+      {
+        "slot_id": "122071161_5_2_4",
+        "day_of_week": 5,
+        "shift": 2,
+        "slot_index": 4,
+        "class_code": "EPET0033-01"
+      },
+      {
+        "slot_id": "122071161_4_3_1",
+        "day_of_week": 4,
+        "shift": 3,
+        "slot_index": 1,
+        "class_code": "CINFO0048-01"
+      },
+      {
+        "slot_id": "122071161_4_3_2",
+        "day_of_week": 4,
+        "shift": 3,
+        "slot_index": 2,
+        "class_code": "CINFO0048-01"
+      },
+      {
+        "slot_id": "122071161_4_3_3",
+        "day_of_week": 4,
+        "shift": 3,
+        "slot_index": 3,
+        "class_code": "CINFO0048-01"
+      },
+      {
+        "slot_id": "122071161_4_3_4",
+        "day_of_week": 4,
+        "shift": 3,
+        "slot_index": 4,
+        "class_code": "CINFO0048-01"
+      }
+    ]
   }
 ]
