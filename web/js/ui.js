@@ -163,6 +163,40 @@ function renderRoomCard(room, buildingInfo, distanceMeters) {
         <span class="projection-text is-off">Fora do horário de expediente letivo</span>
       </div>
     `;
+  } else if (room.will_be_occupied_soon) {
+    statusBadgeHtml = `
+      <span class="status-pill pill-warning">
+        <span class="badge-dot"></span>
+        Ocupa às ${escapeHtml(room.next_slot_start || '')}
+      </span>
+    `;
+    const nextClassText = room.next_class ? ` (${escapeHtml(room.next_class)})` : '';
+    projectionHtml = `
+      <div class="card-projection-box">
+        <svg class="projection-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span class="projection-text is-warning">⚠️ Livre agora · <strong>Ocupa às ${escapeHtml(room.next_slot_start || '')}</strong>${nextClassText}</span>
+      </div>
+    `;
+  } else if (room.will_be_free_soon) {
+    statusBadgeHtml = `
+      <span class="status-pill pill-upcoming">
+        <span class="badge-dot"></span>
+        Libera às ${escapeHtml(room.next_slot_start || '')}
+      </span>
+    `;
+    projectionHtml = `
+      <div class="card-projection-box">
+        <svg class="projection-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="projection-text is-upcoming">✨ <strong>Libera às ${escapeHtml(room.next_slot_start || '')}</strong> · Livre no próximo horário</span>
+      </div>
+    `;
   } else if (isFree) {
     statusBadgeHtml = `
       <span class="status-pill pill-free">
@@ -207,6 +241,17 @@ function renderRoomCard(room, buildingInfo, distanceMeters) {
     `;
   }
 
+  const freeCount = room.free_slots_remaining !== undefined ? room.free_slots_remaining : room.free_slots_total;
+  const freeCountHtml = typeof freeCount === 'number'
+    ? `<span class="meta-item" title="Horários disponíveis hoje">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        ${freeCount} ${freeCount === 1 ? 'horário livre' : 'horários livres'}
+      </span>`
+    : '';
+
   const distanceHtml = distanceMeters !== null
     ? `<span class="meta-item meta-distance">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -249,6 +294,7 @@ function renderRoomCard(room, buildingInfo, distanceMeters) {
           </svg>
           ${escapeHtml(room.category || 'Sala de aula')}
         </span>
+        ${freeCountHtml}
         ${distanceHtml}
       </div>
 

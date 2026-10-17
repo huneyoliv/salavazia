@@ -95,39 +95,103 @@ function hasActiveFilters() {
   return query.trim() !== '' || campus !== 'all' || building !== 'all' || category !== 'all' || !freeOnly;
 }
 
-function getRoomAvailabilityScore(room, nowMinutes, sigaaDay) {
-  if (!room.is_free_now) {
-    return 0;
+function getRoomFreeSlotsInfo(room, sigaaDay, nowMinutes) {
+  const catalogEntry = AppState.roomsCatalog[room.id];
+  const allocations = catalogEntry?.allocations || [];
+  const allocationsToday = allocations.filter((a) => a.day_of_week === sigaaDay);
+
+  const isSaturday = sigaaDay === 7;
+  const totalSlotsToday = isSaturday ? 6 : 16;
+  const totalFreeToday = Math.max(0, totalSlotsToday - allocationsToday.length);
+
+  const applicableSlots = isSaturday
+    ? (window.ScheduleEngine?.UFS_SLOTS || []).filter((s) => s.shift === 1)
+    : (window.ScheduleEngine?.UFS_SLOTS || []);
+
+  const todayAllocKeys = new Set(
+    allocationsToday.map((a) => `${a.shift}_${a.slot_index}`)
+  );
+
+  let remainingFreeToday = 0;
+  for (const slot of applicableSlots) {
+    const endMin = window.ScheduleEngine?.parseTimeToMinutes
+      ? window.ScheduleEngine.parseTimeToMinutes(slot.end)
+      : 0;
+    if (endMin > nowMinutes) {
+      const key = `${slot.shift}_${slot.slotIndex}`;
+      if (!todayAllocKeys.has(key)) {
+        remainingFreeToday++;
+      }
+    }
   }
 
-  let score = 0;
+  return {
+    totalFreeToday,
+    remainingFreeToday
+  };
+}
 
-  if (room.free_until === 'Resto do dia') {
-    const catalogEntry = AppState.roomsCatalog[room.id];
-    const allocationsToday = (catalogEntry?.allocations || []).filter(
-      (a) => a.day_of_week === sigaaDay
-    ).length;
-    score = allocationsToday === 0 ? 900 : 720;
-  } else if (room.free_until && room.free_until.includes(':')) {
-    const [h, m] = room.free_until.split(':').map(Number);
-    const endMinutes = h * 60 + m;
-    let diff = endMinutes - nowMinutes;
-    if (diff < 0) diff = 30;
-    score = room.is_free_next ? diff + 30 : Math.min(diff, 45);
-  } else {
-    score = room.is_free_next ? 120 : 30;
+function evaluateRoomPreSlotState(room, scheduleState) {
+  const isPreSlot = Boolean(scheduleState?.isPreSlotWindow && scheduleState?.nextSlot);
+  const nextSlotStart = scheduleState?.nextSlot?.start || null;
+
+  if (isPreSlot) {
+    if (room.is_free_now && room.is_free_next) {
+      return {
+        priorityGroup: 1,
+        isViable: true,
+        willBeOccupiedSoon: false,
+        willBeFreeSoon: false,
+        nextSlotStart
+      };
+    }
+
+    if (!room.is_free_now && room.is_free_next) {
+      return {
+        priorityGroup: 2,
+        isViable: true,
+        willBeOccupiedSoon: false,
+        willBeFreeSoon: true,
+        nextSlotStart
+      };
+    }
+
+    if (room.is_free_now && !room.is_free_next) {
+      return {
+        priorityGroup: 3,
+        isViable: false,
+        willBeOccupiedSoon: true,
+        willBeFreeSoon: false,
+        nextSlotStart
+      };
+    }
+
+    return {
+      priorityGroup: 4,
+      isViable: false,
+      willBeOccupiedSoon: false,
+      willBeFreeSoon: false,
+      nextSlotStart
+    };
   }
 
-  if (room.category === 'SALA DE AULA') {
-    score += 20;
+  if (room.is_free_now) {
+    return {
+      priorityGroup: 1,
+      isViable: true,
+      willBeOccupiedSoon: false,
+      willBeFreeSoon: false,
+      nextSlotStart: null
+    };
   }
 
-  const cap = room.capacity || 0;
-  if (cap >= 30 && cap <= 80) {
-    score += 10;
-  }
-
-  return score;
+  return {
+    priorityGroup: 4,
+    isViable: false,
+    willBeOccupiedSoon: false,
+    willBeFreeSoon: false,
+    nextSlotStart: null
+  };
 }
 
 function normalizeSearchText(str) {
@@ -157,12 +221,41 @@ function filterAndSortRooms(evaluatedRooms, scheduleState) {
   const { query, campus, building, category, freeOnly } = AppState.filters;
   const normQuery = normalizeSearchText(query);
   const queryTokens = normQuery ? normQuery.split(' ').filter(Boolean) : [];
-  const queryCompact = normQuery.replace(/\s+/g, '');
 
-  let filtered = evaluatedRooms.filter((room) => {
+  const now = scheduleState ? scheduleState.timestamp || new Date() : new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  const sigaaDay = scheduleState
+    ? scheduleState.dayOfWeek
+    : (window.ScheduleEngine ? window.ScheduleEngine.getSigaaDayOfWeek(now) : now.getDay() + 1);
+
+  const enrichedRooms = evaluatedRooms.map((room) => {
+    const slotsInfo = getRoomFreeSlotsInfo(room, sigaaDay, nowMinutes);
+    const preSlotState = evaluateRoomPreSlotState(room, scheduleState);
+
+    return {
+      ...room,
+      free_slots_total: slotsInfo.totalFreeToday,
+      free_slots_remaining: slotsInfo.remainingFreeToday,
+      priority_group: preSlotState.priorityGroup,
+      is_viable: preSlotState.isViable,
+      will_be_occupied_soon: preSlotState.willBeOccupiedSoon,
+      will_be_free_soon: preSlotState.willBeFreeSoon,
+      next_slot_start: preSlotState.nextSlotStart
+    };
+  });
+
+  let filtered = enrichedRooms.filter((room) => {
     if (!room.has_schedule) return false;
 
-    if (freeOnly && !room.is_free_now) return false;
+    if (freeOnly) {
+      if (scheduleState?.isPreSlotWindow) {
+        if (!room.is_viable && !room.will_be_occupied_soon) {
+          return false;
+        }
+      } else if (!room.is_free_now) {
+        return false;
+      }
+    }
 
     if (building !== 'all' && room.building !== building) return false;
 
@@ -201,41 +294,61 @@ function filterAndSortRooms(evaluatedRooms, scheduleState) {
     return true;
   });
 
-  const now = scheduleState ? scheduleState.timestamp || new Date() : new Date();
-  const nowMinutes = now.getHours() * 60 + now.getMinutes();
-  const sigaaDay = scheduleState ? scheduleState.dayOfWeek : (window.ScheduleEngine ? window.ScheduleEngine.getSigaaDayOfWeek(now) : now.getDay() + 1);
+  const buildingDistances = {};
+  if (AppState.userCoords) {
+    for (const [key, bldg] of Object.entries(AppState.buildingsData)) {
+      if (typeof bldg.lat === 'number' && typeof bldg.lng === 'number') {
+        buildingDistances[key] = window.GeoEngine.haversineDistance(
+          AppState.userCoords.lat,
+          AppState.userCoords.lng,
+          bldg.lat,
+          bldg.lng
+        );
+      } else {
+        buildingDistances[key] = Infinity;
+      }
+    }
+  }
 
   filtered.sort((a, b) => {
-    if (a.is_free_now !== b.is_free_now) {
-      return a.is_free_now ? -1 : 1;
+    // 1. Viabilidade: salas disponíveis para estudo vêm antes
+    const viableA = a.is_viable ? 1 : 0;
+    const viableB = b.is_viable ? 1 : 0;
+    if (viableA !== viableB) {
+      return viableB - viableA;
     }
 
-    const availA = getRoomAvailabilityScore(a, nowMinutes, sigaaDay);
-    const availB = getRoomAvailabilityScore(b, nowMinutes, sigaaDay);
-
+    // 2. Proximidade por didática/prédio
     if (AppState.userCoords) {
-      const bldgA = AppState.buildingsData[a.building];
-      const bldgB = AppState.buildingsData[b.building];
-      const distA = bldgA && typeof bldgA.lat === 'number'
-        ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgA.lat, bldgA.lng)
-        : Infinity;
-      const distB = bldgB && typeof bldgB.lat === 'number'
-        ? window.GeoEngine.haversineDistance(AppState.userCoords.lat, AppState.userCoords.lng, bldgB.lat, bldgB.lng)
-        : Infinity;
+      const distA = buildingDistances[a.building] ?? Infinity;
+      const distB = buildingDistances[b.building] ?? Infinity;
 
-      const effDistA = distA - (availA * 0.35);
-      const effDistB = distB - (availB * 0.35);
-
-      if (Math.abs(effDistA - effDistB) > 0.01) {
-        return effDistA - effDistB;
+      if (a.building !== b.building && Math.abs(distA - distB) > 8) {
+        return distA - distB;
       }
-      return a.name.localeCompare(b.name);
     }
 
-    if (availA !== availB) {
-      return availB - availA;
+    // 3. Mais horários livres no dia (slots restantes e total)
+    if (a.free_slots_remaining !== b.free_slots_remaining) {
+      return b.free_slots_remaining - a.free_slots_remaining;
     }
 
+    if (a.free_slots_total !== b.free_slots_total) {
+      return b.free_slots_total - a.free_slots_total;
+    }
+
+    // 4. Na janela de 15 min: livre agora tem preferência sobre desocupa às 15:15
+    if (a.priority_group !== b.priority_group) {
+      return a.priority_group - b.priority_group;
+    }
+
+    // 5. Categoria: Sala de aula tem preferência sobre outros tipos
+    if (a.category !== b.category) {
+      if (a.category === 'SALA DE AULA') return -1;
+      if (b.category === 'SALA DE AULA') return 1;
+    }
+
+    // 6. Alfabético por prédio e nome
     if (a.building !== b.building) {
       return a.building.localeCompare(b.building);
     }
@@ -571,8 +684,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.App = {
+  AppState,
   requestGpsLocation,
   showRoomDetails,
   resetFilters,
-  setShowAll
+  setShowAll,
+  getEvaluatedRooms,
+  filterAndSortRooms
 };

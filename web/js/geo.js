@@ -93,9 +93,30 @@ function findNearestBuilding(userCoords, buildings) {
   };
 }
 
+function findBuildingsSortedByDistance(userCoords, buildings) {
+  if (!userCoords || !buildings) return [];
+
+  const list = [];
+  for (const [key, bldg] of Object.entries(buildings)) {
+    if (typeof bldg.lat === 'number' && typeof bldg.lng === 'number') {
+      const dist = haversineDistance(userCoords.lat, userCoords.lng, bldg.lat, bldg.lng);
+      list.push({
+        key,
+        building: bldg,
+        distanceMeters: dist,
+        distanceFormatted: formatDistance(dist)
+      });
+    }
+  }
+
+  list.sort((a, b) => a.distanceMeters - b.distanceMeters);
+  return list;
+}
+
 window.GeoEngine = {
   haversineDistance,
   formatDistance,
   getUserLocation,
-  findNearestBuilding
+  findNearestBuilding,
+  findBuildingsSortedByDistance
 };

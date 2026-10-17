@@ -683,6 +683,26 @@ body {
   background-color: var(--off-text);
 }
 
+.pill-warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pill-warning .badge-dot {
+  background-color: #f59e0b;
+}
+
+.pill-upcoming {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.pill-upcoming .badge-dot {
+  background-color: #38bdf8;
+}
+
 /* Card Meta Tags */
 .card-meta-row {
   display: flex;
@@ -746,6 +766,22 @@ body {
 
 .projection-text.is-off {
   color: var(--text-muted);
+}
+
+.projection-text.is-warning {
+  color: #f59e0b;
+}
+
+.projection-text.is-warning strong {
+  color: var(--text-primary);
+}
+
+.projection-text.is-upcoming {
+  color: #38bdf8;
+}
+
+.projection-text.is-upcoming strong {
+  color: var(--text-primary);
 }
 
 /* Card Footer */
