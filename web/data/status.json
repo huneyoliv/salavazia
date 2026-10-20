@@ -1,21 +1,13 @@
 {
-  "generated_at": "2026-10-20T13:35:38.198983-03:00",
-  "evaluated_timestamp": "2026-10-20T13:35:38.196082-03:00",
+  "generated_at": "2026-10-20T14:23:22.330869-03:00",
+  "evaluated_timestamp": "2026-10-20T14:23:22.328159-03:00",
   "schedule": {
     "day_of_week": 3,
     "day_name": "Terça-feira",
     "is_academic_hours": true,
     "is_expediente": true,
-    "status_label": "Aula em andamento: T1 (13:30 - 14:15)",
+    "status_label": "Aula em andamento: T2 (14:15 - 15:00)",
     "current_slot": {
-      "shift": 2,
-      "slot_index": 1,
-      "code": "T1",
-      "time_range": "13:30 - 14:15",
-      "start": "13:30",
-      "end": "14:15"
-    },
-    "next_slot": {
       "shift": 2,
       "slot_index": 2,
       "code": "T2",
@@ -23,14 +15,22 @@
       "start": "14:15",
       "end": "15:00"
     },
-    "minutes_until_next": 40,
+    "next_slot": {
+      "shift": 2,
+      "slot_index": 3,
+      "code": "T3",
+      "time_range": "15:15 - 16:00",
+      "start": "15:15",
+      "end": "16:00"
+    },
+    "minutes_until_next": 52,
     "is_pre_slot_window": false
   },
   "summary": {
     "total_rooms": 532,
     "total_active_rooms": 217,
-    "total_free_now": 88,
-    "total_occupied_now": 129
+    "total_free_now": 87,
+    "total_occupied_now": 130
   },
   "rooms": [
     {
@@ -269,7 +269,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "DFA0057-01",
-      "next_class": "DFA0057-01",
+      "next_class": "SOCIA0025-10",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -299,7 +299,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MAT0096-05",
-      "next_class": "MAT0096-05",
+      "next_class": "LETRV0108-DIV",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -329,7 +329,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "NUTR0097-01",
-      "next_class": "NUTR0097-01",
+      "next_class": "BIOL0360-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -344,7 +344,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "TURIS0029-01",
-      "next_class": "TURIS0029-01",
+      "next_class": "TURIS0032-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -389,7 +389,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ECONO0033-01",
-      "next_class": "ECONO0033-01",
+      "next_class": "PSIC0106-03",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -419,7 +419,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ECONO0089-06",
-      "next_class": "ECONO0089-06",
+      "next_class": "EDU0388-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -449,7 +449,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "DIRE0271-01",
-      "next_class": "DIRE0271-01",
+      "next_class": "EQUI0100-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -479,7 +479,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "VETER0023-01B",
-      "next_class": "VETER0023-01B",
+      "next_class": "DFA0056-01B",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -494,7 +494,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "DFA0008-01B",
-      "next_class": "DFA0008-01B",
+      "next_class": "ECONO0006-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -506,12 +506,12 @@
       "category": "SALA DE AULA",
       "capacity": 30,
       "has_schedule": true,
-      "is_free_now": true,
+      "is_free_now": false,
       "is_free_next": false,
-      "current_class": null,
+      "current_class": "FISOL0006-01",
       "next_class": "FISOL0006-01",
-      "free_until": "14:15",
-      "free_at": null
+      "free_until": null,
+      "free_at": "16:45"
     },
     {
       "id": 1008516,
@@ -524,7 +524,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "DFA0028-01B",
-      "next_class": "DFA0028-01B",
+      "next_class": "DFA0055-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -537,9 +537,9 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "COMP0510-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -584,7 +584,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISOL0001-06C",
-      "next_class": "FISOL0001-06C",
+      "next_class": "DFA0019-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -614,7 +614,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "DFA0015-01B",
-      "next_class": "DFA0015-01B",
+      "next_class": "QUI0072-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -687,9 +687,9 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "DESIG0051-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -779,7 +779,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "PSIC0111-02",
-      "next_class": "PSIC0111-02",
+      "next_class": "QUI0255-02",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -792,9 +792,9 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "EDFIS0036-02",
       "free_until": "15:15",
       "free_at": null
     },
@@ -809,7 +809,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "DIRE0273-01",
-      "next_class": "DIRE0273-01",
+      "next_class": "EPROD0072-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -822,9 +822,9 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "FILO0018-17",
       "free_until": "15:15",
       "free_at": null
     },
@@ -839,7 +839,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "PESCA0013-01",
-      "next_class": "PESCA0013-01",
+      "next_class": "ENCIV0134-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -852,9 +852,9 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "PESCA0087-01",
-      "next_class": "PESCA0087-01",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -869,7 +869,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FLORE0009-02",
-      "next_class": "FLORE0009-02",
+      "next_class": "PESCA0032-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -927,9 +927,9 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MAT0001-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -957,9 +957,9 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "ENCIV0135-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -974,7 +974,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MAT0154-01",
-      "next_class": "MAT0154-01",
+      "next_class": "SOCIA0003-04",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1004,7 +1004,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EPROD0036-02",
-      "next_class": "EPROD0036-02",
+      "next_class": "COMP0409-02",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1047,9 +1047,9 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "ESTAT0128-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1062,9 +1062,9 @@
       "capacity": 55,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "FISOL0002-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1137,9 +1137,9 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "COMP0497-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1152,9 +1152,9 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "EDFIS0108-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1169,7 +1169,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0008-02A",
-      "next_class": "MORFO0008-02A",
+      "next_class": "COMP0496-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1182,9 +1182,9 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MORFO0014-01A",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1212,9 +1212,9 @@
       "capacity": 55,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "FISOL0001-06C",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1274,7 +1274,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "TURIS0034-01",
-      "next_class": "TURIS0034-01",
+      "next_class": "ELET0172-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1319,7 +1319,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ENCIV0078-01",
-      "next_class": "ENCIV0078-01",
+      "next_class": "ECONO0146-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1332,9 +1332,9 @@
       "capacity": 48,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "MAT0150-03",
-      "next_class": "MAT0150-03",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1349,7 +1349,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EDFIS0146-01",
-      "next_class": "EDFIS0146-01",
+      "next_class": "COMP0503-02",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1394,7 +1394,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ESTAT0127-01",
-      "next_class": "ESTAT0127-01",
+      "next_class": "DIRE0251-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1407,9 +1407,9 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "EPROD0056-01",
-      "next_class": "EPROD0056-01",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1424,7 +1424,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MAT0153-04",
-      "next_class": "MAT0153-04",
+      "next_class": "MAT0068-02",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1439,7 +1439,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISI0328-01",
-      "next_class": "FISI0328-01",
+      "next_class": "FISI0260-12",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1454,7 +1454,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISI0261-07",
-      "next_class": "FISI0261-07",
+      "next_class": "COMP0502-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1469,7 +1469,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISI0260-10",
-      "next_class": "FISI0260-10",
+      "next_class": "FISI0260-11",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1484,7 +1484,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISI0260-09",
-      "next_class": "FISI0260-09",
+      "next_class": "FISI0262-04",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1529,7 +1529,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "TURIS0058-01",
-      "next_class": "TURIS0058-01",
+      "next_class": "GEOLO0002-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1544,7 +1544,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0027-01",
-      "next_class": "MORFO0027-01",
+      "next_class": "TURIS0037-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1559,7 +1559,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "COMP0498-02",
-      "next_class": "COMP0498-02",
+      "next_class": "EPROD0069-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1572,9 +1572,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "COMP0502-02",
-      "next_class": "COMP0502-02",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1632,9 +1632,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "LETRV0067-ESP1",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1649,7 +1649,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "PSIC0105-03",
-      "next_class": "PSIC0105-03",
+      "next_class": "ENCIV0212-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1679,7 +1679,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "COMP0391-02",
-      "next_class": "COMP0391-02",
+      "next_class": "COMP0391-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1694,7 +1694,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "SOCIA0013-01",
-      "next_class": "SOCIA0013-01",
+      "next_class": "QUI0064-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1709,7 +1709,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ADM0002-03",
-      "next_class": "ADM0002-03",
+      "next_class": "DIRE0268-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1724,7 +1724,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "QUI0073-01",
-      "next_class": "QUI0073-01",
+      "next_class": "COMP0498-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1739,7 +1739,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EPROD0113-01",
-      "next_class": "EPROD0113-01",
+      "next_class": "LETRV0072-ESP",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1784,7 +1784,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EDFIS0048-01",
-      "next_class": "EDFIS0048-01",
+      "next_class": "EPROD0063-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1799,7 +1799,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "LETR0459-01",
-      "next_class": "LETR0459-01",
+      "next_class": "ESTAT0011-04",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1844,7 +1844,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EQUI0115-01",
-      "next_class": "EQUI0115-01",
+      "next_class": "ADM0260-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1859,7 +1859,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ENCIV0211-01B",
-      "next_class": "ENCIV0211-01B",
+      "next_class": "MAT0054-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1872,9 +1872,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "PSIC0069-03",
-      "next_class": "PSIC0069-03",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1917,9 +1917,9 @@
       "capacity": 100,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "COMP0517-02",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1932,9 +1932,9 @@
       "capacity": 100,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "PSIC0094-08",
       "free_until": "15:15",
       "free_at": null
     },
@@ -1949,7 +1949,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0008-04A",
-      "next_class": "MORFO0008-04A",
+      "next_class": "MAT0091-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1964,7 +1964,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ESTAT0012-01",
-      "next_class": "ESTAT0012-01",
+      "next_class": "QUI0064-13",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1979,7 +1979,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "TURIS0055-01",
-      "next_class": "TURIS0055-01",
+      "next_class": "TURIS0031-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -1994,7 +1994,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EPET0008-01",
-      "next_class": "EPET0008-01",
+      "next_class": "EQUI0114-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2009,7 +2009,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EMAT0227-01A",
-      "next_class": "EMAT0227-01A",
+      "next_class": "EPET0033-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2024,7 +2024,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "NUTR0098-01",
-      "next_class": "NUTR0098-01",
+      "next_class": "DIRE0224-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2037,9 +2037,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "ECO0102-02",
       "free_until": "15:15",
       "free_at": null
     },
@@ -2054,7 +2054,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EDFIS0111-01",
-      "next_class": "EDFIS0111-01",
+      "next_class": "MAT0147-02",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2082,9 +2082,9 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MAT0078-03",
       "free_until": "15:15",
       "free_at": null
     },
@@ -2099,7 +2099,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MAT0078-02",
-      "next_class": "MAT0078-02",
+      "next_class": "ELET0056-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2129,7 +2129,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "SOCIA0025-11",
-      "next_class": "SOCIA0025-11",
+      "next_class": "QUI0265-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2159,7 +2159,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EQUI0093-01",
-      "next_class": "EQUI0093-01",
+      "next_class": "EQUI0126-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2189,7 +2189,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "EPET0002-01",
-      "next_class": "EPET0002-01",
+      "next_class": "DIRE0231-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2219,7 +2219,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MEDI0068-01B",
-      "next_class": "MEDI0068-01B",
+      "next_class": "EQUI0214-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2309,7 +2309,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MAT0115-01",
-      "next_class": "MAT0115-01",
+      "next_class": "ECONO0151-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2354,7 +2354,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "PSIC0089-08",
-      "next_class": "PSIC0089-08",
+      "next_class": "ECONO0017-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2367,9 +2367,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "DFA0058-01",
-      "next_class": "DFA0058-01",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2382,9 +2382,9 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "ADM0231-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -2414,7 +2414,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISOL0011-02A",
-      "next_class": "FISOL0011-02A",
+      "next_class": "MAT0153-03",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2442,9 +2442,9 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MAT0078-08",
       "free_until": "15:15",
       "free_at": null
     },
@@ -2489,7 +2489,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ENMEC0182-01",
-      "next_class": "ENMEC0182-01",
+      "next_class": "MAT0097-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2504,7 +2504,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ENCIV0214-01",
-      "next_class": "ENCIV0214-01",
+      "next_class": "QUI0070-03",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2519,7 +2519,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0008-03A",
-      "next_class": "MORFO0008-03A",
+      "next_class": "ENAMB0062-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2549,7 +2549,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "SOCIA0004-01",
-      "next_class": "SOCIA0004-01",
+      "next_class": "TURIS0040-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2562,9 +2562,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "DFA0017-01B",
       "free_until": "15:15",
       "free_at": null
     },
@@ -2654,7 +2654,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "ENCIV0123-01",
-      "next_class": "ENCIV0123-01",
+      "next_class": "ENCIV0124-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -2682,9 +2682,9 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "ENCIV0203-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -3117,9 +3117,9 @@
       "capacity": 10,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "QUI0285-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -3267,9 +3267,9 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "FISI0263-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -3297,9 +3297,9 @@
       "capacity": 15,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "FISI0277-01",
-      "next_class": "FISI0277-01",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3524,7 +3524,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISI0293-01",
-      "next_class": "FISI0293-01",
+      "next_class": "FISI0335-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3539,7 +3539,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISI0408-01",
-      "next_class": "FISI0408-01",
+      "next_class": "FISI0275-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3644,7 +3644,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "BIOL0362-01",
-      "next_class": "BIOL0362-01",
+      "next_class": "BIOL0147-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3672,9 +3672,9 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "BIOL0088-03",
-      "next_class": "BIOL0088-03",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3734,7 +3734,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "BIOL0344-01B",
-      "next_class": "BIOL0344-01B",
+      "next_class": "BIOL0336-01B",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3794,7 +3794,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "BIOL0342-01",
-      "next_class": "BIOL0342-01",
+      "next_class": "MORFO0013-04C",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3884,7 +3884,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "FISOL0011-01B",
-      "next_class": "FISOL0011-01B",
+      "next_class": "FISOL0012-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -3912,9 +3912,9 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "FISOL0001-05C",
       "free_until": "15:15",
       "free_at": null
     },
@@ -4017,9 +4017,9 @@
       "capacity": 60,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MORFO0008-03A",
       "free_until": "15:15",
       "free_at": null
     },
@@ -4032,9 +4032,9 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MORFO0005-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -4047,9 +4047,9 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MORFO0008-02A",
       "free_until": "15:15",
       "free_at": null
     },
@@ -4064,7 +4064,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0013-01D",
-      "next_class": "MORFO0013-01D",
+      "next_class": "MORFO0013-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -4092,9 +4092,9 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "MORFO0026-01A",
       "free_until": "15:15",
       "free_at": null
     },
@@ -4109,7 +4109,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0030-01B",
-      "next_class": "MORFO0030-01B",
+      "next_class": "MORFO0030-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -4124,7 +4124,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MORFO0020-02A",
-      "next_class": "MORFO0020-02A",
+      "next_class": "MORFO0020-02B",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -4467,9 +4467,9 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "EDFIS0076-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -7692,9 +7692,9 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
+      "next_class": "EDUI0083-01",
       "free_until": "15:15",
       "free_at": null
     },
@@ -7754,7 +7754,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "BIOI0152-01B",
-      "next_class": "BIOI0152-01B",
+      "next_class": "BIOI0152-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -7799,7 +7799,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "GEOI0014-01",
-      "next_class": "GEOI0014-01",
+      "next_class": "BIOI0169-01A",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -7827,9 +7827,9 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": false,
-      "is_free_next": false,
+      "is_free_next": true,
       "current_class": "GEOI0116-01",
-      "next_class": "GEOI0116-01",
+      "next_class": null,
       "free_until": null,
       "free_at": "15:00"
     },
@@ -7844,7 +7844,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MATI0098-01",
-      "next_class": "MATI0098-01",
+      "next_class": "MATI0084-02",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -7859,7 +7859,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MATI0113-01",
-      "next_class": "MATI0113-01",
+      "next_class": "MATI0112-01",
       "free_until": null,
       "free_at": "15:00"
     },
@@ -8009,7 +8009,7 @@
       "is_free_now": false,
       "is_free_next": false,
       "current_class": "MAT0155-06",
-      "next_class": "MAT0155-06",
+      "next_class": "EMAT0228-01B",
       "free_until": null,
       "free_at": "15:00"
     }
