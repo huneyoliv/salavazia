@@ -1,21 +1,28 @@
 {
-  "generated_at": "2026-10-22T02:06:26.087870-03:00",
-  "evaluated_timestamp": "2026-10-22T02:06:26.087471-03:00",
+  "generated_at": "2026-10-22T09:10:22.224744-03:00",
+  "evaluated_timestamp": "2026-10-22T09:10:22.221059-03:00",
   "schedule": {
     "day_of_week": 5,
     "day_name": "Quinta-feira",
     "is_academic_hours": false,
-    "is_expediente": false,
-    "status_label": "Fora de expediente (aulas iniciam às 07:30)",
+    "is_expediente": true,
+    "status_label": "Intervalo: Próxima aula M3 às 09:15",
     "current_slot": null,
-    "next_slot": null,
-    "minutes_until_next": null,
-    "is_pre_slot_window": false
+    "next_slot": {
+      "shift": 1,
+      "slot_index": 3,
+      "code": "M3",
+      "time_range": "09:15 - 10:00",
+      "start": "09:15",
+      "end": "10:00"
+    },
+    "minutes_until_next": 5,
+    "is_pre_slot_window": true
   },
   "summary": {
     "total_rooms": 532,
-    "total_active_rooms": 0,
-    "total_free_now": 0,
+    "total_active_rooms": 217,
+    "total_free_now": 217,
     "total_occupied_now": 0
   },
   "rooms": [
@@ -31,9 +38,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008485,
@@ -47,9 +53,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008486,
@@ -63,9 +68,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008487,
@@ -79,9 +83,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008488,
@@ -95,9 +98,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008489,
@@ -111,9 +113,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008490,
@@ -127,9 +128,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008491,
@@ -143,9 +143,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008492,
@@ -159,9 +158,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008493,
@@ -175,9 +173,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008494,
@@ -191,9 +188,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008495,
@@ -207,9 +203,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008496,
@@ -223,9 +218,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008497,
@@ -239,9 +233,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008498,
@@ -255,9 +248,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008499,
@@ -268,12 +260,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENMEC0178-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008500,
@@ -287,9 +278,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008501,
@@ -303,9 +293,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008502,
@@ -319,9 +308,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "17:00",
+      "free_at": null
     },
     {
       "id": 1008503,
@@ -332,12 +320,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ZOOT0178-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008504,
@@ -348,12 +335,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRL0020-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008505,
@@ -364,12 +350,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MAT0078-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008506,
@@ -383,9 +368,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008507,
@@ -396,12 +380,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "HIST0014-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008508,
@@ -415,9 +398,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008509,
@@ -431,9 +413,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008510,
@@ -447,9 +428,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008511,
@@ -460,12 +440,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0067-ING1",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008512,
@@ -476,12 +455,11 @@
       "capacity": 45,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FONO0176-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008513,
@@ -495,9 +473,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "10:00",
+      "free_at": null
     },
     {
       "id": 1008514,
@@ -508,12 +485,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "NUTR0065-01A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008515,
@@ -524,12 +500,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ELET0111-01C",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008516,
@@ -540,12 +515,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MORFO0026-02B",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008517,
@@ -556,12 +530,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "AGRON0299-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008518,
@@ -572,12 +545,11 @@
       "capacity": 45,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ZOOT0008-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008519,
@@ -591,9 +563,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "17:00",
+      "free_at": null
     },
     {
       "id": 1008520,
@@ -604,12 +575,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "DANCA0177-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008521,
@@ -623,9 +593,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008522,
@@ -636,12 +605,11 @@
       "capacity": 40,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0077-VERN1",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008523,
@@ -655,9 +623,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008524,
@@ -668,12 +635,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRL0034-12",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008525,
@@ -687,9 +653,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008526,
@@ -703,9 +668,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008527,
@@ -719,9 +683,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008528,
@@ -735,9 +698,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "20:45",
+      "free_at": null
     },
     {
       "id": 1008529,
@@ -748,12 +710,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISTR0110-01B",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008530,
@@ -767,9 +728,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008531,
@@ -780,12 +740,11 @@
       "capacity": 70,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "DFA0058-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008532,
@@ -799,9 +758,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008533,
@@ -812,12 +770,11 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0069-04A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008534,
@@ -831,9 +788,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008535,
@@ -844,12 +800,11 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "AGRON0339-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008536,
@@ -860,12 +815,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EDFIS0021-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008537,
@@ -876,12 +830,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0088-VERN1B",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008538,
@@ -892,12 +845,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EQUI0083-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008539,
@@ -911,9 +863,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008540,
@@ -927,9 +878,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008541,
@@ -943,9 +893,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008542,
@@ -959,9 +908,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008543,
@@ -972,12 +920,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ALIM0061-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008544,
@@ -988,12 +935,11 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ECONO0173-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008545,
@@ -1004,12 +950,11 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEO0075-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008546,
@@ -1020,12 +965,11 @@
       "capacity": 70,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0067-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008547,
@@ -1039,9 +983,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008548,
@@ -1052,12 +995,11 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MAT0151-05",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008549,
@@ -1068,12 +1010,11 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FONO0142-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008550,
@@ -1084,12 +1025,11 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MAT0155-03",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008551,
@@ -1100,12 +1040,11 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MAT0150-04",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008552,
@@ -1119,9 +1058,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008553,
@@ -1135,9 +1073,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008554,
@@ -1151,9 +1088,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008555,
@@ -1167,9 +1103,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008556,
@@ -1183,9 +1118,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008557,
@@ -1196,12 +1130,11 @@
       "capacity": 56,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0065-VERN1",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008558,
@@ -1215,9 +1148,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008559,
@@ -1228,12 +1160,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "COMP0334-08",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008560,
@@ -1247,9 +1178,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008561,
@@ -1263,9 +1193,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008562,
@@ -1279,9 +1208,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008563,
@@ -1295,9 +1223,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008564,
@@ -1311,9 +1238,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008565,
@@ -1327,9 +1253,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008566,
@@ -1340,12 +1265,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEOLO0089-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008567,
@@ -1356,12 +1280,11 @@
       "capacity": 48,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENCIV0075-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008568,
@@ -1372,12 +1295,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ECO0048-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008569,
@@ -1391,9 +1313,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:45",
+      "free_at": null
     },
     {
       "id": 1008570,
@@ -1404,12 +1325,11 @@
       "capacity": 48,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EDFIS0131-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008571,
@@ -1420,12 +1340,11 @@
       "capacity": 72,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "HIST0145-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008572,
@@ -1439,9 +1358,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008573,
@@ -1455,9 +1373,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008574,
@@ -1468,12 +1385,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "INTER0048-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008575,
@@ -1484,12 +1400,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "BIOL0018-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008576,
@@ -1500,12 +1415,11 @@
       "capacity": 60,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENCIV0105-04",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008577,
@@ -1516,12 +1430,11 @@
       "capacity": 48,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISI0260-07",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008578,
@@ -1532,12 +1445,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISI0261-05",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008579,
@@ -1548,12 +1460,11 @@
       "capacity": 70,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EPROD0036-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008580,
@@ -1564,12 +1475,11 @@
       "capacity": 60,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ESTAT0002-03",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008581,
@@ -1583,9 +1493,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008582,
@@ -1599,9 +1508,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008583,
@@ -1612,12 +1520,11 @@
       "capacity": 21,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0069-03A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008584,
@@ -1628,12 +1535,11 @@
       "capacity": 21,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEO0091-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008585,
@@ -1644,12 +1550,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SOCIA0003-03",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008586,
@@ -1660,12 +1565,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "COMP0334-07",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008587,
@@ -1679,9 +1583,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008588,
@@ -1692,12 +1595,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEO0058-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008589,
@@ -1708,12 +1610,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FONO0140-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008590,
@@ -1727,9 +1628,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008591,
@@ -1740,12 +1640,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ZOOT0124-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008592,
@@ -1756,12 +1655,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETR0429-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008593,
@@ -1772,12 +1670,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0090-ING",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008594,
@@ -1788,12 +1685,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SOCIA0013-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008595,
@@ -1804,12 +1700,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0088-ING",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008596,
@@ -1823,9 +1718,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008597,
@@ -1836,12 +1730,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ECO0052-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008598,
@@ -1852,12 +1745,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ZOOT0148-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008599,
@@ -1868,12 +1760,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEO0082-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008600,
@@ -1884,12 +1775,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SOCIA0003-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008601,
@@ -1900,12 +1790,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0070-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008602,
@@ -1916,12 +1805,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0069-05A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008603,
@@ -1932,12 +1820,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEO0077-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008604,
@@ -1948,12 +1835,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRV0088-VERN1A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008605,
@@ -1964,12 +1850,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EQUI0077-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008606,
@@ -1980,12 +1865,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRL0101-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008607,
@@ -1996,12 +1880,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EPET0014-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008608,
@@ -2012,12 +1895,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETR0383-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008609,
@@ -2031,9 +1913,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008610,
@@ -2047,9 +1928,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008611,
@@ -2060,12 +1940,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEOLO0102-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008612,
@@ -2076,12 +1955,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENAMB0036-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008613,
@@ -2092,12 +1970,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "PSIC0157-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008614,
@@ -2108,12 +1985,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "COMSO0359-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008615,
@@ -2124,12 +2000,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISOL0005-01B",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008616,
@@ -2140,12 +2015,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EQUI0133-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008617,
@@ -2159,9 +2033,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008618,
@@ -2172,12 +2045,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EQUI0119-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008619,
@@ -2191,9 +2063,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008620,
@@ -2207,9 +2078,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008621,
@@ -2223,9 +2093,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008622,
@@ -2239,9 +2108,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008623,
@@ -2252,12 +2120,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENMEC0199-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008624,
@@ -2268,12 +2135,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISOL0016-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008625,
@@ -2287,9 +2153,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008626,
@@ -2303,9 +2168,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008627,
@@ -2316,12 +2180,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENFER0169-01A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008628,
@@ -2335,9 +2198,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008629,
@@ -2348,12 +2210,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEOLO0068-01B",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008630,
@@ -2367,9 +2228,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008631,
@@ -2380,12 +2240,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "LETRL0034-11",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008632,
@@ -2399,9 +2258,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008633,
@@ -2412,12 +2270,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "PSIC0063-19",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008634,
@@ -2431,9 +2288,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008635,
@@ -2444,12 +2300,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENFER0160-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008636,
@@ -2460,12 +2315,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "AGRON0326-01A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008637,
@@ -2479,9 +2333,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008638,
@@ -2492,12 +2345,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ALIM0002-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008639,
@@ -2511,9 +2363,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008640,
@@ -2527,9 +2378,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008641,
@@ -2543,9 +2393,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008642,
@@ -2559,9 +2408,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008643,
@@ -2575,9 +2423,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008644,
@@ -2591,9 +2438,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008645,
@@ -2607,9 +2453,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008646,
@@ -2620,12 +2465,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "AGRON0312-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008647,
@@ -2639,9 +2483,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008648,
@@ -2652,12 +2495,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0064-07",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008649,
@@ -2671,9 +2513,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008650,
@@ -2687,9 +2528,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008651,
@@ -2703,9 +2543,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008652,
@@ -2719,9 +2558,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008653,
@@ -2735,9 +2573,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008654,
@@ -2751,9 +2588,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008655,
@@ -2767,9 +2603,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008656,
@@ -2783,9 +2618,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008657,
@@ -2799,9 +2633,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008658,
@@ -2815,9 +2648,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008659,
@@ -2831,9 +2663,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008660,
@@ -2844,12 +2675,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "ENCIV0108-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008661,
@@ -2863,9 +2693,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008662,
@@ -2879,9 +2708,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008663,
@@ -2895,9 +2723,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008664,
@@ -2911,9 +2738,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008665,
@@ -2927,9 +2753,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008666,
@@ -2943,9 +2768,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008667,
@@ -2959,9 +2783,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008668,
@@ -2975,9 +2798,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008669,
@@ -2991,9 +2813,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008670,
@@ -3007,9 +2828,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008671,
@@ -3023,9 +2843,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008672,
@@ -3039,9 +2858,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008673,
@@ -3055,9 +2873,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008674,
@@ -3071,9 +2888,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008675,
@@ -3087,9 +2903,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008676,
@@ -3103,9 +2918,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008677,
@@ -3119,9 +2933,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008678,
@@ -3135,9 +2948,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008679,
@@ -3151,9 +2963,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008680,
@@ -3167,9 +2978,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008681,
@@ -3183,9 +2993,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008682,
@@ -3199,9 +3008,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008683,
@@ -3215,9 +3023,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008684,
@@ -3231,9 +3038,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008685,
@@ -3247,9 +3053,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008686,
@@ -3263,9 +3068,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008687,
@@ -3279,9 +3083,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008688,
@@ -3295,9 +3098,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008689,
@@ -3311,9 +3113,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008690,
@@ -3327,9 +3128,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008691,
@@ -3343,9 +3143,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008692,
@@ -3359,9 +3158,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008693,
@@ -3375,9 +3173,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008694,
@@ -3391,9 +3188,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008695,
@@ -3407,9 +3203,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008696,
@@ -3423,9 +3218,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008697,
@@ -3439,9 +3233,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008698,
@@ -3455,9 +3248,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008699,
@@ -3471,9 +3263,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008700,
@@ -3487,9 +3278,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008701,
@@ -3503,9 +3293,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008702,
@@ -3519,9 +3308,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008703,
@@ -3535,9 +3323,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008704,
@@ -3551,9 +3338,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008705,
@@ -3567,9 +3353,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008706,
@@ -3583,9 +3368,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008707,
@@ -3599,9 +3383,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008708,
@@ -3615,9 +3398,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008709,
@@ -3631,9 +3413,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008710,
@@ -3647,9 +3428,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008711,
@@ -3663,9 +3443,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008712,
@@ -3679,9 +3458,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008713,
@@ -3695,9 +3473,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008714,
@@ -3711,9 +3488,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008715,
@@ -3727,9 +3503,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008716,
@@ -3743,9 +3518,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008717,
@@ -3759,9 +3533,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008718,
@@ -3775,9 +3548,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008719,
@@ -3791,9 +3563,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008720,
@@ -3807,9 +3578,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008721,
@@ -3823,9 +3593,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008722,
@@ -3839,9 +3608,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008723,
@@ -3855,9 +3623,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008724,
@@ -3868,12 +3635,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "BIOL0171-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008725,
@@ -3887,9 +3653,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008726,
@@ -3900,12 +3665,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "BIOL0367-05",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008727,
@@ -3919,9 +3683,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008728,
@@ -3935,9 +3698,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008729,
@@ -3951,9 +3713,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008730,
@@ -3964,12 +3725,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "BIOL0308-01A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008731,
@@ -3983,9 +3743,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008732,
@@ -3999,9 +3758,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008733,
@@ -4015,9 +3773,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008734,
@@ -4028,12 +3785,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FLORE0067-01A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008735,
@@ -4047,9 +3803,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008736,
@@ -4063,9 +3818,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008737,
@@ -4079,9 +3833,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008738,
@@ -4095,9 +3848,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008739,
@@ -4111,9 +3863,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008740,
@@ -4124,12 +3875,11 @@
       "capacity": 60,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISOL0006-04",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008741,
@@ -4143,9 +3893,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008742,
@@ -4159,9 +3908,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008743,
@@ -4175,9 +3923,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008744,
@@ -4191,9 +3938,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008745,
@@ -4207,9 +3953,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008746,
@@ -4223,9 +3968,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008747,
@@ -4239,9 +3983,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008748,
@@ -4255,9 +3998,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008749,
@@ -4271,9 +4013,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008750,
@@ -4284,12 +4025,11 @@
       "capacity": 30,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MORFO0006-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008751,
@@ -4303,9 +4043,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "10:00",
+      "free_at": null
     },
     {
       "id": 1008752,
@@ -4319,9 +4058,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008753,
@@ -4335,9 +4073,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008754,
@@ -4351,9 +4088,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008755,
@@ -4367,9 +4103,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1008756,
@@ -4380,12 +4115,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MORFO0009-01C",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008757,
@@ -4399,9 +4133,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008758,
@@ -4415,9 +4148,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008759,
@@ -4431,9 +4163,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008760,
@@ -4447,9 +4178,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008761,
@@ -4463,9 +4193,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008762,
@@ -4479,9 +4208,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008763,
@@ -4495,9 +4223,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008764,
@@ -4508,12 +4235,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEOLO0102-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008765,
@@ -4527,9 +4253,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008766,
@@ -4540,12 +4265,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEOLO0076-01A",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008767,
@@ -4559,9 +4283,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008768,
@@ -4575,9 +4298,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008769,
@@ -4591,9 +4313,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008770,
@@ -4607,9 +4328,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008771,
@@ -4623,9 +4343,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008772,
@@ -4639,9 +4358,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008773,
@@ -4655,9 +4373,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008774,
@@ -4671,9 +4388,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008775,
@@ -4687,9 +4403,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008776,
@@ -4703,9 +4418,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008777,
@@ -4719,9 +4433,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008778,
@@ -4735,9 +4448,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008779,
@@ -4748,12 +4460,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EDFIS0012-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008780,
@@ -4767,9 +4478,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008781,
@@ -4783,9 +4493,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008782,
@@ -4796,12 +4505,11 @@
       "capacity": 25,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EDFIS0011-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008783,
@@ -4815,9 +4523,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008784,
@@ -4831,9 +4538,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008785,
@@ -4847,9 +4553,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008786,
@@ -4863,9 +4568,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008787,
@@ -4879,9 +4583,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008788,
@@ -4895,9 +4598,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008789,
@@ -4911,9 +4613,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008790,
@@ -4927,9 +4628,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008791,
@@ -4943,9 +4643,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008792,
@@ -4959,9 +4658,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008793,
@@ -4975,9 +4673,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008794,
@@ -4991,9 +4688,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008795,
@@ -5007,9 +4703,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008796,
@@ -5023,9 +4718,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008797,
@@ -5039,9 +4733,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008798,
@@ -5055,9 +4748,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008799,
@@ -5071,9 +4763,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008800,
@@ -5087,9 +4778,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008801,
@@ -5103,9 +4793,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008802,
@@ -5119,9 +4808,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008803,
@@ -5135,9 +4823,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008804,
@@ -5151,9 +4838,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008805,
@@ -5167,9 +4853,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008806,
@@ -5183,9 +4868,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008807,
@@ -5199,9 +4883,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008808,
@@ -5215,9 +4898,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008809,
@@ -5231,9 +4913,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008810,
@@ -5247,9 +4928,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008811,
@@ -5263,9 +4943,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008812,
@@ -5279,9 +4958,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008813,
@@ -5295,9 +4973,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008814,
@@ -5311,9 +4988,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008815,
@@ -5327,9 +5003,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008816,
@@ -5343,9 +5018,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008817,
@@ -5359,9 +5033,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008818,
@@ -5375,9 +5048,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008819,
@@ -5391,9 +5063,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008820,
@@ -5407,9 +5078,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008821,
@@ -5423,9 +5093,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008822,
@@ -5439,9 +5108,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008823,
@@ -5455,9 +5123,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008824,
@@ -5471,9 +5138,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008825,
@@ -5487,9 +5153,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008826,
@@ -5503,9 +5168,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008827,
@@ -5519,9 +5183,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008828,
@@ -5535,9 +5198,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008829,
@@ -5551,9 +5213,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008830,
@@ -5567,9 +5228,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008831,
@@ -5583,9 +5243,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008832,
@@ -5599,9 +5258,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008833,
@@ -5615,9 +5273,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008834,
@@ -5631,9 +5288,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008835,
@@ -5647,9 +5303,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008836,
@@ -5663,9 +5318,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008837,
@@ -5679,9 +5333,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008838,
@@ -5695,9 +5348,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008839,
@@ -5711,9 +5363,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008840,
@@ -5727,9 +5378,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008841,
@@ -5743,9 +5393,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008842,
@@ -5759,9 +5408,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008843,
@@ -5775,9 +5423,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008844,
@@ -5791,9 +5438,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008845,
@@ -5807,9 +5453,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008846,
@@ -5823,9 +5468,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008847,
@@ -5839,9 +5483,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008848,
@@ -5855,9 +5498,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008849,
@@ -5871,9 +5513,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008850,
@@ -5887,9 +5528,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008851,
@@ -5903,9 +5543,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008852,
@@ -5919,9 +5558,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008853,
@@ -5935,9 +5573,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008854,
@@ -5951,9 +5588,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008855,
@@ -5967,9 +5603,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008856,
@@ -5983,9 +5618,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008857,
@@ -5999,9 +5633,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008858,
@@ -6015,9 +5648,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008859,
@@ -6031,9 +5663,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008860,
@@ -6047,9 +5678,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008861,
@@ -6063,9 +5693,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008862,
@@ -6079,9 +5708,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008863,
@@ -6095,9 +5723,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008864,
@@ -6111,9 +5738,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008865,
@@ -6127,9 +5753,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008866,
@@ -6143,9 +5768,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008867,
@@ -6159,9 +5783,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008868,
@@ -6175,9 +5798,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008869,
@@ -6191,9 +5813,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008870,
@@ -6207,9 +5828,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008871,
@@ -6223,9 +5843,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008872,
@@ -6239,9 +5858,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008873,
@@ -6255,9 +5873,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008874,
@@ -6271,9 +5888,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008875,
@@ -6287,9 +5903,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008876,
@@ -6303,9 +5918,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008877,
@@ -6319,9 +5933,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008878,
@@ -6335,9 +5948,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008879,
@@ -6351,9 +5963,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008880,
@@ -6367,9 +5978,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008881,
@@ -6383,9 +5993,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008882,
@@ -6399,9 +6008,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008883,
@@ -6415,9 +6023,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008884,
@@ -6431,9 +6038,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008885,
@@ -6447,9 +6053,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008886,
@@ -6463,9 +6068,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008887,
@@ -6479,9 +6083,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008888,
@@ -6495,9 +6098,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008889,
@@ -6511,9 +6113,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008890,
@@ -6527,9 +6128,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008891,
@@ -6543,9 +6143,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008892,
@@ -6559,9 +6158,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008893,
@@ -6575,9 +6173,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008894,
@@ -6591,9 +6188,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008895,
@@ -6607,9 +6203,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008896,
@@ -6623,9 +6218,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008897,
@@ -6639,9 +6233,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008898,
@@ -6655,9 +6248,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008899,
@@ -6671,9 +6263,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008900,
@@ -6687,9 +6278,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008901,
@@ -6703,9 +6293,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008902,
@@ -6719,9 +6308,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008903,
@@ -6735,9 +6323,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008904,
@@ -6751,9 +6338,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008905,
@@ -6767,9 +6353,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008906,
@@ -6783,9 +6368,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008907,
@@ -6799,9 +6383,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008908,
@@ -6815,9 +6398,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008909,
@@ -6831,9 +6413,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008910,
@@ -6847,9 +6428,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008911,
@@ -6863,9 +6443,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008912,
@@ -6879,9 +6458,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008913,
@@ -6895,9 +6473,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008914,
@@ -6911,9 +6488,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008915,
@@ -6927,9 +6503,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008916,
@@ -6943,9 +6518,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008917,
@@ -6959,9 +6533,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008918,
@@ -6975,9 +6548,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008919,
@@ -6991,9 +6563,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008920,
@@ -7007,9 +6578,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008921,
@@ -7023,9 +6593,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008922,
@@ -7039,9 +6608,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008923,
@@ -7055,9 +6623,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008924,
@@ -7071,9 +6638,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008925,
@@ -7087,9 +6653,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008926,
@@ -7103,9 +6668,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008927,
@@ -7119,9 +6683,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008928,
@@ -7135,9 +6698,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008929,
@@ -7151,9 +6713,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008930,
@@ -7167,9 +6728,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008931,
@@ -7183,9 +6743,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008932,
@@ -7199,9 +6758,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008933,
@@ -7215,9 +6773,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008934,
@@ -7231,9 +6788,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008935,
@@ -7247,9 +6803,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008936,
@@ -7263,9 +6818,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008937,
@@ -7279,9 +6833,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008938,
@@ -7295,9 +6848,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008939,
@@ -7311,9 +6863,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008940,
@@ -7327,9 +6878,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008941,
@@ -7343,9 +6893,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008942,
@@ -7359,9 +6908,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008943,
@@ -7375,9 +6923,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008944,
@@ -7391,9 +6938,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008945,
@@ -7407,9 +6953,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008946,
@@ -7423,9 +6968,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008947,
@@ -7439,9 +6983,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008948,
@@ -7455,9 +6998,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008949,
@@ -7471,9 +7013,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008950,
@@ -7487,9 +7028,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008951,
@@ -7503,9 +7043,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008952,
@@ -7519,9 +7058,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008953,
@@ -7535,9 +7073,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008954,
@@ -7551,9 +7088,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008955,
@@ -7567,9 +7103,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008956,
@@ -7583,9 +7118,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008957,
@@ -7599,9 +7133,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008958,
@@ -7615,9 +7148,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008959,
@@ -7631,9 +7163,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008960,
@@ -7647,9 +7178,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008961,
@@ -7663,9 +7193,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008962,
@@ -7679,9 +7208,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1008963,
@@ -7695,9 +7223,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008964,
@@ -7711,9 +7238,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008965,
@@ -7727,9 +7253,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008966,
@@ -7743,9 +7268,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008967,
@@ -7759,9 +7283,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008968,
@@ -7775,9 +7298,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008969,
@@ -7791,9 +7313,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008970,
@@ -7807,9 +7328,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008971,
@@ -7823,9 +7343,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008972,
@@ -7839,9 +7358,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008973,
@@ -7855,9 +7373,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008974,
@@ -7871,9 +7388,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008975,
@@ -7884,12 +7400,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SINF0078-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008976,
@@ -7903,9 +7418,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008977,
@@ -7919,9 +7433,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008978,
@@ -7932,12 +7445,11 @@
       "capacity": 24,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUII0066-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008979,
@@ -7951,9 +7463,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008980,
@@ -7967,9 +7478,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008981,
@@ -7983,9 +7493,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008982,
@@ -7999,9 +7508,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008983,
@@ -8015,9 +7523,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008984,
@@ -8031,9 +7538,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008985,
@@ -8047,9 +7553,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008986,
@@ -8063,9 +7568,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008987,
@@ -8079,9 +7583,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008988,
@@ -8095,9 +7598,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008989,
@@ -8111,9 +7613,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008990,
@@ -8124,12 +7625,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "FISII0082-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008991,
@@ -8143,9 +7643,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008992,
@@ -8159,9 +7658,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1008993,
@@ -8175,9 +7673,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "17:00",
+      "free_at": null
     },
     {
       "id": 1008994,
@@ -8188,12 +7685,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "MATI0031-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008995,
@@ -8207,9 +7703,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "17:00",
+      "free_at": null
     },
     {
       "id": 1008996,
@@ -8223,9 +7718,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1008997,
@@ -8236,12 +7730,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "EDUI0018-02",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1008998,
@@ -8255,9 +7748,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1008999,
@@ -8271,9 +7763,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009000,
@@ -8287,9 +7778,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009001,
@@ -8303,9 +7793,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "15:15",
+      "free_at": null
     },
     {
       "id": 1009002,
@@ -8319,9 +7808,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1009003,
@@ -8332,12 +7820,11 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "GEOI0109-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1009004,
@@ -8348,12 +7835,11 @@
       "capacity": 80,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SINF0021-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1009005,
@@ -8367,9 +7853,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1009006,
@@ -8380,12 +7865,11 @@
       "capacity": 35,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUII0170-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1009007,
@@ -8396,12 +7880,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "BIOI0193-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1009008,
@@ -8415,9 +7898,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "19:00",
+      "free_at": null
     },
     {
       "id": 1009009,
@@ -8431,9 +7913,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "11:00",
+      "free_at": null
     },
     {
       "id": 1009010,
@@ -8444,12 +7925,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SINF0057-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 1009011,
@@ -8463,9 +7943,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1009012,
@@ -8479,9 +7958,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "13:30",
+      "free_at": null
     },
     {
       "id": 1009013,
@@ -8495,9 +7973,8 @@
       "is_free_next": true,
       "current_class": null,
       "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "free_until": "Resto do dia",
+      "free_at": null
     },
     {
       "id": 1009014,
@@ -8508,12 +7985,11 @@
       "capacity": 50,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "SINF0015-01",
+      "free_until": "09:15",
+      "free_at": null
     },
     {
       "id": 122071161,
@@ -8524,12 +8000,11 @@
       "capacity": 20,
       "has_schedule": true,
       "is_free_now": true,
-      "is_free_next": true,
+      "is_free_next": false,
       "current_class": null,
-      "next_class": null,
-      "free_until": null,
-      "free_at": null,
-      "is_off_hours": true
+      "next_class": "QUI0069-02A",
+      "free_until": "09:15",
+      "free_at": null
     }
   ]
 }
