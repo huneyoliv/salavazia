@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-24T19:36:17.010179-03:00",
-  "evaluated_timestamp": "2026-10-24T19:36:17.009642-03:00",
+  "generated_at": "2026-10-26T02:03:50.127987-03:00",
+  "evaluated_timestamp": "2026-10-26T02:03:50.127489-03:00",
   "schedule": {
-    "day_of_week": 7,
-    "day_name": "Sábado",
+    "day_of_week": 2,
+    "day_name": "Segunda-feira",
     "is_academic_hours": false,
     "is_expediente": false,
-    "status_label": "Sábado (aulas encerradas às 12:30)",
+    "status_label": "Fora de expediente (aulas iniciam às 07:30)",
     "current_slot": null,
     "next_slot": null,
     "minutes_until_next": null,
