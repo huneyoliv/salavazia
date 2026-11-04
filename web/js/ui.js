@@ -121,6 +121,26 @@ function renderGpsBanner(gpsState, nearestInfo) {
   banner.style.display = 'none';
 }
 
+function renderSourceNotice() {
+  const banner = document.getElementById('source-notice');
+  if (!banner) return;
+
+  banner.innerHTML = `
+    <div class="notice-banner-card is-warning">
+      <svg class="notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      <div class="notice-content">
+        Os dados do <strong>Sala Vazia</strong> são obtidos diretamente do <strong>SIGAA</strong>, por meio dos QR Codes das salas.
+        Por isso, só é possível saber se há aula em uma sala se o professor a reservar previamente no SIGAA.
+      </div>
+    </div>
+  `;
+  banner.style.display = 'block';
+}
+
 function renderMetrics(totalRooms, totalFree, totalOccupied, nearestInfo) {
   const freeEl = document.getElementById('metric-free');
   const occupiedEl = document.getElementById('metric-occupied');
@@ -392,6 +412,7 @@ window.UI = {
   escapeHtml,
   renderClock,
   renderGpsBanner,
+  renderSourceNotice,
   renderMetrics,
   renderRoomCard,
   renderRoomsGrid

@@ -374,6 +374,9 @@ function updateAppView() {
   const scheduleState = window.ScheduleEngine.getCurrentScheduleState();
   window.UI.renderClock(scheduleState);
 
+  // Render source notice (only needs to be rendered once)
+  window.UI.renderSourceNotice();
+
   const nearestInfo = window.GeoEngine.findNearestBuilding(
     AppState.userCoords,
     AppState.buildingsData

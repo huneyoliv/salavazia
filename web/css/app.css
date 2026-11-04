@@ -221,6 +221,45 @@ body {
   background: var(--bg-surface);
 }
 
+/* Source Notice Banner */
+.notice-container {
+  margin-top: 1rem;
+}
+
+.notice-banner-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+}
+
+.notice-banner-card.is-warning {
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.notice-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--interval-text);
+}
+
+.notice-content {
+  flex: 1;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.notice-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 .gps-banner-card.is-active {
   background: rgba(16, 185, 129, 0.05);
   border-color: rgba(16, 185, 129, 0.2);
