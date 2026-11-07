@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-07T05:58:43.284623-03:00",
-  "evaluated_timestamp": "2026-11-07T05:58:43.284071-03:00",
+  "generated_at": "2026-11-07T13:33:47.154071-03:00",
+  "evaluated_timestamp": "2026-11-07T13:33:47.153682-03:00",
   "schedule": {
     "day_of_week": 7,
     "day_name": "Sábado",
     "is_academic_hours": false,
     "is_expediente": false,
-    "status_label": "Fora de expediente (aulas iniciam às 07:30)",
+    "status_label": "Sábado (aulas encerradas às 12:30)",
     "current_slot": null,
     "next_slot": null,
     "minutes_until_next": null,
