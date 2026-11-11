@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-10T23:01:20.802130-03:00",
-  "evaluated_timestamp": "2026-11-10T23:01:20.801744-03:00",
+  "generated_at": "2026-11-11T06:39:08.531465-03:00",
+  "evaluated_timestamp": "2026-11-11T06:39:08.531055-03:00",
   "schedule": {
-    "day_of_week": 3,
-    "day_name": "Terça-feira",
+    "day_of_week": 4,
+    "day_name": "Quarta-feira",
     "is_academic_hours": false,
     "is_expediente": false,
-    "status_label": "Fora do horário de aulas",
+    "status_label": "Fora de expediente (aulas iniciam às 07:30)",
     "current_slot": null,
     "next_slot": null,
     "minutes_until_next": null,
